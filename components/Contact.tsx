@@ -9,15 +9,41 @@ const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+
+    try {
+      // Formspree API üzerinden barisyldrm@pm.me adresine gönderim
+      const response = await fetch("https://formspree.io/f/xknadjzo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+          _subject: `Lunavor Yeni İletişim Formu: ${formState.name}`,
+          // Formspree dashboard üzerinden barisyldrm@pm.me tanımlandığı varsayılır. 
+          // Eğer ID yoksa direkt e-posta adresi de kullanılabilir: https://formspree.io/barisyldrm@pm.me
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormState({ name: '', email: '', message: '' });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        alert("Bir sorun oluştu, lütfen daha sonra tekrar deneyin veya WhatsApp üzerinden ulaşın.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Gönderim sırasında bir hata oluştu.");
+    } finally {
       setIsSubmitting(false);
-      setSubmitted(true);
-      setFormState({ name: '', email: '', message: '' });
-      setTimeout(() => setSubmitted(false), 5000);
-    }, 1500);
+    }
   };
 
   return (
@@ -85,6 +111,7 @@ const Contact: React.FC = () => {
                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Adınız & Şirketiniz</label>
                 <input 
                   type="text" 
+                  name="name"
                   required
                   value={formState.name}
                   onChange={(e) => setFormState({...formState, name: e.target.value})}
@@ -96,6 +123,7 @@ const Contact: React.FC = () => {
                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">İletişim Adresi</label>
                 <input 
                   type="email" 
+                  name="email"
                   required
                   value={formState.email}
                   onChange={(e) => setFormState({...formState, email: e.target.value})}
@@ -106,6 +134,7 @@ const Contact: React.FC = () => {
               <div className="space-y-3">
                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Proje Detayları</label>
                 <textarea 
+                  name="message"
                   required
                   rows={4}
                   value={formState.message}

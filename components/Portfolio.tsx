@@ -16,7 +16,7 @@ const Portfolio: React.FC = () => {
             </h2>
           </div>
           <p className="text-slate-400 max-w-sm text-lg md:text-xl font-light border-l-2 border-blue-600 pl-8 leading-relaxed">
-            Interakdeniz ve Hell Gym gibi prestijli markalar için tasarladığımız dijital ekosistemler.
+            Interakdeniz, Ikonyum Ahşap ve Hell Gym gibi prestijli markalar için tasarladığımız dijital ekosistemler.
           </p>
         </div>
 
@@ -28,12 +28,16 @@ const Portfolio: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="group relative h-[450px] md:h-[650px] rounded-[3.5rem] overflow-hidden border border-white/5"
+              className="group relative h-[450px] md:h-[650px] rounded-[3.5rem] overflow-hidden border border-white/5 bg-slate-900"
             >
               <img 
                 src={project.imageUrl} 
                 alt={project.title}
                 className="w-full h-full object-cover grayscale opacity-60 transition-all duration-1000 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200";
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 group-hover:opacity-60 transition-opacity" />
               
