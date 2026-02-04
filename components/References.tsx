@@ -1,9 +1,8 @@
 
 import React from 'react';
-import { CLIENTS } from '../constants';
+import { CLIENTS } from '../constants.tsx';
 
 const References: React.FC = () => {
-  // Kesintisiz döngü için client listesini çoğaltıyoruz
   const marqueeClients = [...CLIENTS, ...CLIENTS, ...CLIENTS, ...CLIENTS];
 
   return (
@@ -14,7 +13,6 @@ const References: React.FC = () => {
         </p>
       </div>
       
-      {/* Yanlardaki solma efekti için gradyan maskeleri */}
       <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-slate-950 to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none" />
 
@@ -35,7 +33,6 @@ const References: React.FC = () => {
                     target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(client.name)}&background=1e293b&color=3b82f6&bold=true`;
                   }}
                 />
-                {/* Logo altındaki hafif parlama efekti (Hover'da aktif olur) */}
                 <div className="absolute -inset-4 bg-blue-500/0 group-hover:bg-blue-500/10 blur-xl rounded-full transition-all duration-500 -z-10" />
               </div>
             </div>

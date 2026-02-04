@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { Menu, X, Instagram, MessageCircle } from 'lucide-react';
-import { NAV_LINKS, WHATSAPP_LINK, SOCIAL_LINKS } from '../constants';
+import { NAV_LINKS, WHATSAPP_LINK, SOCIAL_LINKS } from '../constants.tsx';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);

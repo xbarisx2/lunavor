@@ -1,22 +1,24 @@
 
 import React, { useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import References from './components/References';
-import Services from './components/Services';
-import Packages from './components/Packages';
-import Portfolio from './components/Portfolio';
-import Engineering from './components/Engineering';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import References from './components/References.tsx';
+import Services from './components/Services.tsx';
+import Studio from './components/Studio.tsx';
+import Packages from './components/Packages.tsx';
+import Portfolio from './components/Portfolio.tsx';
+import Engineering from './components/Engineering.tsx';
+import Contact from './components/Contact.tsx';
+import Footer from './components/Footer.tsx';
 
 function App() {
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
+      const anchor = target.closest('a');
+      if (anchor && anchor.getAttribute('href')?.startsWith('#')) {
         e.preventDefault();
-        const id = target.getAttribute('href')?.substring(1);
+        const id = anchor.getAttribute('href')?.substring(1);
         if (id) {
           const element = document.getElementById(id);
           if (element) {
@@ -40,6 +42,7 @@ function App() {
         <Hero />
         <References />
         <Services />
+        <Studio />
         <Packages />
         <Portfolio />
         <Engineering />

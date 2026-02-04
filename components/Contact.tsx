@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { WHATSAPP_LINK } from '../constants';
+import { WHATSAPP_LINK } from '../constants.tsx';
 
 const Contact: React.FC = () => {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -14,7 +14,6 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // Formspree API üzerinden barisyldrm@pm.me adresine gönderim
       const response = await fetch("https://formspree.io/f/xknadjzo", {
         method: "POST",
         headers: {
@@ -26,8 +25,6 @@ const Contact: React.FC = () => {
           email: formState.email,
           message: formState.message,
           _subject: `Lunavor Yeni İletişim Formu: ${formState.name}`,
-          // Formspree dashboard üzerinden barisyldrm@pm.me tanımlandığı varsayılır. 
-          // Eğer ID yoksa direkt e-posta adresi de kullanılabilir: https://formspree.io/barisyldrm@pm.me
         }),
       });
 
@@ -86,7 +83,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">Genel Merkez</p>
-                  <p className="text-white font-bold text-lg">Beyhekim Mah. Sanat Sok., Selçuklu, Konya</p>
+                  <p className="text-white font-bold text-lg">Beyhekim Mah., Selçuklu, Konya</p>
                 </div>
               </div>
             </div>
@@ -115,7 +112,7 @@ const Contact: React.FC = () => {
                   required
                   value={formState.name}
                   onChange={(e) => setFormState({...formState, name: e.target.value})}
-                  placeholder="Barış Yıldırım"
+                  placeholder="İsim Giriniz"
                   className="w-full bg-slate-950/50 border border-white/10 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-blue-500 transition-all focus:ring-4 ring-blue-500/10"
                 />
               </div>
@@ -139,7 +136,7 @@ const Contact: React.FC = () => {
                   rows={4}
                   value={formState.message}
                   onChange={(e) => setFormState({...formState, message: e.target.value})}
-                  placeholder="Projeniz veya ilgilendiğiniz paket hakkında bilgi verin..."
+                  placeholder="Mesajınızı buraya yazın..."
                   className="w-full bg-slate-950/50 border border-white/10 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-blue-500 transition-all focus:ring-4 ring-blue-500/10 resize-none"
                 />
               </div>

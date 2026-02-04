@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Star, ArrowRight } from 'lucide-react';
-import { PACKAGES, WHATSAPP_LINK } from '../constants';
+import { PACKAGES, WHATSAPP_LINK } from '../constants.tsx';
 
 const Packages: React.FC = () => {
   return (

@@ -1,15 +1,15 @@
 
 import React from 'react';
 import { Layout, Code, ShoppingCart, Github, Linkedin, Instagram, Globe, Database, ShieldCheck } from 'lucide-react';
-import { Service, Project, NavLink, Client, PricingPackage } from './types';
+import { Service, Project, NavLink, Client, PricingPackage } from './types.ts';
 
 export const WHATSAPP_NUMBER = '905050627876';
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Merhaba%20Lunavor%20ekibi!%20Projem%20i%C3%A7in%20teklif%20almak%20istiyorum.`;
 
 export const NAV_LINKS: NavLink[] = [
   { name: 'Çözümler', href: '#services' },
+  { name: 'Studio', href: '#studio' },
   { name: 'Paketler', href: '#packages' },
-  { name: 'Referanslar', href: '#references' },
   { name: 'Portfolyo', href: '#portfolio' },
   { name: 'İletişim', href: '#contact' },
 ];
@@ -39,13 +39,13 @@ export const PACKAGES: PricingPackage[] = [
   {
     id: 'starter',
     name: 'Kurumsal Başlangıç',
-    price: '9.500₺',
+    price: '12.500₺',
     features: ['Modern Kurumsal Tasarım', 'SEO Altyapısı', 'Mobil Uyumluluk', 'Yönetim Paneli', 'SSL Sertifikası Dahil']
   },
   {
     id: 'pro',
     name: 'E-Ticaret Pro',
-    price: '18.500₺',
+    price: '24.500₺',
     features: ['Sanal POS Entegrasyonu', 'Gelişmiş Kargo Takip', 'Stok Takip Sistemi', 'Kampanya Yönetimi', '7/24 Teknik Destek'],
     recommended: true
   },
@@ -99,17 +99,17 @@ export const CLIENTS: Client[] = [
   },
   { 
     id: 4, 
-    name: 'TechSolutions', 
+    name: 'Nvidia Partners', 
     logoUrl: 'https://logo.clearbit.com/nvidia.com' 
   },
   { 
     id: 5, 
-    name: 'DigitalFlow', 
+    name: 'Adobe Creative', 
     logoUrl: 'https://logo.clearbit.com/adobe.com' 
   },
   { 
     id: 6, 
-    name: 'GlobalConnect', 
+    name: 'Intel Systems', 
     logoUrl: 'https://logo.clearbit.com/intel.com' 
   },
 ];
