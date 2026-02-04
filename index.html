@@ -3,12 +3,13 @@
 <html lang="tr" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#020617" />
     
     <!-- SEO Başlık ve Meta Bilgileri -->
     <title>Lunavor | Kurumsal Yazılım ve Dijital Dönüşüm Ajansı</title>
     <meta name="description" content="Lunavor, yüksek performanslı web yazılımları, e-ticaret sistemleri ve kurumsal dijital çözümler üreten bir mühendislik ajansıdır. Konya merkezli global standartlar." />
-    <meta name="keywords" content="web tasarım, kurumsal yazılım, e-ticaret, lunavor, yazılım ajansı, konya yazılım, dijital pazarlama, seo" />
+    <meta name="keywords" content="web tasarım, kurumsal yazılım, e-ticaret, lunavor, yazılım ajansı, konya yazılım, dijital pazarlama, seo, barış yıldırım" />
     <meta name="author" content="Lunavor Agency" />
     <meta name="robots" content="index, follow" />
 
@@ -24,13 +25,36 @@
     <meta property="twitter:title" content="Lunavor | Digital Engineering" />
     <meta property="twitter:description" content="Profesyonel web çözümleri ve kurumsal yazılım mühendisliği." />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://www.ikonyumahsap.com.tr/img/ikonyum-ahsap.png" />
+    <!-- Favicon & Apple Icon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%233b82f6%22 font-family=%22sans-serif%22 font-weight=%22bold%22>L</text></svg>" />
+    <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=180&h=180&auto=format&fit=crop" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Lunavor Agency",
+      "url": "https://lunavor.com.tr/",
+      "logo": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=200&h=200&auto=format&fit=crop",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+90-505-062-7876",
+        "contactType": "customer service",
+        "areaServed": "TR",
+        "availableLanguage": "Turkish"
+      },
+      "sameAs": [
+        "https://www.instagram.com/lunavor.com.tr/"
+      ]
+    }
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&family=Sora:wght@400;700;800&display=swap" rel="stylesheet">
+    
     <style>
       :root {
         --bg-dark: #020617;
@@ -62,10 +86,8 @@
       }
       .noise {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
         background: url('https://grainy-gradients.vercel.app/noise.svg');
         opacity: 0.03;
         pointer-events: none;
@@ -94,22 +116,24 @@
       ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
       ::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
     </style>
+
     <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@^19.2.4",
-        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-        "react/": "https://esm.sh/react@^19.2.4/",
-        "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-        "framer-motion": "https://esm.sh/framer-motion@^12.31.0"
-      }
-    }
-    </script>
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0?external=react",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.17?external=react,react-dom",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
   </head>
   <body>
     <div class="noise"></div>
     <div id="root"></div>
-    <!-- Vercel için giriş noktasını burada tanımlıyoruz -->
     <script type="module" src="./index.tsx"></script>
   </body>
 </html>
