@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Database, ShieldCheck, Layers, GitBranch, Cpu } from 'lucide-react';
+import { Terminal, Database, ShieldCheck, Layers, GitBranch, Cpu, Search, Trophy } from 'lucide-react';
 
 const Engineering: React.FC = () => {
   return (
@@ -15,21 +15,21 @@ const Engineering: React.FC = () => {
             viewport={{ once: true }}
             className="lg:col-span-5"
           >
-            <span className="text-[10px] font-black tracking-[0.6em] text-blue-500 uppercase mb-6 block">ENGINEERING DNA</span>
+            <span className="text-[10px] font-black tracking-[0.6em] text-blue-500 uppercase mb-6 block">PREMIUM ENGINEERING</span>
             <h2 className="fluid-h2 font-black mb-10 tracking-tighter uppercase italic break-words">
-              KODUN <br /><span className="gradient-text">USTALIĞI.</span>
+              DİJİTAL <br /><span className="gradient-text">HAKİMİYET.</span>
             </h2>
             
             <p className="text-xl text-slate-400 mb-14 font-light leading-relaxed max-w-lg">
-              Interakdeniz ve Hell Gym gibi prestijli projelerde uyguladığımız gibi, her satır kod markanız için <span className="text-white font-bold italic underline decoration-blue-500 underline-offset-8">mühendislik eseri</span> değerindedir.
+              Türkiye'nin en seçkin markaları için sunduğumuz çözümlerde olduğu gibi; her satır kod, markanızı arama motorlarında <span className="text-white font-bold italic underline decoration-blue-500 underline-offset-8">zirveye taşıyan</span> bir mühendislik başyapıtıdır.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
               {[
-                { icon: <Database size={20}/>, text: 'Scalable Microservices' },
-                { icon: <ShieldCheck size={20}/>, text: 'Military-Grade Security' },
-                { icon: <Layers size={20}/>, text: 'Modular UI Libraries' },
-                { icon: <GitBranch size={20}/>, text: 'Agile & Rapid Build' }
+                { icon: <Search size={20}/>, text: 'Advanced SEO Optimization' },
+                { icon: <Trophy size={20}/>, text: 'High-Performance UX' },
+                { icon: <Database size={20}/>, text: 'Scalable Cloud Architecture' },
+                { icon: <ShieldCheck size={20}/>, text: 'Cyber Security Priority' }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center space-x-5 group cursor-default p-4 glass-card rounded-2xl border-white/5 hover:border-blue-500/30 transition-all">
                   <div className="w-12 h-12 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center text-slate-500 group-hover:bg-blue-600 group-hover:text-white transition-all">
@@ -58,7 +58,7 @@ const Engineering: React.FC = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Terminal size={14} className="text-slate-600" />
-                    <span className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">lunavor_build_engine.v3</span>
+                    <span className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">lunavor_ai_engine.v4.0</span>
                   </div>
                 </div>
                 
@@ -67,25 +67,25 @@ const Engineering: React.FC = () => {
                   <div className="flex gap-4 mb-6">
                     <span className="text-slate-700">➜</span>
                     <span className="text-blue-400 font-bold">lunavor</span>
-                    <span className="text-white">init --quality enterprise</span>
+                    <span className="text-white">deploy --seo-rank-boost --performance-max</span>
                   </div>
-                  <div className="text-slate-500 mb-6 font-light italic opacity-60 break-all">[INFO] Analysing brand architecture: Hell Gym Center...</div>
-                  <div className="text-slate-500 mb-10 font-light italic opacity-60 break-all">[INFO] Optimizing Core Web Vitals to 100/100...</div>
+                  <div className="text-slate-500 mb-6 font-light italic opacity-60 break-all">[PROCESS] Building High-End Infrastructure...</div>
+                  <div className="text-slate-500 mb-10 font-light italic opacity-60 break-all">[SUCCESS] Google Core Web Vitals: 100/100 Points</div>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div className="p-8 bg-slate-900/50 border border-blue-500/10 rounded-3xl group-hover:border-blue-500/30 transition-all">
                       <div className="flex items-center space-x-3 mb-6">
                          <div className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
-                         <span className="text-[10px] text-slate-500 font-black tracking-[0.2em] uppercase">System Latency</span>
+                         <span className="text-[10px] text-slate-500 font-black tracking-[0.2em] uppercase">Conversion Rate</span>
                       </div>
-                      <div className="text-3xl font-black text-white italic">0.02ms</div>
+                      <div className="text-3xl font-black text-white italic">+420%</div>
                     </div>
                     <div className="p-8 bg-slate-900/50 border border-blue-500/10 rounded-3xl group-hover:border-blue-500/30 transition-all">
                       <div className="flex items-center space-x-3 mb-6">
                          <Cpu size={18} className="text-blue-500" />
-                         <span className="text-[10px] text-slate-500 font-black tracking-[0.2em] uppercase">Architecture</span>
+                         <span className="text-[10px] text-slate-500 font-black tracking-[0.2em] uppercase">Status</span>
                       </div>
-                      <div className="text-3xl font-black text-white italic">STABLE</div>
+                      <div className="text-3xl font-black text-white italic">DOMINANT</div>
                     </div>
                   </div>
                 </div>

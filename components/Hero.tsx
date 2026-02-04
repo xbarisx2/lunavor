@@ -11,9 +11,8 @@ const Hero: React.FC = () => {
         <div className="absolute top-1/4 -left-1/4 w-[700px] h-[700px] bg-blue-600/10 rounded-full blur-[160px] animate-pulse" />
         <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[140px]" />
         
-        {/* Swirl / Vortex Ornament inspired by Logo */}
+        {/* Swirl / Vortex Ornament */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] opacity-[0.05] border-[1px] border-blue-500/20 rounded-full animate-[spin_60s_linear_infinite]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vw] opacity-[0.03] border-[1px] border-indigo-500/10 rounded-full animate-[spin_45s_linear_infinite_reverse]" />
 
         {/* Subtle Grid Overlay */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
@@ -29,13 +28,13 @@ const Hero: React.FC = () => {
           <div className="inline-flex items-center space-x-2 px-4 py-2 mb-10 bg-blue-500/10 border border-blue-500/20 rounded-full backdrop-blur-md">
             <Zap size={14} className="text-blue-500 fill-blue-500" />
             <span className="text-[11px] font-black tracking-[0.4em] text-blue-400 uppercase">
-              RECODING THE FUTURE
+              TURKEY'S FINEST SOFTWARE ENGINEERING
             </span>
           </div>
 
           <h1 className="fluid-h1 font-black tracking-tighter mb-10 uppercase leading-none">
             DİJİTAL <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 italic pr-4">DÜNYAYI</span> <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 italic pr-4">MİMARİNİN</span> <br />
             <span className="relative inline-block">
               YENİDEN
               <motion.span 
@@ -45,11 +44,11 @@ const Hero: React.FC = () => {
                 className="absolute -bottom-2 left-0 h-2 bg-blue-600/30 rounded-full" 
               />
             </span> <br />
-            KODLUYORUZ.
+            ZİRVESİNDEYİZ.
           </h1>
 
           <p className="text-lg md:text-2xl text-slate-400 max-w-2xl mb-14 leading-relaxed font-light">
-            Sıradanlığın ötesinde, <span className="text-white font-bold">yüksek performanslı</span> yazılımlar ve markanızın ruhunu yansıtan <span className="text-white font-bold">dijital mimariler</span> inşa ediyoruz.
+            Sadece web sitesi değil, <span className="text-white font-bold">SEO dominasyonu</span> kuran ve markanızı küresel rekabete hazırlayan <span className="text-white font-bold">yüksek performanslı</span> dijital ekosistemler inşa ediyoruz.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-6">
@@ -59,14 +58,14 @@ const Hero: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto px-12 py-6 bg-blue-600 text-white font-black rounded-2xl flex items-center justify-center space-x-3 transition-all shadow-[0_25px_50px_-12px_rgba(37,99,235,0.5)]"
             >
-              <span>WEB PAKETLERİ</span>
+              <span>KURUMSAL ÇÖZÜMLER</span>
               <Rocket size={20} />
             </motion.a>
             <motion.a
               href="#portfolio"
               className="w-full sm:w-auto px-12 py-6 bg-transparent border border-white/10 text-white font-black rounded-2xl flex items-center justify-center space-x-3 hover:bg-white/5 transition-all group"
             >
-              <span>ÇALIŞMALARIMIZ</span>
+              <span>BAŞARI HİKAYELERİ</span>
               <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform text-blue-500" />
             </motion.a>
           </div>
@@ -86,28 +85,16 @@ const Hero: React.FC = () => {
               <div className="w-3 h-3 rounded-full bg-green-500/40" />
             </div>
             <div className="font-mono text-[12px] md:text-sm space-y-4 leading-relaxed">
-              <p className="text-blue-400">class <span className="text-yellow-400 italic">LunavorEngine</span> {'{'}</p>
-              <p className="pl-4 text-slate-500 font-light italic">// High-end architecture</p>
-              <p className="pl-4"><span className="text-indigo-400">init</span>() {'{'}</p>
-              <p className="pl-8 text-white">this.ux = <span className="text-green-400">'flawless'</span>;</p>
-              <p className="pl-8 text-white">this.speed = <span className="text-green-400">'optimum'</span>;</p>
-              <p className="pl-8 text-white">this.secure = <span className="text-green-400">true</span>;</p>
+              <p className="text-blue-400">class <span className="text-yellow-400 italic">LunavorMastery</span> {'{'}</p>
+              <p className="pl-4 text-slate-500 font-light italic">// Global Rank One Algos</p>
+              <p className="pl-4"><span className="text-indigo-400">optimize</span>() {'{'}</p>
+              <p className="pl-8 text-white">this.seo = <span className="text-green-400">'excellent'</span>;</p>
+              <p className="pl-8 text-white">this.loadTime = <span className="text-green-400">'0.3s'</span>;</p>
+              <p className="pl-8 text-white">this.rank = <span className="text-green-400">1</span>;</p>
               <p className="pl-4 text-white">{'}'}</p>
               <p className="text-blue-400">{'}'}</p>
             </div>
-            
-            <div className="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
-               <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
-                    <Code2 size={20} className="text-blue-500" />
-                  </div>
-                  <span className="text-[11px] text-slate-500 font-black tracking-widest uppercase">LUNAVOR CORE</span>
-               </div>
-               <div className="px-3 py-1.5 rounded-lg bg-blue-500/20 text-blue-400 text-[9px] font-black tracking-widest">v3.0_STABLE</div>
-            </div>
           </div>
-          
-          {/* Ambient Glow behind card */}
           <div className="absolute -inset-4 bg-blue-600/20 blur-[80px] rounded-full group-hover:bg-blue-600/30 transition-all duration-700 -z-10" />
         </motion.div>
       </div>
