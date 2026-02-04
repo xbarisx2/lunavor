@@ -4,8 +4,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/',
   build: {
     outDir: 'dist',
+    assetsDir: 'assets',
     sourcemap: false,
     rollupOptions: {
       input: {
@@ -15,5 +17,6 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+    strictPort: true,
   }
 });
