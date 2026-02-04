@@ -10,6 +10,11 @@ const Hero: React.FC = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
         <div className="absolute top-1/4 -left-1/4 w-[700px] h-[700px] bg-blue-600/10 rounded-full blur-[160px] animate-pulse" />
         <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[140px]" />
+        
+        {/* Swirl / Vortex Ornament inspired by Logo */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] opacity-[0.05] border-[1px] border-blue-500/20 rounded-full animate-[spin_60s_linear_infinite]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vw] opacity-[0.03] border-[1px] border-indigo-500/10 rounded-full animate-[spin_45s_linear_infinite_reverse]" />
+
         {/* Subtle Grid Overlay */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
       </div>

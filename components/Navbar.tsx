@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { Menu, X, Instagram, MessageCircle } from 'lucide-react';
 import { NAV_LINKS, WHATSAPP_LINK, SOCIAL_LINKS } from '../constants.tsx';
+import Logo from './Logo.tsx';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,9 +37,9 @@ const Navbar: React.FC = () => {
             href="#"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-2xl font-black tracking-tighter gradient-text"
+            className="flex items-center"
           >
-            LUNAVOR
+            <Logo size={42} />
           </motion.a>
 
           {/* Desktop Links & Icons */}

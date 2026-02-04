@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { SOCIAL_LINKS } from '../constants.tsx';
+import Logo from './Logo.tsx';
 
 const Footer: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="md:col-span-2">
-            <div className="text-3xl font-black tracking-tighter gradient-text mb-6">LUNAVOR</div>
+            <Logo size={50} className="mb-6" />
             <p className="text-slate-500 max-w-sm mb-8">
               Konya merkezli, global standartlarda web yazılım ve dijital dönüşüm ajansı. İşletmenizin teknolojik çözüm ortağı.
             </p>
