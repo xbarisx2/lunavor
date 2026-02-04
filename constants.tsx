@@ -3,6 +3,9 @@ import React from 'react';
 import { Layout, Code, ShoppingCart, Github, Linkedin, Instagram, Globe, Database, ShieldCheck } from 'lucide-react';
 import { Service, Project, NavLink, Client, PricingPackage } from './types';
 
+export const WHATSAPP_NUMBER = '905050627876';
+export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Merhaba%20Lunavor%20ekibi!%20Projem%20i%C3%A7in%20teklif%20almak%20istiyorum.`;
+
 export const NAV_LINKS: NavLink[] = [
   { name: 'Çözümler', href: '#services' },
   { name: 'Paketler', href: '#packages' },
@@ -58,36 +61,61 @@ export const PROJECTS: Project[] = [
   {
     id: 1,
     title: 'Interakdeniz Alüminyum',
-    category: 'Kurumsal Web Tasarım',
-    imageUrl: 'https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=1200',
-    url: 'https://interakdeniz.com'
+    category: 'Endüstriyel Web & Katalog',
+    imageUrl: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1200',
+    url: 'https://www.interakdenizaluminyum.com/'
   },
   {
     id: 2,
     title: 'Hell Gym Center',
     category: 'Hizmet & Rezervasyon',
     imageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1200',
-    url: 'https://hellgym.com'
+    url: 'https://www.hellgymcenter.com/'
   },
   {
     id: 3,
-    title: 'Endüstriyel B2B Portalı',
-    category: 'Özel Yazılım',
-    imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-    url: 'https://lunavor.com/b2b-portal'
+    title: 'Ikonyum Ahşap',
+    category: 'Ahşap Tasarım & Kurumsal',
+    imageUrl: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=1200',
+    url: 'https://www.ikonyumahsap.com.tr/'
   }
 ];
 
 export const CLIENTS: Client[] = [
-  { id: 1, name: 'Interakdeniz', logoUrl: 'https://logo.clearbit.com/google.com' },
-  { id: 2, name: 'HellGym', logoUrl: 'https://logo.clearbit.com/spotify.com' },
-  { id: 3, name: 'Stripe', logoUrl: 'https://logo.clearbit.com/stripe.com' },
-  { id: 4, name: 'DigitalOcean', logoUrl: 'https://logo.clearbit.com/digitalocean.com' },
-  { id: 5, name: 'GitHub', logoUrl: 'https://logo.clearbit.com/github.com' },
+  { 
+    id: 1, 
+    name: 'Interakdeniz Alüminyum', 
+    logoUrl: 'https://github.com/xbarisx2/logo/blob/main/logoointer-removebg-preview.png?raw=true' 
+  },
+  { 
+    id: 2, 
+    name: 'Hell Gym Center', 
+    logoUrl: 'https://www.hellgymcenter.com/images/hellogo.png' 
+  },
+  { 
+    id: 3, 
+    name: 'Ikonyum Ahşap', 
+    logoUrl: 'https://www.ikonyumahsap.com.tr/img/ikonyum-ahsap.png' 
+  },
+  { 
+    id: 4, 
+    name: 'TechSolutions', 
+    logoUrl: 'https://logo.clearbit.com/nvidia.com' 
+  },
+  { 
+    id: 5, 
+    name: 'DigitalFlow', 
+    logoUrl: 'https://logo.clearbit.com/adobe.com' 
+  },
+  { 
+    id: 6, 
+    name: 'GlobalConnect', 
+    logoUrl: 'https://logo.clearbit.com/intel.com' 
+  },
 ];
 
 export const SOCIAL_LINKS = [
-  { icon: <Instagram size={20} />, href: 'https://instagram.com' },
+  { icon: <Instagram size={20} />, href: 'https://www.instagram.com/lunavor.com.tr/' },
   { icon: <Linkedin size={20} />, href: 'https://linkedin.com' },
   { icon: <Github size={20} />, href: 'https://github.com' },
 ];

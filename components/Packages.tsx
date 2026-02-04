@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Star, ArrowRight } from 'lucide-react';
-import { PACKAGES } from '../constants';
+import { PACKAGES, WHATSAPP_LINK } from '../constants';
 
 const Packages: React.FC = () => {
   return (
@@ -66,7 +66,10 @@ const Packages: React.FC = () => {
                 ))}
               </ul>
 
-              <motion.button 
+              <motion.a 
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className={`w-full py-6 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all flex items-center justify-center space-x-3 ${
@@ -77,7 +80,7 @@ const Packages: React.FC = () => {
               >
                 <span>Hemen Başlat</span>
                 <ArrowRight size={16} />
-              </motion.button>
+              </motion.a>
             </motion.div>
           ))}
         </div>

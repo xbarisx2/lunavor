@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import { WHATSAPP_LINK } from '../constants';
 
 const Contact: React.FC = () => {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -35,7 +36,7 @@ const Contact: React.FC = () => {
             </p>
 
             <div className="space-y-8">
-              <div className="flex items-center space-x-6 group">
+              <a href="mailto:barisyldrm@pm.me" className="flex items-center space-x-6 group">
                 <div className="w-14 h-14 rounded-2xl bg-slate-900 border border-white/5 flex items-center justify-center text-blue-500 transition-colors group-hover:bg-blue-600 group-hover:text-white">
                   <Mail size={24} />
                 </div>
@@ -43,16 +44,16 @@ const Contact: React.FC = () => {
                   <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">Doğrudan E-posta</p>
                   <p className="text-white font-bold text-lg">barisyldrm@pm.me</p>
                 </div>
-              </div>
-              <div className="flex items-center space-x-6 group">
+              </a>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-6 group">
                 <div className="w-14 h-14 rounded-2xl bg-slate-900 border border-white/5 flex items-center justify-center text-cyan-500 transition-colors group-hover:bg-cyan-600 group-hover:text-white">
                   <Phone size={24} />
                 </div>
                 <div>
-                  <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">Müşteri Hattı</p>
+                  <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">WhatsApp Hattı</p>
                   <p className="text-white font-bold text-lg">0505 062 78 76</p>
                 </div>
-              </div>
+              </a>
               <div className="flex items-center space-x-6 group">
                 <div className="w-14 h-14 rounded-2xl bg-slate-900 border border-white/5 flex items-center justify-center text-indigo-500 transition-colors group-hover:bg-indigo-600 group-hover:text-white">
                   <MapPin size={24} />
@@ -64,13 +65,13 @@ const Contact: React.FC = () => {
               </div>
             </div>
             
-            <div className="mt-16 p-6 border border-blue-500/20 bg-blue-500/5 rounded-2xl flex items-center justify-between group cursor-pointer hover:bg-blue-500/10 transition-all">
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="mt-16 p-6 border border-blue-500/20 bg-blue-500/5 rounded-2xl flex items-center justify-between group cursor-pointer hover:bg-blue-500/10 transition-all block">
               <div>
-                <p className="text-white font-bold text-sm">Hemen Bir Toplantı Planlayın</p>
-                <p className="text-slate-500 text-xs">Takvimimizden size uygun saati seçin.</p>
+                <p className="text-white font-bold text-sm">Hemen WhatsApp üzerinden yazın</p>
+                <p className="text-slate-500 text-xs">Size en hızlı bu kanaldan yardımcı olabiliriz.</p>
               </div>
               <ExternalLink size={20} className="text-blue-500" />
-            </div>
+            </a>
           </motion.div>
 
           <motion.div
@@ -123,7 +124,7 @@ const Contact: React.FC = () => {
                 {isSubmitting ? (
                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 ) : submitted ? (
-                  <span>Teklif Talebi Alındı!</span>
+                  <span>Mesajınız Bize Ulaştı!</span>
                 ) : (
                   <>
                     <span>Talebi Gönder</span>

@@ -52,12 +52,14 @@
       }
       /* Mobilde başlıkların taşmasını önleyen responsive boyutlandırma */
       .fluid-h1 {
-        font-size: clamp(2.5rem, 8vw, 6.5rem);
-        line-height: 0.95;
+        font-size: clamp(2.4rem, 9vw, 6.2rem);
+        line-height: 1;
+        letter-spacing: -0.04em;
       }
       .fluid-h2 {
         font-size: clamp(2rem, 5vw, 4.5rem);
-        line-height: 1;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
       }
       @keyframes marquee {
         0% { transform: translateX(0); }
@@ -71,6 +73,13 @@
       ::-webkit-scrollbar-track { background: var(--bg-dark); }
       ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
       ::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .rotate-y-12 {
+        transform: rotateY(-12deg);
+      }
     </style>
   <script type="importmap">
 {
