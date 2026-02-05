@@ -6,15 +6,10 @@ import { ArrowUpRight, Code2, Rocket, Zap, ChevronRight } from 'lucide-react';
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-[95vh] lg:min-h-screen flex flex-col justify-center pt-28 pb-16 overflow-hidden px-6 lg:px-12">
-      {/* Dynamic Background */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
         <div className="absolute top-1/4 -left-1/4 w-[700px] h-[700px] bg-blue-600/10 rounded-full blur-[160px] animate-pulse" />
         <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[140px]" />
-        
-        {/* Swirl / Vortex Ornament */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] opacity-[0.05] border-[1px] border-blue-500/20 rounded-full animate-[spin_60s_linear_infinite]" />
-
-        {/* Subtle Grid Overlay */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
       </div>
 
@@ -28,15 +23,15 @@ const Hero: React.FC = () => {
           <div className="inline-flex items-center space-x-2 px-4 py-2 mb-10 bg-blue-500/10 border border-blue-500/20 rounded-full backdrop-blur-md">
             <Zap size={14} className="text-blue-500 fill-blue-500" />
             <span className="text-[11px] font-black tracking-[0.4em] text-blue-400 uppercase">
-              TURKEY'S FINEST SOFTWARE ENGINEERING
+              PROFESYONEL WEB TASARIM & YAZILIM AJANSI
             </span>
           </div>
 
           <h1 className="fluid-h1 font-black tracking-tighter mb-10 uppercase leading-none">
-            DİJİTAL <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 italic pr-4">MİMARİNİN</span> <br />
+            KONYA <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 italic pr-4">WEB TASARIM</span> <br />
             <span className="relative inline-block">
-              YENİDEN
+              VE YAZILIMDA
               <motion.span 
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
@@ -44,11 +39,11 @@ const Hero: React.FC = () => {
                 className="absolute -bottom-2 left-0 h-2 bg-blue-600/30 rounded-full" 
               />
             </span> <br />
-            ZİRVESİNDEYİZ.
+            ZİRVEYE OYNAYIN.
           </h1>
 
           <p className="text-lg md:text-2xl text-slate-400 max-w-2xl mb-14 leading-relaxed font-light">
-            Sadece web sitesi değil, <span className="text-white font-bold">SEO dominasyonu</span> kuran ve markanızı küresel rekabete hazırlayan <span className="text-white font-bold">yüksek performanslı</span> dijital ekosistemler inşa ediyoruz.
+            Lunavor Agency ile sadece bir web sitesi değil, Google'da <span className="text-white font-bold">ilk sırada</span> yer alacak, <span className="text-white font-bold">SEO odaklı</span> yüksek performanslı bir dijital kimlik inşa ediyoruz.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-6">
@@ -58,7 +53,7 @@ const Hero: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto px-12 py-6 bg-blue-600 text-white font-black rounded-2xl flex items-center justify-center space-x-3 transition-all shadow-[0_25px_50px_-12px_rgba(37,99,235,0.5)]"
             >
-              <span>KURUMSAL ÇÖZÜMLER</span>
+              <span>TEKLİF ALIN</span>
               <Rocket size={20} />
             </motion.a>
             <motion.a
@@ -71,7 +66,6 @@ const Hero: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Responsive Code Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8, x: 40 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -85,12 +79,12 @@ const Hero: React.FC = () => {
               <div className="w-3 h-3 rounded-full bg-green-500/40" />
             </div>
             <div className="font-mono text-[12px] md:text-sm space-y-4 leading-relaxed">
-              <p className="text-blue-400">class <span className="text-yellow-400 italic">LunavorMastery</span> {'{'}</p>
-              <p className="pl-4 text-slate-500 font-light italic">// Global Rank One Algos</p>
+              <p className="text-blue-400">class <span className="text-yellow-400 italic">LunavorSEO</span> {'{'}</p>
+              <p className="pl-4 text-slate-500 font-light italic">// Google Top Rank Algorithm</p>
               <p className="pl-4"><span className="text-indigo-400">optimize</span>() {'{'}</p>
-              <p className="pl-8 text-white">this.seo = <span className="text-green-400">'excellent'</span>;</p>
-              <p className="pl-8 text-white">this.loadTime = <span className="text-green-400">'0.3s'</span>;</p>
-              <p className="pl-8 text-white">this.rank = <span className="text-green-400">1</span>;</p>
+              <p className="pl-8 text-white">this.keywords = <span className="text-green-400">'Web Tasarım'</span>;</p>
+              <p className="pl-8 text-white">this.location = <span className="text-green-400">'Konya'</span>;</p>
+              <p className="pl-8 text-white">this.googleRank = <span className="text-green-400">1</span>;</p>
               <p className="pl-4 text-white">{'}'}</p>
               <p className="text-blue-400">{'}'}</p>
             </div>
