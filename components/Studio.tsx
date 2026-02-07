@@ -1,9 +1,12 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PlayCircle, Camera, Aperture, Globe } from 'lucide-react';
+import { PlayCircle, Camera, Globe } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext.tsx';
 
 const Studio: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="studio" className="py-32 px-6 bg-[#020617] relative overflow-hidden">
       <div className="absolute top-0 right-0 w-full h-full opacity-5 pointer-events-none">
@@ -27,16 +30,16 @@ const Studio: React.FC = () => {
           >
             <div className="flex items-center space-x-3 mb-8">
               <span className="w-12 h-[2px] bg-blue-600" />
-              <span className="text-xs font-black tracking-[0.5em] text-blue-500 uppercase">Production Excellence</span>
+              <span className="text-xs font-black tracking-[0.5em] text-blue-500 uppercase">{t.studio.badge}</span>
             </div>
             
             <h2 className="text-5xl md:text-6xl font-black mb-10 tracking-tighter leading-tight text-white italic">
-              GLOBAL STANDARTLARDA <br />
-              <span className="gradient-text">GÖRSEL GÜÇ.</span>
+              {t.studio.title1} <br />
+              <span className="gradient-text">{t.studio.title2}</span>
             </h2>
             
             <p className="text-xl text-slate-400 mb-14 leading-relaxed font-light border-l-2 border-blue-900 pl-8">
-              Teknoloji sadece bir araçtır, hikaye ise her şey. Lunavor Agency Studio, en son teknoloji 8K sinema kameraları ve profesyonel post-prodüksiyon ekibi ile markanızı görsel bir başyapıta dönüştürür.
+              {t.studio.desc}
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
@@ -45,18 +48,18 @@ const Studio: React.FC = () => {
                    <div className="p-3 bg-blue-950/50 rounded-lg group-hover:bg-blue-600 transition-colors">
                       <Camera size={22} className="text-white" />
                    </div>
-                   <span className="text-white font-bold tracking-tight uppercase text-sm">Üretim Belgeseli</span>
+                   <span className="text-white font-bold tracking-tight uppercase text-sm">{t.studio.docs}</span>
                 </div>
-                <p className="text-xs text-slate-500 leading-relaxed uppercase tracking-wider font-bold">Sinematik Anlatım</p>
+                <p className="text-xs text-slate-500 leading-relaxed uppercase tracking-wider font-bold">{t.studio.docsSub}</p>
               </div>
               <div className="group">
                 <div className="flex items-center space-x-4 mb-4">
                    <div className="p-3 bg-blue-950/50 rounded-lg group-hover:bg-blue-600 transition-colors">
                       <Globe size={22} className="text-white" />
                    </div>
-                   <span className="text-white font-bold tracking-tight uppercase text-sm">Kurumsal Reklam</span>
+                   <span className="text-white font-bold tracking-tight uppercase text-sm">{t.studio.adverts}</span>
                 </div>
-                <p className="text-xs text-slate-500 leading-relaxed uppercase tracking-wider font-bold">Global Yayın Kalitesi</p>
+                <p className="text-xs text-slate-500 leading-relaxed uppercase tracking-wider font-bold">{t.studio.advertsSub}</p>
               </div>
             </div>
           </motion.div>
@@ -70,7 +73,7 @@ const Studio: React.FC = () => {
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-[0_0_80px_rgba(30,58,138,0.2)] bg-slate-900 border border-white/5 group">
               <img 
                 src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200" 
-                alt="Pro Lab" 
+                alt="Production Hub" 
                 className="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-blue-900/10 pointer-events-none group-hover:bg-transparent transition-all" />
@@ -79,7 +82,7 @@ const Studio: React.FC = () => {
                     <PlayCircle size={24} className="text-blue-500" />
                  </div>
                  <div>
-                    <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest">Latest Project</p>
+                    <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest">{t.studio.latest}</p>
                     <p className="text-xs text-white font-bold uppercase">Corporate Showreel 2024</p>
                  </div>
               </div>

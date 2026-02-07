@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { WHATSAPP_LINK } from '../constants.tsx';
+import { useLanguage } from '../context/LanguageContext.tsx';
 
 const Contact: React.FC = () => {
+  const { t } = useLanguage();
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -24,7 +26,7 @@ const Contact: React.FC = () => {
           name: formState.name,
           email: formState.email,
           message: formState.message,
-          _subject: `Lunavor Yeni İletişim Formu: ${formState.name}`,
+          _subject: `New Global Contact from: ${formState.name}`,
         }),
       });
 
@@ -33,11 +35,11 @@ const Contact: React.FC = () => {
         setFormState({ name: '', email: '', message: '' });
         setTimeout(() => setSubmitted(false), 5000);
       } else {
-        alert("Bir sorun oluştu, lütfen daha sonra tekrar deneyin veya WhatsApp üzerinden ulaşın.");
+        alert("Something went wrong, please try again or contact via WhatsApp.");
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      alert("Gönderim sırasında bir hata oluştu.");
+      alert("An error occurred during submission.");
     } finally {
       setIsSubmitting(false);
     }
@@ -52,10 +54,9 @@ const Contact: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter italic uppercase">İŞE <br /><span className="gradient-text">BAŞLAYALIM.</span></h2>
+            <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter italic uppercase">{t.contact.title1} <br /><span className="gradient-text">{t.contact.title2}</span></h2>
             <p className="text-slate-400 mb-12 text-xl font-light leading-relaxed">
-              Özel bir projeniz mi var yoksa hazır paketlerimizden birini mi istiyorsunuz? 
-              Bize mesaj gönderin, profesyonel ekibimiz 24 saat içinde çözüm önerileriyle size dönsün.
+              {t.contact.desc}
             </p>
 
             <div className="space-y-8">
@@ -64,7 +65,7 @@ const Contact: React.FC = () => {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">Doğrudan E-posta</p>
+                  <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">{t.contact.email}</p>
                   <p className="text-white font-bold text-lg">barisyldrm@pm.me</p>
                 </div>
               </a>
@@ -73,8 +74,8 @@ const Contact: React.FC = () => {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">WhatsApp Hattı</p>
-                  <p className="text-white font-bold text-lg">0505 062 78 76</p>
+                  <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">{t.contact.whatsapp}</p>
+                  <p className="text-white font-bold text-lg">+90 505 062 78 76</p>
                 </div>
               </a>
               <div className="flex items-center space-x-6 group">
@@ -82,16 +83,16 @@ const Contact: React.FC = () => {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">Genel Merkez</p>
-                  <p className="text-white font-bold text-lg">Beyhekim Mah., Selçuklu, Konya</p>
+                  <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">{t.contact.hq}</p>
+                  <p className="text-white font-bold text-lg">{t.contact.hqLoc}</p>
                 </div>
               </div>
             </div>
             
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="mt-16 p-6 border border-blue-500/20 bg-blue-500/5 rounded-2xl flex items-center justify-between group cursor-pointer hover:bg-blue-500/10 transition-all block">
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="mt-16 p-6 border border-blue-500/20 bg-blue-500/5 rounded-2xl flex items-center justify-between group cursor-pointer hover:bg-blue-500/10 transition-all block text-left">
               <div>
-                <p className="text-white font-bold text-sm">Hemen WhatsApp üzerinden yazın</p>
-                <p className="text-slate-500 text-xs">Size en hızlı bu kanaldan yardımcı olabiliriz.</p>
+                <p className="text-white font-bold text-sm">{t.contact.quickChat}</p>
+                <p className="text-slate-500 text-xs">{t.contact.quickChatSub}</p>
               </div>
               <ExternalLink size={20} className="text-blue-500" />
             </a>
@@ -105,38 +106,38 @@ const Contact: React.FC = () => {
           >
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="space-y-3">
-                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Adınız & Şirketiniz</label>
+                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t.contact.formName}</label>
                 <input 
                   type="text" 
                   name="name"
                   required
                   value={formState.name}
                   onChange={(e) => setFormState({...formState, name: e.target.value})}
-                  placeholder="İsim Giriniz"
+                  placeholder="Enter Name"
                   className="w-full bg-slate-950/50 border border-white/10 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-blue-500 transition-all focus:ring-4 ring-blue-500/10"
                 />
               </div>
               <div className="space-y-3">
-                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">İletişim Adresi</label>
+                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t.contact.formEmail}</label>
                 <input 
                   type="email" 
                   name="email"
                   required
                   value={formState.email}
                   onChange={(e) => setFormState({...formState, email: e.target.value})}
-                  placeholder="ornek@mail.com"
+                  placeholder="example@mail.com"
                   className="w-full bg-slate-950/50 border border-white/10 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-blue-500 transition-all focus:ring-4 ring-blue-500/10"
                 />
               </div>
               <div className="space-y-3">
-                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Proje Detayları</label>
+                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t.contact.formProject}</label>
                 <textarea 
                   name="message"
                   required
                   rows={4}
                   value={formState.message}
                   onChange={(e) => setFormState({...formState, message: e.target.value})}
-                  placeholder="Mesajınızı buraya yazın..."
+                  placeholder={t.contact.formPlaceholder}
                   className="w-full bg-slate-950/50 border border-white/10 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-blue-500 transition-all focus:ring-4 ring-blue-500/10 resize-none"
                 />
               </div>
@@ -150,10 +151,10 @@ const Contact: React.FC = () => {
                 {isSubmitting ? (
                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 ) : submitted ? (
-                  <span>Mesajınız Bize Ulaştı!</span>
+                  <span>{t.contact.received}</span>
                 ) : (
                   <>
-                    <span>Talebi Gönder</span>
+                    <span>{t.contact.submit}</span>
                     <Send size={18} />
                   </>
                 )}

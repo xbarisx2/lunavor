@@ -1,14 +1,16 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
-import { Menu, X, Instagram, MessageCircle } from 'lucide-react';
-import { NAV_LINKS, WHATSAPP_LINK, SOCIAL_LINKS } from '../constants.tsx';
+import { Menu, X, Instagram, MessageCircle, Globe } from 'lucide-react';
+import { WHATSAPP_LINK, SOCIAL_LINKS } from '../constants.tsx';
+import { useLanguage } from '../context/LanguageContext.tsx';
 import Logo from './Logo.tsx';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollYProgress } = useScroll();
+  const { language, setLanguage, t } = useLanguage();
 
   const instagramLink = SOCIAL_LINKS.find(s => s.href.includes('instagram'))?.href || 'https://www.instagram.com/lunavor.com.tr/';
 
@@ -19,6 +21,14 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const navLinks = [
+    { name: t.nav.solutions, href: '#services' },
+    { name: t.nav.studio, href: '#studio' },
+    { name: t.nav.packages, href: '#packages' },
+    { name: t.nav.portfolio, href: '#portfolio' },
+    { name: t.nav.contact, href: '#contact' },
+  ];
 
   return (
     <>
@@ -45,7 +55,7 @@ const Navbar: React.FC = () => {
           {/* Desktop Links & Icons */}
           <div className="hidden md:flex items-center space-x-8">
             <div className="flex items-center space-x-8 border-r border-white/10 pr-8">
-              {NAV_LINKS.map((link) => (
+              {navLinks.map((link) => (
                 <motion.a
                   key={link.name}
                   href={link.href}
@@ -60,6 +70,17 @@ const Navbar: React.FC = () => {
             </div>
 
             <div className="flex items-center space-x-5">
+              {/* Language Switcher */}
+              <button
+                onClick={() => setLanguage(language === 'en' ? 'tr' : 'en')}
+                className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg border border-white/10 hover:border-blue-500/50 transition-all group bg-white/5"
+              >
+                <Globe size={14} className="text-blue-400 group-hover:rotate-12 transition-transform" />
+                <span className="text-[10px] font-black uppercase text-white tracking-widest">
+                  {language === 'en' ? 'TR' : 'EN'}
+                </span>
+              </button>
+
               <motion.a
                 href={instagramLink}
                 target="_blank"
@@ -88,13 +109,19 @@ const Navbar: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 className="px-6 py-2.5 rounded-full bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all"
               >
-                Teklif Al
+                {t.nav.getQuote}
               </motion.a>
             </div>
           </div>
 
           {/* Mobile Toggle */}
           <div className="flex items-center space-x-4 md:hidden">
+            <button
+              onClick={() => setLanguage(language === 'en' ? 'tr' : 'en')}
+              className="px-2 py-1 rounded bg-white/5 border border-white/10 text-[10px] font-black"
+            >
+              {language === 'en' ? 'TR' : 'EN'}
+            </button>
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-slate-400">
                <MessageCircle size={22} />
             </a>
@@ -117,7 +144,7 @@ const Navbar: React.FC = () => {
               className="absolute top-full left-0 right-0 bg-slate-950 border-b border-white/10 overflow-hidden shadow-2xl"
             >
               <div className="flex flex-col p-8 space-y-6">
-                {NAV_LINKS.map((link, idx) => (
+                {navLinks.map((link, idx) => (
                   <motion.a
                     key={link.name}
                     initial={{ opacity: 0, x: -10 }}
@@ -152,7 +179,7 @@ const Navbar: React.FC = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="w-full py-4 rounded-xl bg-blue-600 text-white text-center font-bold text-lg"
                 >
-                  Teklif Al
+                  {t.nav.getQuote}
                 </motion.a>
               </div>
             </motion.div>

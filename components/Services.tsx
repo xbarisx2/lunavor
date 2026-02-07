@@ -1,111 +1,108 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, ShoppingCart, Layout, ArrowUpRight, Zap, Globe, Cpu } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext.tsx';
 
 const Services: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
-    <section id="services" className="py-32 px-6 lg:px-12">
+    <section id="services" className="py-24 md:py-32 px-5 lg:px-12 bg-[#020617]">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-24">
+        <div className="mb-20 text-center md:text-left">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="fluid-h2 font-black tracking-tighter mb-8 uppercase italic">
-              DİJİTAL <br /><span className="gradient-text">GÜCÜNÜZ.</span>
+            <h2 className="fluid-h2 font-black tracking-tighter mb-6 uppercase italic">
+              {t.services.title1} <br /><span className="gradient-text">{t.services.title2}</span>
             </h2>
-            <div className="h-2 w-24 bg-blue-600 rounded-full shadow-[0_0_15px_rgba(37,99,235,0.5)]" />
+            <div className="h-1.5 w-20 bg-blue-600 rounded-full mx-auto md:mx-0" />
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:auto-rows-[420px]">
-          {/* Main Card */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-5 lg:gap-8">
+          {/* Software Card */}
           <motion.div 
-            whileHover={{ y: -8 }}
-            className="md:col-span-7 glass-card rounded-[3rem] p-10 md:p-14 flex flex-col justify-between group overflow-hidden relative"
+            whileHover={{ y: -5 }}
+            className="md:col-span-12 lg:col-span-7 glass-card rounded-[2.5rem] p-8 md:p-12 flex flex-col justify-between group overflow-hidden relative"
           >
-            <div className="absolute -top-20 -right-20 w-80 h-80 bg-blue-600/5 rounded-full blur-[100px] group-hover:bg-blue-600/15 transition-all duration-700" />
+            <div className="absolute -top-20 -right-20 w-80 h-80 bg-blue-600/5 rounded-full blur-[100px]" />
             <div>
-              <div className="w-20 h-20 rounded-3xl bg-blue-600 flex items-center justify-center mb-10 shadow-2xl">
-                <Code2 size={40} className="text-white" />
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-blue-600 flex items-center justify-center mb-10 shadow-lg shadow-blue-900/40">
+                <Code2 size={32} className="text-white md:size-10" />
               </div>
-              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">Enterprise Yazılım</h3>
-              <p className="text-slate-400 text-lg lg:text-xl font-light leading-relaxed max-w-lg">
-                Karmaşık iş süreçlerinizi modern teknolojilerle ölçeklenebilir ve sürdürülebilir sistemlere dönüştürüyoruz.
+              <h3 className="text-2xl md:text-4xl font-bold mb-4 tracking-tight">{t.services.enterprise.title}</h3>
+              <p className="text-slate-400 text-sm md:text-lg font-light leading-relaxed max-w-lg">
+                {t.services.enterprise.desc}
               </p>
             </div>
-            <div className="flex items-center justify-between mt-12">
-              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-500">Scale without limits</span>
-              <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
-                <ArrowUpRight size={24} />
+            <div className="flex items-center justify-between mt-10">
+              <span className="text-[9px] font-black uppercase tracking-[0.3em] text-blue-500">World-Class Solutions</span>
+              <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+                <ArrowUpRight size={20} />
               </div>
             </div>
           </motion.div>
 
-          {/* Performance Mini */}
+          {/* Performance Card */}
           <motion.div 
-            whileHover={{ y: -8 }}
-            className="md:col-span-5 bg-slate-900 rounded-[3rem] p-12 flex flex-col justify-center items-center text-center border border-white/5 relative overflow-hidden group shadow-2xl"
+            className="md:col-span-6 lg:col-span-5 bg-slate-900 rounded-[2.5rem] p-10 flex flex-col justify-center items-center text-center border border-white/5 relative overflow-hidden group shadow-xl"
           >
-            <Zap size={56} className="text-yellow-400 mb-8 animate-pulse" />
-            <div className="text-7xl font-black text-white mb-4 tracking-tighter italic">99.9%</div>
-            <p className="text-xs font-black uppercase tracking-[0.5em] text-slate-500">Uptime & Speed</p>
-            <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <Zap size={48} className="text-yellow-400 mb-6 animate-pulse" />
+            <div className="text-5xl md:text-7xl font-black text-white mb-2 tracking-tighter italic">99.9%</div>
+            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500">{t.services.perf}</p>
           </motion.div>
 
-          {/* E-commerce */}
+          {/* E-commerce Card */}
           <motion.div 
-            whileHover={{ y: -8 }}
-            className="md:col-span-5 glass-card rounded-[3rem] p-12 flex flex-col justify-between group"
+            className="md:col-span-6 lg:col-span-5 glass-card rounded-[2.5rem] p-10 flex flex-col justify-between"
           >
-            <div className="w-16 h-16 rounded-2xl bg-slate-950 border border-white/5 flex items-center justify-center mb-8">
-              <ShoppingCart size={32} className="text-cyan-500" />
+            <div className="w-14 h-14 rounded-2xl bg-slate-950 border border-white/5 flex items-center justify-center mb-8">
+              <ShoppingCart size={24} className="text-cyan-500" />
             </div>
             <div>
-              <h3 className="text-3xl font-bold mb-4 tracking-tight">E-Ticaret</h3>
-              <p className="text-slate-400 leading-relaxed font-light">Global ödeme sistemleri ve tam entegrasyonlu uçtan uca mağaza yönetimi.</p>
+              <h3 className="text-2xl font-bold mb-3 tracking-tight">{t.services.ecommerce.title}</h3>
+              <p className="text-slate-400 text-sm leading-relaxed font-light">{t.services.ecommerce.desc}</p>
             </div>
-            <div className="mt-10 flex flex-col gap-4">
-              <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+            <div className="mt-8">
+              <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden mb-3">
                 <motion.div 
                   initial={{ width: 0 }}
                   whileInView={{ width: '92%' }}
-                  className="h-full bg-cyan-500 shadow-[0_0_10px_rgba(6,182,212,0.5)]"
+                  className="h-full bg-cyan-500"
                 />
               </div>
-              <div className="flex justify-between items-center text-[10px] text-cyan-500 font-black uppercase tracking-widest">
-                <span>Market Growth</span>
-                <span>+92% Efficiency</span>
+              <div className="flex justify-between items-center text-[9px] text-cyan-500 font-black uppercase tracking-widest">
+                <span>{t.services.growth}</span>
+                <span>+92% {t.services.efficiency}</span>
               </div>
             </div>
           </motion.div>
 
           {/* UI/UX Card */}
           <motion.div 
-            whileHover={{ y: -8 }}
-            className="md:col-span-7 glass-card rounded-[3rem] p-10 md:p-14 flex flex-col justify-between group overflow-hidden relative"
+            className="md:col-span-12 lg:col-span-7 glass-card rounded-[2.5rem] p-10 flex flex-col justify-between group relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/10 to-transparent pointer-events-none" />
-            <div className="flex flex-col md:flex-row md:items-start justify-between gap-12">
-              <div className="max-w-md">
-                <div className="w-20 h-20 rounded-3xl bg-indigo-600/10 flex items-center justify-center mb-10 border border-indigo-500/20">
-                  <Layout size={40} className="text-indigo-500" />
+            <div className="flex flex-col md:flex-row gap-10 items-start">
+              <div className="flex-1">
+                <div className="w-16 h-16 rounded-3xl bg-indigo-600/10 flex items-center justify-center mb-8 border border-indigo-500/20">
+                  <Layout size={32} className="text-indigo-500" />
                 </div>
-                <h3 className="text-3xl lg:text-4xl font-bold mb-6 tracking-tight">Eşsiz UI/UX</h3>
-                <p className="text-slate-400 text-lg font-light leading-relaxed">
-                  Kullanıcılarınızın bağ kuracağı, yüksek dönüşüm odaklı ve akışkan dijital deneyimler tasarlıyoruz.
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">{t.services.uiux.title}</h3>
+                <p className="text-slate-400 text-sm md:text-base font-light leading-relaxed">
+                  {t.services.uiux.desc}
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-6 self-center md:self-start">
-                <div className="p-5 bg-white/5 rounded-3xl border border-white/5 flex flex-col items-center">
-                  <Globe size={24} className="text-slate-500 mb-3" />
-                  <span className="text-[9px] font-black uppercase text-slate-500 tracking-widest">SEO Optimized</span>
+              <div className="grid grid-cols-2 gap-4 w-full md:w-auto">
+                <div className="p-5 bg-white/5 rounded-2xl border border-white/5 flex flex-col items-center">
+                  <Globe size={20} className="text-slate-500 mb-2" />
+                  <span className="text-[8px] font-black uppercase text-slate-500 tracking-widest">SEO MAX</span>
                 </div>
-                <div className="p-5 bg-white/5 rounded-3xl border border-white/5 flex flex-col items-center">
-                  <Cpu size={24} className="text-slate-500 mb-3" />
-                  <span className="text-[9px] font-black uppercase text-slate-500 tracking-widest">Core Web Vitals</span>
+                <div className="p-5 bg-white/5 rounded-2xl border border-white/5 flex flex-col items-center">
+                  <Cpu size={20} className="text-slate-500 mb-2" />
+                  <span className="text-[8px] font-black uppercase text-slate-500 tracking-widest">FASTEST</span>
                 </div>
               </div>
             </div>

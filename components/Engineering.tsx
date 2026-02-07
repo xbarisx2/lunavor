@@ -1,9 +1,12 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Database, ShieldCheck, Layers, GitBranch, Cpu, Search, Trophy } from 'lucide-react';
+import { Terminal, Database, ShieldCheck, Cpu, Search, Trophy } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext.tsx';
 
 const Engineering: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="engineering" className="py-32 px-6 lg:px-12 relative bg-slate-950 overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
@@ -15,21 +18,21 @@ const Engineering: React.FC = () => {
             viewport={{ once: true }}
             className="lg:col-span-5"
           >
-            <span className="text-[10px] font-black tracking-[0.6em] text-blue-500 uppercase mb-6 block">PREMIUM ENGINEERING</span>
+            <span className="text-[10px] font-black tracking-[0.6em] text-blue-500 uppercase mb-6 block">{t.engineering.badge}</span>
             <h2 className="fluid-h2 font-black mb-10 tracking-tighter uppercase italic break-words">
-              DİJİTAL <br /><span className="gradient-text">HAKİMİYET.</span>
+              {t.engineering.title1} <br /><span className="gradient-text">{t.engineering.title2}</span>
             </h2>
             
             <p className="text-xl text-slate-400 mb-14 font-light leading-relaxed max-w-lg">
-              Türkiye'nin en seçkin markaları için sunduğumuz çözümlerde olduğu gibi; her satır kod, markanızı arama motorlarında <span className="text-white font-bold italic underline decoration-blue-500 underline-offset-8">zirveye taşıyan</span> bir mühendislik başyapıtıdır.
+              {t.engineering.desc}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
               {[
-                { icon: <Search size={20}/>, text: 'Advanced SEO Optimization' },
-                { icon: <Trophy size={20}/>, text: 'High-Performance UX' },
-                { icon: <Database size={20}/>, text: 'Scalable Cloud Architecture' },
-                { icon: <ShieldCheck size={20}/>, text: 'Cyber Security Priority' }
+                { icon: <Search size={20}/>, text: t.engineering.seo },
+                { icon: <Trophy size={20}/>, text: t.engineering.ux },
+                { icon: <Database size={20}/>, text: t.engineering.cloud },
+                { icon: <ShieldCheck size={20}/>, text: t.engineering.security }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center space-x-5 group cursor-default p-4 glass-card rounded-2xl border-white/5 hover:border-blue-500/30 transition-all">
                   <div className="w-12 h-12 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center text-slate-500 group-hover:bg-blue-600 group-hover:text-white transition-all">
@@ -58,7 +61,7 @@ const Engineering: React.FC = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Terminal size={14} className="text-slate-600" />
-                    <span className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">lunavor_ai_engine.v4.0</span>
+                    <span className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">{t.engineering.terminal}</span>
                   </div>
                 </div>
                 
@@ -67,16 +70,16 @@ const Engineering: React.FC = () => {
                   <div className="flex gap-4 mb-6">
                     <span className="text-slate-700">➜</span>
                     <span className="text-blue-400 font-bold">lunavor</span>
-                    <span className="text-white">deploy --seo-rank-boost --performance-max</span>
+                    <span className="text-white">deploy --global-seo-boost --perf-ultra</span>
                   </div>
-                  <div className="text-slate-500 mb-6 font-light italic opacity-60 break-all">[PROCESS] Building High-End Infrastructure...</div>
-                  <div className="text-slate-500 mb-10 font-light italic opacity-60 break-all">[SUCCESS] Google Core Web Vitals: 100/100 Points</div>
+                  <div className="text-slate-500 mb-6 font-light italic opacity-60 break-all">{t.engineering.terminalProcess}</div>
+                  <div className="text-slate-500 mb-10 font-light italic opacity-60 break-all">{t.engineering.terminalSuccess}</div>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div className="p-8 bg-slate-900/50 border border-blue-500/10 rounded-3xl group-hover:border-blue-500/30 transition-all">
                       <div className="flex items-center space-x-3 mb-6">
                          <div className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
-                         <span className="text-[10px] text-slate-500 font-black tracking-[0.2em] uppercase">Conversion Rate</span>
+                         <span className="text-[10px] text-slate-500 font-black tracking-[0.2em] uppercase">{t.engineering.conversion}</span>
                       </div>
                       <div className="text-3xl font-black text-white italic">+420%</div>
                     </div>

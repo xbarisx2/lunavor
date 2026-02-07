@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { LanguageProvider } from './context/LanguageContext.tsx';
 import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
 import References from './components/References.tsx';
@@ -11,7 +12,7 @@ import Engineering from './components/Engineering.tsx';
 import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
 
-function App() {
+function AppContent() {
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
@@ -50,6 +51,14 @@ function App() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 }
 

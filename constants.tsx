@@ -4,33 +4,33 @@ import { Layout, Code, ShoppingCart, Github, Linkedin, Instagram, Globe, Databas
 import { Service, Project, NavLink, Client, PricingPackage } from './types.ts';
 
 export const WHATSAPP_NUMBER = '905050627876';
-export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Merhaba%20Lunavor%20ekibi!%20Projem%20i%C3%A7in%20teklif%20almak%20istiyorum.`;
+export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20Lunavor%20Team!%20I'd%20like%20to%20get%20a%20quote%20for%20a%20global%20project.`;
 
 export const NAV_LINKS: NavLink[] = [
-  { name: 'Çözümler', href: '#services' },
+  { name: 'Solutions', href: '#services' },
   { name: 'Studio', href: '#studio' },
-  { name: 'Paketler', href: '#packages' },
-  { name: 'Portfolyo', href: '#portfolio' },
-  { name: 'İletişim', href: '#contact' },
+  { name: 'Packages', href: '#packages' },
+  { name: 'Portfolio', href: '#portfolio' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export const SERVICES: Service[] = [
   {
     id: 'web-development',
-    title: 'Kurumsal Web Tasarım',
-    description: 'Şirketinizin dijital prestijini artıran, yüksek performanslı ve SEO uyumlu kurumsal web çözümleri.',
+    title: 'Enterprise Web Design',
+    description: 'High-performance, SEO-centric digital architectures that redefine your global presence.',
     iconName: 'Layout'
   },
   {
     id: 'ecommerce',
-    title: 'E-Ticaret Sistemleri',
-    description: 'Gelişmiş ödeme sistemleri ve stok yönetimi ile donatılmış, satış odaklı profesyonel mağaza altyapıları.',
+    title: 'E-Commerce Engines',
+    description: 'Sales-focused professional infrastructures with integrated payment and global inventory management.',
     iconName: 'ShoppingCart'
   },
   {
     id: 'custom-software',
-    title: 'Özel Yazılım Geliştirme',
-    description: 'İşletme süreçlerinizi otomatize eden, size özel kurgulanmış web tabanlı uygulama ve yazılım sistemleri.',
+    title: 'Custom Engineering',
+    description: 'Automated business processes through bespoke web applications and scalable software systems.',
     iconName: 'Code'
   }
 ];
@@ -38,44 +38,44 @@ export const SERVICES: Service[] = [
 export const PACKAGES: PricingPackage[] = [
   {
     id: 'starter',
-    name: 'Kurumsal Başlangıç',
+    name: 'Corporate Essential',
     price: '12.500₺',
-    features: ['Modern Kurumsal Tasarım', 'SEO Altyapısı', 'Mobil Uyumluluk', 'Yönetim Paneli', 'SSL Sertifikası Dahil']
+    features: ['Modern Global Design', 'SEO Infrastructure', 'Responsive Architecture', 'Management Panel', 'SSL Certified']
   },
   {
     id: 'pro',
-    name: 'E-Ticaret Pro',
+    name: 'E-Commerce Elite',
     price: '24.500₺',
-    features: ['Sanal POS Entegrasyonu', 'Gelişmiş Kargo Takip', 'Stok Takip Sistemi', 'Kampanya Yönetimi', '7/24 Teknik Destek'],
+    features: ['Global Payment Gateway', 'Advanced Logistics Integration', 'Stock Automation', 'Campaign Engine', '24/7 Priority Support'],
     recommended: true
   },
   {
     id: 'enterprise',
     name: 'Enterprise Custom',
-    price: 'Teklif Alın',
-    features: ['Özel API Geliştirme', 'Mikroservis Mimarisi', 'SaaS Çözümleri', 'Dedicated Altyapı', 'Bakım & Destek Anlaşması']
+    price: 'Custom Quote',
+    features: ['Bespoke API Engineering', 'Microservices Architecture', 'SaaS Solutions', 'Dedicated Infrastructure', 'SLA Agreement']
   }
 ];
 
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: 'Interakdeniz Alüminyum',
-    category: 'Endüstriyel Web & Katalog',
+    title: 'Interakdeniz Aluminum',
+    category: 'Industrial Web & Catalog',
     imageUrl: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1200',
     url: 'https://www.interakdenizaluminyum.com/'
   },
   {
     id: 2,
     title: 'Hell Gym Center',
-    category: 'Hizmet & Rezervasyon',
+    category: 'Service & Reservation',
     imageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1200',
     url: 'https://www.hellgymcenter.com/'
   },
   {
     id: 3,
-    title: 'Ikonyum Ahşap',
-    category: 'Ahşap Tasarım & Kurumsal',
+    title: 'Ikonyum Wood',
+    category: 'Design & Corporate',
     imageUrl: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=1200',
     url: 'https://www.ikonyumahsap.com.tr/'
   }

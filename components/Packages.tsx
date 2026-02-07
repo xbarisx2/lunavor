@@ -3,8 +3,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Star, ArrowRight } from 'lucide-react';
 import { PACKAGES, WHATSAPP_LINK } from '../constants.tsx';
+import { useLanguage } from '../context/LanguageContext.tsx';
 
 const Packages: React.FC = () => {
+  const { t, language } = useLanguage();
+
   return (
     <section id="packages" className="py-32 px-6 lg:px-12 bg-[#020617] relative">
       <div className="absolute inset-0 bg-blue-600/5 -z-10 blur-[150px]" />
@@ -16,13 +19,13 @@ const Packages: React.FC = () => {
             whileInView={{ opacity: 1 }}
             className="text-[10px] font-black tracking-[0.6em] text-blue-500 uppercase mb-6 block"
           >
-            SABİT FİYAT & GARANTİ KALİTE
+            {t.packages.badge}
           </motion.span>
           <h2 className="fluid-h2 font-black mb-8 uppercase italic tracking-tighter">
-            PROJE <span className="gradient-text">PAKETLERİ.</span>
+            {t.packages.title1} <span className="gradient-text">{t.packages.title2}</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl font-light">
-            Hedeflerinize ulaşmanızı sağlayacak teknoloji paketlerimiz. Karmaşa yok, sadece çözüm var.
+            {t.packages.desc}
           </p>
         </div>
 
@@ -43,15 +46,19 @@ const Packages: React.FC = () => {
               {pkg.recommended && (
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 px-8 py-2.5 bg-white text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-full flex items-center space-x-2 shadow-2xl">
                   <Star size={14} className="fill-blue-600" />
-                  <span>MOST POPULAR CHOICE</span>
+                  <span>{t.packages.popular}</span>
                 </div>
               )}
 
               <div className="mb-12">
-                <h3 className={`text-3xl font-bold mb-6 ${pkg.recommended ? 'text-white' : 'text-white'}`}>{pkg.name}</h3>
+                <h3 className={`text-3xl font-bold mb-6 text-white`}>{pkg.name}</h3>
                 <div className="flex items-baseline">
                   <span className={`text-5xl font-black tracking-tighter ${pkg.recommended ? 'text-white' : 'text-blue-500'}`}>{pkg.price}</span>
-                  {pkg.price !== 'Teklif Alın' && <span className={`text-[10px] ml-2 font-black uppercase tracking-widest ${pkg.recommended ? 'text-blue-100' : 'text-slate-500'}`}>'den başlayan</span>}
+                  {pkg.price !== 'Custom Quote' && pkg.price !== 'Özel Teklif' && (
+                    <span className={`text-[10px] ml-2 font-black uppercase tracking-widest ${pkg.recommended ? 'text-blue-100' : 'text-slate-500'}`}>
+                      {t.packages.startingFrom}
+                    </span>
+                  )}
                 </div>
               </div>
               
@@ -78,7 +85,7 @@ const Packages: React.FC = () => {
                   : 'bg-white/5 text-white border border-white/10 hover:bg-white hover:text-black hover:border-white'
                 }`}
               >
-                <span>Hemen Başlat</span>
+                <span>{t.packages.getStarted}</span>
                 <ArrowRight size={16} />
               </motion.a>
             </motion.div>

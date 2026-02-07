@@ -1,15 +1,17 @@
 
 import React from 'react';
 import { CLIENTS } from '../constants.tsx';
+import { useLanguage } from '../context/LanguageContext.tsx';
 
 const References: React.FC = () => {
+  const { t } = useLanguage();
   const marqueeClients = [...CLIENTS, ...CLIENTS, ...CLIENTS, ...CLIENTS];
 
   return (
     <section id="references" className="py-20 bg-slate-950 border-y border-white/5 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-6 mb-12 relative z-10">
         <p className="text-[10px] font-black uppercase tracking-[0.5em] text-blue-500/80 text-center">
-          GÜVENLE ÇALIŞTIĞIMIZ ÇÖZÜM ORTAKLARIMIZ
+          {t.references.title}
         </p>
       </div>
       
