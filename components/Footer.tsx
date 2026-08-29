@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full border border-white/5 bg-slate-900 flex items-center justify-center text-slate-500 hover:text-white hover:bg-blue-600 transition-all"
-                  aria-label="Social Media"
+                  aria-label={link.href.includes('instagram') ? 'Instagram' : 'E-posta'}
                 >
                   {link.icon}
                 </a>

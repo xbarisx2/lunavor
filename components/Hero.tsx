@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5">
             <motion.a
               href="#packages"
-              aria-label="Get a quote"
+              aria-label="Proje hakkında iletişime geç"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="w-full sm:w-auto px-10 py-5 bg-blue-600 text-white font-black rounded-2xl flex items-center justify-center space-x-3 transition-all shadow-xl shadow-blue-900/20"
@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
             </motion.a>
             <motion.a
               href="#portfolio"
-              aria-label="View case studies"
+              aria-label="Çalışmaları görüntüle"
               className="w-full sm:w-auto px-10 py-5 bg-transparent border border-white/10 text-white font-black rounded-2xl flex items-center justify-center space-x-3 hover:bg-white/5 transition-all group"
             >
               <span className="text-sm tracking-widest">{t.hero.ctaSecondary}</span>
@@ -82,11 +82,11 @@ const Hero: React.FC = () => {
               <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
             </div>
             <div className="font-mono text-xs space-y-3 leading-relaxed">
-              <p className="text-blue-400">class <span className="text-yellow-400">LunavorEngine</span> {'{'}</p>
+              <p className="text-blue-400">proje <span className="text-yellow-400">Lunavor</span> {'{'}</p>
               <p className="pl-4 text-slate-500 italic">{t.hero.codeComment}</p>
-              <p className="pl-4"><span className="text-indigo-400">rankOne</span>() {'{'}</p>
-              <p className="pl-8 text-white">speed = <span className="text-green-400">100</span>;</p>
-              <p className="pl-8 text-white">seo = <span className="text-green-400">true</span>;</p>
+              <p className="pl-4"><span className="text-indigo-400">planla</span>() {'{'}</p>
+              <p className="pl-8 text-white">web = <span className="text-green-400">hazır</span>;</p>
+              <p className="pl-8 text-white">mobil = <span className="text-green-400">uyumlu</span>;</p>
               <p className="pl-4 text-white">{'}'}</p>
               <p className="text-blue-400">{'}'}</p>
             </div>

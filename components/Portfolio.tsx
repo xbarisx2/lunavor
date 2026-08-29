@@ -56,7 +56,7 @@ const Portfolio: React.FC = () => {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`Visit project: ${project.title}`}
+                    aria-label={`${project.title} projesini görüntüle`}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className="w-14 h-14 rounded-full glass-card flex items-center justify-center text-white border border-white/20 hover:bg-blue-600 hover:border-blue-500 transition-all"
