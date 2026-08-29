@@ -1,121 +1,60 @@
-
 import React from 'react';
-import { Layout, Code, ShoppingCart, Github, Linkedin, Instagram, Globe, Database, ShieldCheck } from 'lucide-react';
+import { Instagram, Mail } from 'lucide-react';
 import { Service, Project, NavLink, Client, PricingPackage } from './types.ts';
 
-export const WHATSAPP_NUMBER = '905050627876';
-export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20Lunavor%20Team!%20I'd%20like%20to%20get%20a%20quote%20for%20a%20global%20project.`;
+export const CONTACT_EMAIL = 'lunavor.app@gmail.com';
+export const EMAIL_LINK = `mailto:${CONTACT_EMAIL}?subject=Lunavor%20proje%20görüşmesi`;
 
 export const NAV_LINKS: NavLink[] = [
-  { name: 'Solutions', href: '#services' },
-  { name: 'Studio', href: '#studio' },
-  { name: 'Packages', href: '#packages' },
-  { name: 'Portfolio', href: '#portfolio' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Hizmetler', href: '#services' },
+  { name: 'Takasso', href: '#studio' },
+  { name: 'Çalışma modeli', href: '#packages' },
+  { name: 'Projeler', href: '#portfolio' },
+  { name: 'İletişim', href: '#contact' },
 ];
 
 export const SERVICES: Service[] = [
-  {
-    id: 'web-development',
-    title: 'Enterprise Web Design',
-    description: 'High-performance, SEO-centric digital architectures that redefine your global presence.',
-    iconName: 'Layout'
-  },
-  {
-    id: 'ecommerce',
-    title: 'E-Commerce Engines',
-    description: 'Sales-focused professional infrastructures with integrated payment and global inventory management.',
-    iconName: 'ShoppingCart'
-  },
-  {
-    id: 'custom-software',
-    title: 'Custom Engineering',
-    description: 'Automated business processes through bespoke web applications and scalable software systems.',
-    iconName: 'Code'
-  }
+  { id: 'web-development', title: 'Web sitesi', description: 'Markanıza ve ihtiyacınıza uygun, hızlı ve mobil uyumlu web siteleri.', iconName: 'Layout' },
+  { id: 'mobile-development', title: 'Mobil uygulama', description: 'Android ve iOS için sade, kullanışlı ve sürdürülebilir uygulamalar.', iconName: 'Smartphone' },
+  { id: 'release-support', title: 'Yayın süreçleri', description: 'Google Play ve App Store yayın hazırlığı, mağaza düzeni ve teknik destek.', iconName: 'Code2' },
 ];
 
 export const PACKAGES: PricingPackage[] = [
-  {
-    id: 'starter',
-    name: 'Corporate Essential',
-    price: '12.500₺',
-    features: ['Modern Global Design', 'SEO Infrastructure', 'Responsive Architecture', 'Management Panel', 'SSL Certified']
-  },
-  {
-    id: 'pro',
-    name: 'E-Commerce Elite',
-    price: '24.500₺',
-    features: ['Global Payment Gateway', 'Advanced Logistics Integration', 'Stock Automation', 'Campaign Engine', '24/7 Priority Support'],
-    recommended: true
-  },
-  {
-    id: 'enterprise',
-    name: 'Enterprise Custom',
-    price: 'Custom Quote',
-    features: ['Bespoke API Engineering', 'Microservices Architecture', 'SaaS Solutions', 'Dedicated Infrastructure', 'SLA Agreement']
-  }
+  { id: 'web', name: 'Web sitesi', price: 'İhtiyaca göre', features: ['İhtiyaç analizi', 'Mobil uyumlu tasarım', 'SEO temeli', 'Yayın desteği'] },
+  { id: 'mobile', name: 'Mobil uygulama', price: 'İhtiyaca göre', features: ['Ürün planlama', 'Android ve iOS geliştirme', 'Test süreci', 'Mağaza yayın hazırlığı'], recommended: true },
+  { id: 'release', name: 'Yayın ve destek', price: 'İhtiyaca göre', features: ['Google Play yayını', 'App Store yayını', 'Mağaza içerikleri', 'Teknik yönlendirme'] },
 ];
 
 export const PROJECTS: Project[] = [
-  {
-    id: 1,
-    title: 'Interakdeniz Aluminum',
-    category: 'Industrial Web & Catalog',
-    imageUrl: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1200',
-    url: 'https://www.interakdenizaluminyum.com/'
-  },
-  {
-    id: 2,
-    title: 'Hell Gym Center',
-    category: 'Service & Reservation',
-    imageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1200',
-    url: 'https://www.hellgymcenter.com/'
-  },
-  {
-    id: 3,
-    title: 'Ikonyum Wood',
-    category: 'Design & Corporate',
-    imageUrl: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=1200',
-    url: 'https://www.ikonyumahsap.com.tr/'
-  }
+  { id: 1, title: 'Takasso', category: 'Mobil uygulama ve web platformu', imageUrl: 'https://takasso.com.tr/brand/takasso-app-icon.png', url: 'https://takasso.com.tr/' },
+  { id: 2, title: 'Interakdeniz Alüminyum', category: 'Kurumsal web sitesi', imageUrl: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1200', url: 'https://www.interakdenizaluminyum.com/' },
+  { id: 3, title: 'Hell Gym Center', category: 'Hizmet ve rezervasyon', imageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1200', url: 'https://www.hellgymcenter.com/' },
+  { id: 4, title: 'İkonyum Ahşap', category: 'Kurumsal web sitesi', imageUrl: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=1200', url: 'https://www.ikonyumahsap.com.tr/' },
 ];
 
 export const CLIENTS: Client[] = [
-  { 
-    id: 1, 
-    name: 'Interakdeniz Alüminyum', 
-    logoUrl: 'https://github.com/xbarisx2/logo/blob/main/logoointer-removebg-preview.png?raw=true' 
-  },
-  { 
-    id: 2, 
-    name: 'Hell Gym Center', 
-    logoUrl: 'https://www.hellgymcenter.com/images/hellogo.png' 
-  },
-  { 
-    id: 3, 
-    name: 'Ikonyum Ahşap', 
-    logoUrl: 'https://www.ikonyumahsap.com.tr/img/ikonyum-ahsap.png' 
-  },
-  { 
-    id: 4, 
-    name: 'Nvidia Partners', 
-    logoUrl: 'https://logo.clearbit.com/nvidia.com' 
-  },
-  { 
-    id: 5, 
-    name: 'Adobe Creative', 
-    logoUrl: 'https://logo.clearbit.com/adobe.com' 
-  },
-  { 
-    id: 6, 
-    name: 'Intel Systems', 
-    logoUrl: 'https://logo.clearbit.com/intel.com' 
-  },
+  { id: 1, name: 'Takasso', logoUrl: 'https://takasso.com.tr/brand/takasso-app-icon.png' },
+  { id: 2, name: 'Interakdeniz Alüminyum', logoUrl: 'https://github.com/xbarisx2/logo/blob/main/logoointer-removebg-preview.png?raw=true' },
+  { id: 3, name: 'Hell Gym Center', logoUrl: 'https://www.hellgymcenter.com/images/hellogo.png' },
+  { id: 4, name: 'İkonyum Ahşap', logoUrl: 'https://www.ikonyumahsap.com.tr/img/ikonyum-ahsap.png' },
 ];
 
 export const SOCIAL_LINKS = [
-  { icon: <Instagram size={20} />, href: 'https://www.instagram.com/lunavor.com.tr/' },
-  { icon: <Linkedin size={20} />, href: 'https://linkedin.com' },
-  { icon: <Github size={20} />, href: 'https://github.com' },
+  { icon: <Instagram size={20} />, href: 'https://www.instagram.com/takassoicomitr/' },
+  { icon: <Mail size={20} />, href: EMAIL_LINK },
 ];
+
+const content = {
+  nav: { solutions: 'Hizmetler', studio: 'Takasso', packages: 'Çalışma modeli', portfolio: 'Projeler', contact: 'İletişim', getQuote: 'Proje konuşalım' },
+  hero: { badge: 'WEB SİTESİ VE MOBİL UYGULAMA GELİŞTİRME', title1: 'FİKRİNİZİ', title2: 'DİJİTALE', title3: 'TAŞIYALIM', title4: '.', desc: 'Lunavor, kişiye ve işletmeye özel web siteleri ve mobil uygulamalar geliştirir. Tasarımdan yayın sürecine kadar tek ekip olarak ilerleriz.', ctaPrimary: 'PROJEYİ KONUŞALIM', ctaSecondary: 'ÇALIŞMALARI GÖR', codeComment: '// Sade plan, sağlam ürün', codeFocus: 'Web ve mobil', codeScope: 'Yayın' },
+  references: { title: 'GELİŞTİRDİĞİMİZ ÜRÜNLER VE ÇALIŞMALAR' },
+  services: { title1: 'DİJİTAL', title2: 'ÜRÜNLER.', enterprise: { title: 'Web sitesi', desc: 'İşinizi anlatan, mobil cihazlarda iyi çalışan ve arama motorlarına hazır web siteleri.' }, ecommerce: { title: 'Mobil uygulama', desc: 'Kullanıcı deneyimini merkeze alan Android ve iOS uygulamaları.' }, uiux: { title: 'Yayın süreçleri', desc: 'Google Play ve App Store yayınları için gerekli hazırlıkları birlikte tamamlarız.' }, perf: 'Sade planlama', growth: 'Ürüne odaklı', efficiency: 'çalışma' },
+  studio: { badge: 'ANA ÜRÜNÜMÜZ', title1: "TAKASSO'YU", title2: 'GELİŞTİRİYORUZ.', desc: 'Takasso, ikinci el ürünleri keşfetmeyi, ilan vermeyi ve kullanıcıların doğrudan iletişim kurmasını kolaylaştıran pazar yeri uygulamamızdır.', docs: 'Mobil uygulama', docsSub: 'Android ve iOS yayın süreçleri', adverts: 'Web platformu', advertsSub: 'Ürün ve topluluk deneyimi', latest: 'Ürün vitrini' },
+  packages: { badge: 'İHTİYACA GÖRE GELİŞTİRME', title1: 'ÇALIŞMA', title2: 'MODELİ.', desc: 'Her proje için ihtiyacı, kapsamı ve yayın hedefini birlikte netleştiririz. Sabit paket yerine doğru çözümü planlarız.', popular: 'ÖNE ÇIKAN ÇÖZÜM', startingFrom: '', getStarted: 'Bize yazın' },
+  portfolio: { badge: 'GERÇEK ÇALIŞMALAR', title1: 'ÜRÜN', title2: 'VİTRİNİ.', desc: 'Lunavor çatısı altında geliştirdiğimiz web siteleri, uygulamalar ve dijital ürünlerden seçmeler.' },
+  engineering: { badge: 'GELİŞTİRME SÜRECİ', title1: 'SAĞLAM', title2: 'TEMELLER.', desc: 'İhtiyacı anlayıp sade bir planla tasarım, geliştirme, test ve yayın adımlarını birlikte yürütüyoruz.', seo: 'SEO uyumlu yapı', ux: 'Mobil uyum', cloud: 'Ölçeklenebilir altyapı', security: 'Bakımı kolay kod', terminal: 'lunavor_project.flow', terminalProcess: '[SÜREÇ] İhtiyaçlar analiz ediliyor...', terminalSuccess: '[HAZIR] Tasarım, geliştirme, test ve yayın planı oluşturuldu.', conversion: 'Teslim yaklaşımı' },
+  contact: { title1: 'BİRLİKTE', title2: 'ÜRETELİM.', desc: 'Yeni bir web sitesi, mobil uygulama veya yayın desteği için bize yazın. Projenizi ve hedefinizi dinleyip uygun yol haritasını paylaşalım.', email: 'E-posta', whatsapp: 'E-posta', hq: 'Çalışma şekli', hqLoc: 'Proje bazlı ve uzaktan', quickChat: 'E-posta ile iletişime geçin', quickChatSub: 'Projenizi kısaca anlatın, size dönüş yapalım.', formName: 'Ad soyad / Firma', formEmail: 'E-posta adresi', formProject: 'Proje detayları', formPlaceholder: 'Projenizden ve hedefinizden bahsedin...', submit: 'Mesajı gönder', received: 'Mesaj alındı' },
+  footer: { desc: 'Kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve yayın çözümleri geliştiren yazılım şirketi.', quickLinks: 'Hızlı bağlantılar', connect: 'İletişim', rights: 'Tüm hakları saklıdır.' }
+};
+
+export const translations = { en: content, tr: content };

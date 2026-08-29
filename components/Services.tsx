@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, ShoppingCart, Layout, ArrowUpRight, Zap, Globe, Cpu } from 'lucide-react';
+import { Code2, Smartphone, Layout, ArrowUpRight, Globe, Cpu } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext.tsx';
 
 const Services: React.FC = () => {
@@ -39,7 +39,7 @@ const Services: React.FC = () => {
               </p>
             </div>
             <div className="flex items-center justify-between mt-10">
-              <span className="text-[9px] font-black uppercase tracking-[0.3em] text-blue-500">World-Class Solutions</span>
+              <span className="text-[9px] font-black uppercase tracking-[0.3em] text-blue-500">Lunavor hizmetleri</span>
               <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
                 <ArrowUpRight size={20} />
               </div>
@@ -50,8 +50,8 @@ const Services: React.FC = () => {
           <motion.div 
             className="md:col-span-6 lg:col-span-5 bg-slate-900 rounded-[2.5rem] p-10 flex flex-col justify-center items-center text-center border border-white/5 relative overflow-hidden group shadow-xl"
           >
-            <Zap size={48} className="text-yellow-400 mb-6 animate-pulse" />
-            <div className="text-5xl md:text-7xl font-black text-white mb-2 tracking-tighter italic">99.9%</div>
+            <Smartphone size={48} className="text-yellow-400 mb-6" />
+            <div className="text-4xl md:text-5xl font-black text-white mb-2 tracking-tighter italic">Android &amp; iOS</div>
             <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500">{t.services.perf}</p>
           </motion.div>
 
@@ -60,7 +60,7 @@ const Services: React.FC = () => {
             className="md:col-span-6 lg:col-span-5 glass-card rounded-[2.5rem] p-10 flex flex-col justify-between"
           >
             <div className="w-14 h-14 rounded-2xl bg-slate-950 border border-white/5 flex items-center justify-center mb-8">
-              <ShoppingCart size={24} className="text-cyan-500" />
+              <Code2 size={24} className="text-cyan-500" />
             </div>
             <div>
               <h3 className="text-2xl font-bold mb-3 tracking-tight">{t.services.ecommerce.title}</h3>
@@ -70,13 +70,13 @@ const Services: React.FC = () => {
               <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden mb-3">
                 <motion.div 
                   initial={{ width: 0 }}
-                  whileInView={{ width: '92%' }}
+                  whileInView={{ width: '100%' }}
                   className="h-full bg-cyan-500"
                 />
               </div>
               <div className="flex justify-between items-center text-[9px] text-cyan-500 font-black uppercase tracking-widest">
                 <span>{t.services.growth}</span>
-                <span>+92% {t.services.efficiency}</span>
+                <span>{t.services.efficiency}</span>
               </div>
             </div>
           </motion.div>
@@ -98,11 +98,11 @@ const Services: React.FC = () => {
               <div className="grid grid-cols-2 gap-4 w-full md:w-auto">
                 <div className="p-5 bg-white/5 rounded-2xl border border-white/5 flex flex-col items-center">
                   <Globe size={20} className="text-slate-500 mb-2" />
-                  <span className="text-[8px] font-black uppercase text-slate-500 tracking-widest">SEO MAX</span>
+                  <span className="text-[8px] font-black uppercase text-slate-500 tracking-widest">SEO TEMELİ</span>
                 </div>
                 <div className="p-5 bg-white/5 rounded-2xl border border-white/5 flex flex-col items-center">
                   <Cpu size={20} className="text-slate-500 mb-2" />
-                  <span className="text-[8px] font-black uppercase text-slate-500 tracking-widest">FASTEST</span>
+                  <span className="text-[8px] font-black uppercase text-slate-500 tracking-widest">MOBİL UYUM</span>
                 </div>
               </div>
             </div>

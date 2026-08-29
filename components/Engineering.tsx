@@ -70,7 +70,7 @@ const Engineering: React.FC = () => {
                   <div className="flex gap-4 mb-6">
                     <span className="text-slate-700">➜</span>
                     <span className="text-blue-400 font-bold">lunavor</span>
-                    <span className="text-white">deploy --global-seo-boost --perf-ultra</span>
+                    <span className="text-white">plan --design --develop --test --publish</span>
                   </div>
                   <div className="text-slate-500 mb-6 font-light italic opacity-60 break-all">{t.engineering.terminalProcess}</div>
                   <div className="text-slate-500 mb-10 font-light italic opacity-60 break-all">{t.engineering.terminalSuccess}</div>
@@ -81,14 +81,14 @@ const Engineering: React.FC = () => {
                          <div className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
                          <span className="text-[10px] text-slate-500 font-black tracking-[0.2em] uppercase">{t.engineering.conversion}</span>
                       </div>
-                      <div className="text-3xl font-black text-white italic">+420%</div>
+                      <div className="text-2xl font-black text-white italic">Adım adım</div>
                     </div>
                     <div className="p-8 bg-slate-900/50 border border-blue-500/10 rounded-3xl group-hover:border-blue-500/30 transition-all">
                       <div className="flex items-center space-x-3 mb-6">
                          <Cpu size={18} className="text-blue-500" />
-                         <span className="text-[10px] text-slate-500 font-black tracking-[0.2em] uppercase">Status</span>
+                         <span className="text-[10px] text-slate-500 font-black tracking-[0.2em] uppercase">Durum</span>
                       </div>
-                      <div className="text-3xl font-black text-white italic">DOMINANT</div>
+                      <div className="text-3xl font-black text-white italic">PLANLI</div>
                     </div>
                   </div>
                 </div>

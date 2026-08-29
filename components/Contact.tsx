@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { WHATSAPP_LINK } from '../constants.tsx';
+import { Send, Mail, ExternalLink } from 'lucide-react';
+import { CONTACT_EMAIL, EMAIL_LINK } from '../constants.tsx';
 import { useLanguage } from '../context/LanguageContext.tsx';
 
 const Contact: React.FC = () => {
@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
           name: formState.name,
           email: formState.email,
           message: formState.message,
-          _subject: `New Global Contact from: ${formState.name}`,
+          _subject: `Lunavor proje iletişimi: ${formState.name}`,
         }),
       });
 
@@ -35,11 +35,11 @@ const Contact: React.FC = () => {
         setFormState({ name: '', email: '', message: '' });
         setTimeout(() => setSubmitted(false), 5000);
       } else {
-        alert("Something went wrong, please try again or contact via WhatsApp.");
+        alert("Mesaj gönderilemedi. Lütfen tekrar deneyin veya e-posta ile ulaşın.");
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      alert("An error occurred during submission.");
+      alert("Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.");
     } finally {
       setIsSubmitting(false);
     }
@@ -60,27 +60,18 @@ const Contact: React.FC = () => {
             </p>
 
             <div className="space-y-8">
-              <a href="mailto:barisyldrm@pm.me" className="flex items-center space-x-6 group">
+              <a href={EMAIL_LINK} className="flex items-center space-x-6 group">
                 <div className="w-14 h-14 rounded-2xl bg-slate-900 border border-white/5 flex items-center justify-center text-blue-500 transition-colors group-hover:bg-blue-600 group-hover:text-white">
                   <Mail size={24} />
                 </div>
                 <div>
                   <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">{t.contact.email}</p>
-                  <p className="text-white font-bold text-lg">barisyldrm@pm.me</p>
-                </div>
-              </a>
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-6 group">
-                <div className="w-14 h-14 rounded-2xl bg-slate-900 border border-white/5 flex items-center justify-center text-cyan-500 transition-colors group-hover:bg-cyan-600 group-hover:text-white">
-                  <Phone size={24} />
-                </div>
-                <div>
-                  <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">{t.contact.whatsapp}</p>
-                  <p className="text-white font-bold text-lg">+90 505 062 78 76</p>
+                  <p className="text-white font-bold text-lg">{CONTACT_EMAIL}</p>
                 </div>
               </a>
               <div className="flex items-center space-x-6 group">
-                <div className="w-14 h-14 rounded-2xl bg-slate-900 border border-white/5 flex items-center justify-center text-indigo-500 transition-colors group-hover:bg-indigo-600 group-hover:text-white">
-                  <MapPin size={24} />
+                <div className="w-14 h-14 rounded-2xl bg-slate-900 border border-white/5 flex items-center justify-center text-cyan-500 transition-colors group-hover:bg-cyan-600 group-hover:text-white">
+                  <Mail size={24} />
                 </div>
                 <div>
                   <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">{t.contact.hq}</p>
@@ -89,7 +80,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
             
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="mt-16 p-6 border border-blue-500/20 bg-blue-500/5 rounded-2xl flex items-center justify-between group cursor-pointer hover:bg-blue-500/10 transition-all block text-left">
+            <a href={EMAIL_LINK} className="mt-16 p-6 border border-blue-500/20 bg-blue-500/5 rounded-2xl flex items-center justify-between group cursor-pointer hover:bg-blue-500/10 transition-all block text-left">
               <div>
                 <p className="text-white font-bold text-sm">{t.contact.quickChat}</p>
                 <p className="text-slate-500 text-xs">{t.contact.quickChatSub}</p>
@@ -113,7 +104,7 @@ const Contact: React.FC = () => {
                   required
                   value={formState.name}
                   onChange={(e) => setFormState({...formState, name: e.target.value})}
-                  placeholder="Enter Name"
+                  placeholder="Adınızı yazın"
                   className="w-full bg-slate-950/50 border border-white/10 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-blue-500 transition-all focus:ring-4 ring-blue-500/10"
                 />
               </div>

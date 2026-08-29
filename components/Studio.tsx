@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PlayCircle, Camera, Globe } from 'lucide-react';
+import { PlayCircle, Smartphone, Globe } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext.tsx';
 
 const Studio: React.FC = () => {
@@ -46,7 +46,7 @@ const Studio: React.FC = () => {
               <div className="group">
                 <div className="flex items-center space-x-4 mb-4">
                    <div className="p-3 bg-blue-950/50 rounded-lg group-hover:bg-blue-600 transition-colors">
-                      <Camera size={22} className="text-white" />
+                      <Smartphone size={22} className="text-white" />
                    </div>
                    <span className="text-white font-bold tracking-tight uppercase text-sm">{t.studio.docs}</span>
                 </div>
@@ -72,9 +72,9 @@ const Studio: React.FC = () => {
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-[0_0_80px_rgba(30,58,138,0.2)] bg-slate-900 border border-white/5 group">
               <img 
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200" 
-                alt="Production Hub" 
-                className="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
+                src="https://takasso.com.tr/brand/takasso-app-icon.png"
+                alt="Takasso uygulama vitrini"
+                className="w-full aspect-[4/3] object-contain bg-slate-950 p-20 opacity-90 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-blue-900/10 pointer-events-none group-hover:bg-transparent transition-all" />
               <div className="absolute bottom-8 left-8 flex items-center space-x-4 bg-slate-950/90 backdrop-blur-xl p-4 rounded-xl border border-white/10">
@@ -83,7 +83,7 @@ const Studio: React.FC = () => {
                  </div>
                  <div>
                     <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest">{t.studio.latest}</p>
-                    <p className="text-xs text-white font-bold uppercase">Corporate Showreel 2024</p>
+                    <p className="text-xs text-white font-bold uppercase">Takasso</p>
                  </div>
               </div>
             </div>

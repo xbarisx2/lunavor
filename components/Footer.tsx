@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SOCIAL_LINKS } from '../constants.tsx';
+import { CONTACT_EMAIL, SOCIAL_LINKS } from '../constants.tsx';
 import { useLanguage } from '../context/LanguageContext.tsx';
 import Logo from './Logo.tsx';
 
@@ -45,18 +45,16 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">{t.footer.connect}</h4>
             <ul className="space-y-4 text-slate-500 text-sm">
-              <li>barisyldrm@pm.me</li>
-              <li>+90 505 062 78 76</li>
-              <li>Global HQ / Remote</li>
+              <li>{CONTACT_EMAIL}</li>
+              <li>Proje bazlı ve uzaktan çalışma</li>
             </ul>
           </div>
         </div>
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-slate-600 text-xs font-medium">© 2024 Lunavor Software Engineering. {t.footer.rights}</p>
+          <p className="text-slate-600 text-xs font-medium">© 2026 Lunavor. {t.footer.rights}</p>
           <div className="flex space-x-8 text-[10px] font-black text-slate-600 tracking-widest uppercase">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
+            <span>Web ve mobil ürün geliştirme</span>
           </div>
         </div>
       </div>

@@ -25,16 +25,11 @@ const References: React.FC = () => {
               key={`${client.id}-${idx}`}
               className="flex items-center justify-center px-12 md:px-16 transition-all duration-700 cursor-default group"
             >
-              <div className="relative">
-                <img 
-                  src={client.logoUrl} 
-                  alt={client.name} 
-                  className="h-12 md:h-14 w-auto object-contain opacity-50 grayscale brightness-200 contrast-125 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(client.name)}&background=1e293b&color=3b82f6&bold=true`;
-                  }}
-                />
+              <div className="relative flex items-center gap-4 opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                <div className="w-10 h-10 rounded-xl border border-blue-500/30 bg-blue-500/10 flex items-center justify-center text-blue-300 font-black text-sm">
+                  {client.name.charAt(0)}
+                </div>
+                <span className="text-white/80 font-bold tracking-tight whitespace-nowrap">{client.name}</span>
                 <div className="absolute -inset-4 bg-blue-500/0 group-hover:bg-blue-500/10 blur-xl rounded-full transition-all duration-500 -z-10" />
               </div>
             </div>

@@ -2,11 +2,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Star, ArrowRight } from 'lucide-react';
-import { PACKAGES, WHATSAPP_LINK } from '../constants.tsx';
+import { EMAIL_LINK, PACKAGES } from '../constants.tsx';
 import { useLanguage } from '../context/LanguageContext.tsx';
 
 const Packages: React.FC = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <section id="packages" className="py-32 px-6 lg:px-12 bg-[#020617] relative">
@@ -54,7 +54,7 @@ const Packages: React.FC = () => {
                 <h3 className={`text-3xl font-bold mb-6 text-white`}>{pkg.name}</h3>
                 <div className="flex items-baseline">
                   <span className={`text-5xl font-black tracking-tighter ${pkg.recommended ? 'text-white' : 'text-blue-500'}`}>{pkg.price}</span>
-                  {pkg.price !== 'Custom Quote' && pkg.price !== 'Özel Teklif' && (
+                {pkg.price !== 'İhtiyaca göre' && (
                     <span className={`text-[10px] ml-2 font-black uppercase tracking-widest ${pkg.recommended ? 'text-blue-100' : 'text-slate-500'}`}>
                       {t.packages.startingFrom}
                     </span>
@@ -74,9 +74,7 @@ const Packages: React.FC = () => {
               </ul>
 
               <motion.a 
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={EMAIL_LINK}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className={`w-full py-6 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all flex items-center justify-center space-x-3 ${
