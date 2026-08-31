@@ -64,7 +64,7 @@ function BrandMark({ compact = false }: { compact?: boolean }) {
   return (
     <span className={`brand ${compact ? 'brand--compact' : ''}`}>
       <span className="brand-mark" aria-hidden="true">
-        <img src="/lunavor-mark.svg?v=2" alt="" width="48" height="48" />
+        <img src="/lunavor-mark.svg?v=3" alt="" width="48" height="48" />
       </span>
       <span className="brand-name">Lunavor</span>
     </span>
