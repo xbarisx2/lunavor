@@ -4,6 +4,8 @@ import { Service, Project, NavLink, Client, PricingPackage } from './types.ts';
 
 export const CONTACT_EMAIL = 'lunavor.app@gmail.com';
 export const EMAIL_LINK = `mailto:${CONTACT_EMAIL}?subject=Lunavor%20proje%20görüşmesi`;
+export const INSTAGRAM_LINK = 'https://www.instagram.com/bariisyldrmm/?hl=tr';
+export const WHATSAPP_LINK = `https://wa.me/905050627876?text=${encodeURIComponent('Merhaba, Lunavor projesi hakkında görüşmek istiyorum.')}`;
 
 export const NAV_LINKS: NavLink[] = [
   { name: 'Hizmetler', href: '#services' },
@@ -40,7 +42,7 @@ export const CLIENTS: Client[] = [
 ];
 
 export const SOCIAL_LINKS = [
-  { icon: <Instagram size={20} />, href: 'https://www.instagram.com/takassoicomitr/' },
+  { icon: <Instagram size={20} />, href: INSTAGRAM_LINK },
   { icon: <Mail size={20} />, href: EMAIL_LINK },
 ];
 
@@ -53,7 +55,7 @@ const content = {
   packages: { badge: 'İHTİYACA GÖRE GELİŞTİRME', title1: 'ÇALIŞMA', title2: 'MODELİ.', desc: 'Her proje için ihtiyacı, kapsamı ve yayın hedefini birlikte netleştiririz. Sabit paket yerine doğru çözümü planlarız.', popular: 'ÖNE ÇIKAN ÇÖZÜM', startingFrom: '', getStarted: 'Bize yazın' },
   portfolio: { badge: 'GERÇEK ÇALIŞMALAR', title1: 'ÜRÜN', title2: 'VİTRİNİ.', desc: 'Lunavor çatısı altında geliştirdiğimiz web siteleri, uygulamalar ve dijital ürünlerden seçmeler.' },
   engineering: { badge: 'GELİŞTİRME SÜRECİ', title1: 'SAĞLAM', title2: 'TEMELLER.', desc: 'İhtiyacı anlayıp sade bir planla tasarım, geliştirme, test ve yayın adımlarını birlikte yürütüyoruz.', seo: 'SEO uyumlu yapı', ux: 'Mobil uyum', cloud: 'Ölçeklenebilir altyapı', security: 'Bakımı kolay kod', terminal: 'lunavor_project.flow', terminalProcess: '[SÜREÇ] İhtiyaçlar analiz ediliyor...', terminalSuccess: '[HAZIR] Tasarım, geliştirme, test ve yayın planı oluşturuldu.', conversion: 'Teslim yaklaşımı' },
-  contact: { title1: 'BİRLİKTE', title2: 'ÜRETELİM.', desc: 'Yeni bir web sitesi, mobil uygulama veya yayın desteği için bize yazın. Projenizi ve hedefinizi dinleyip uygun yol haritasını paylaşalım.', email: 'E-posta', whatsapp: 'E-posta', hq: 'Çalışma şekli', hqLoc: 'Proje bazlı ve uzaktan', quickChat: 'E-posta ile iletişime geçin', quickChatSub: 'Projenizi kısaca anlatın, size dönüş yapalım.', formName: 'Ad soyad / Firma', formEmail: 'E-posta adresi', formProject: 'Proje detayları', formPlaceholder: 'Projenizden ve hedefinizden bahsedin...', submit: 'Mesajı gönder', received: 'Mesaj alındı' },
+  contact: { title1: 'BİRLİKTE', title2: 'ÜRETELİM.', desc: 'Yeni bir web sitesi, mobil uygulama veya yayın desteği için bize yazın. Projenizi ve hedefinizi dinleyip uygun yol haritasını paylaşalım.', email: 'E-posta', whatsapp: 'WhatsApp', hq: 'Çalışma şekli', hqLoc: 'Proje bazlı ve uzaktan', quickChat: 'E-posta ile iletişime geçin', quickChatSub: 'Projenizi kısaca anlatın, size dönüş yapalım.', formName: 'Ad soyad / Firma', formEmail: 'E-posta adresi', formProject: 'Proje detayları', formPlaceholder: 'Projenizden ve hedefinizden bahsedin...', submit: 'Mesajı gönder', received: 'Mesaj alındı' },
   footer: { desc: 'Kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve yayın çözümleri geliştiren yazılım şirketi.', quickLinks: 'Hızlı bağlantılar', connect: 'İletişim', rights: 'Tüm hakları saklıdır.' }
 };
 

@@ -1,142 +1,66 @@
-<!DOCTYPE html>
-<html lang="tr" class="scroll-smooth">
+<!doctype html>
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#020617" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    <!-- SEO Master Configuration -->
-    <title>Lunavor | Web Sitesi ve Mobil Uygulama Geliştirme</title>
-    <meta name="description" content="Lunavor; kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve Google Play ile App Store yayın süreçleri geliştirir." />
-    <meta name="keywords" content="web sitesi, mobil uygulama, uygulama geliştirme, Google Play, App Store, SEO, Takasso" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090c10" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Lunavor | Web sitesi ve mobil uygulama geliştirme</title>
+    <meta name="description" content="Lunavor; kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve Google Play ile App Store yayın çözümleri geliştirir." />
     <meta name="author" content="Lunavor" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://www.lunavor.com.tr/" />
-    
-    <!-- Open Graph / Social Media Domination -->
+    <link rel="icon" type="image/svg+xml" href="/lunavor-mark.svg?v=2" />
+    <link rel="apple-touch-icon" href="/lunavor-mark.svg?v=2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Lunavor | Web Sitesi ve Mobil Uygulama Geliştirme" />
+    <meta property="og:title" content="Lunavor | Web sitesi ve mobil uygulama geliştirme" />
     <meta property="og:description" content="Kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve yayın çözümleri." />
     <meta property="og:url" content="https://www.lunavor.com.tr/" />
     <meta property="og:site_name" content="Lunavor" />
-    <meta property="og:image" content="https://www.lunavor.com.tr/lunavor-mark.svg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    
-    <!-- Twitter Domination -->
+    <meta property="og:image" content="https://www.lunavor.com.tr/lunavor-mark.svg?v=2" />
+    <meta property="og:image:alt" content="Lunavor" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Lunavor | Web Sitesi ve Mobil Uygulama Geliştirme" />
+    <meta name="twitter:title" content="Lunavor | Web sitesi ve mobil uygulama geliştirme" />
     <meta name="twitter:description" content="Kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve yayın çözümleri." />
-    <meta name="twitter:image" content="https://www.lunavor.com.tr/lunavor-mark.svg" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/lunavor-mark.svg" />
-    <link rel="apple-touch-icon" href="/lunavor-mark.svg" />
-
-    <!-- Structured Data (JSON-LD) for SEO Rankings -->
+    <meta name="twitter:image" content="https://www.lunavor.com.tr/lunavor-mark.svg?v=2" />
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Lunavor",
-      "url": "https://www.lunavor.com.tr/",
-      "email": "mailto:lunavor.app@gmail.com",
-      "logo": "https://www.lunavor.com.tr/lunavor-mark.svg",
-      "sameAs": ["https://www.instagram.com/takassoicomitr/"]
-    }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&family=Sora:wght@400;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-      :root {
-        --bg-dark: #020617;
-        --accent-blue: #3b82f6;
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.lunavor.com.tr/#organization",
+            "name": "Lunavor",
+            "url": "https://www.lunavor.com.tr/",
+            "logo": "https://www.lunavor.com.tr/lunavor-mark.svg?v=2",
+            "email": "lunavor.app@gmail.com",
+            "sameAs": ["https://www.instagram.com/bariisyldrmm/?hl=tr"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.lunavor.com.tr/#website",
+            "url": "https://www.lunavor.com.tr/",
+            "name": "Lunavor",
+            "inLanguage": "tr-TR",
+            "publisher": { "@id": "https://www.lunavor.com.tr/#organization" }
+          },
+          {
+            "@type": "Service",
+            "name": "Web sitesi ve mobil uygulama geliştirme",
+            "provider": { "@id": "https://www.lunavor.com.tr/#organization" },
+            "areaServed": "TR",
+            "serviceType": ["Web sitesi geliştirme", "Mobil uygulama geliştirme", "Google Play ve App Store yayın desteği"]
+          }
+        ]
       }
-      body {
-        font-family: 'Outfit', sans-serif;
-        background-color: var(--bg-dark);
-        color: #f8fafc;
-        overflow-x: hidden;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-      h1, h2, h3, h4, h5, h6, .font-heading {
-        font-family: 'Sora', sans-serif;
-      }
-      .gradient-text {
-        background: linear-gradient(to right, #ffffff 20%, #3b82f6 50%, #22d3ee 80%);
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: textShine 5s ease-in-out infinite;
-      }
-      @keyframes textShine {
-        to { background-position: 200% center; }
-      }
-      .glass-card {
-        background: rgba(15, 23, 42, 0.4);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-      }
-      .noise {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: url('https://grainy-gradients.vercel.app/noise.svg');
-        opacity: 0.02;
-        pointer-events: none;
-        z-index: 9999;
-      }
-      .fluid-h1 {
-        font-size: clamp(2.2rem, 10vw, 6.2rem);
-        line-height: 0.95;
-        letter-spacing: -0.05em;
-      }
-      .fluid-h2 {
-        font-size: clamp(1.8rem, 6vw, 4.5rem);
-        line-height: 1.05;
-        letter-spacing: -0.04em;
-      }
-      @keyframes marquee {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-      .marquee-content {
-        display: flex;
-        animation: marquee 30s linear infinite;
-      }
-      /* Fast Interaction Optimization */
-      * { transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1); }
-      ::selection { background: var(--accent-blue); color: #fff; }
-      ::-webkit-scrollbar { width: 4px; }
-      ::-webkit-scrollbar-track { background: var(--bg-dark); }
-      ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
-    </style>
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@^19.2.4",
-        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-        "react/": "https://esm.sh/react@^19.2.4/",
-        "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-        "framer-motion": "https://esm.sh/framer-motion@^12.31.0",
-        "vite": "https://esm.sh/vite@^7.3.1",
-        "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3"
-      }
-    }
     </script>
   </head>
   <body>
-    <div class="noise"></div>
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
