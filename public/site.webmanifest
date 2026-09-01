@@ -1,0 +1,23 @@
+{
+  "name": "Lunavor",
+  "short_name": "Lunavor",
+  "description": "Web sitesi, mobil uygulama ve yayın çözümleri.",
+  "lang": "tr-TR",
+  "id": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090c10",
+  "theme_color": "#090c10",
+  "icons": [
+    {
+      "src": "/lunavor-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/lunavor-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

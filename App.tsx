@@ -64,7 +64,7 @@ function BrandMark({ compact = false }: { compact?: boolean }) {
   return (
     <span className={`brand ${compact ? 'brand--compact' : ''}`}>
       <span className="brand-mark" aria-hidden="true">
-        <img src="/lunavor-mark.svg?v=3" alt="" width="48" height="48" />
+        <img src="/lunavor-mark.svg?v=4" alt="" width="48" height="48" decoding="async" />
       </span>
       <span className="brand-name">Lunavor</span>
     </span>
@@ -216,7 +216,7 @@ function App() {
                 <div className="product-window__topline"><span>TAKASSO</span><span className="status-dot">YAYINDA</span></div>
                 <div className="product-window__hero-copy">Daha iyi<br /><em>keşfet.</em></div>
                 <div className="product-window__cards">
-                  <div className="mini-card mini-card--image"><img src={takasso.imageUrl} alt="Takasso uygulama simgesi" width="96" height="96" loading="eager" /></div>
+                  <div className="mini-card mini-card--image"><img src={takasso.imageUrl} alt="Takasso uygulama simgesi" width="96" height="96" loading="eager" decoding="async" fetchPriority="high" /></div>
                   <div className="mini-card"><span>web</span><strong>hazır</strong></div>
                   <div className="mini-card"><span>mobil</span><strong>uyumlu</strong></div>
                 </div>
@@ -282,7 +282,7 @@ function App() {
               <article className={`work-card work-card--${index + 1}`} key={project.id}>
                 <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} projesini görüntüle`}>
                   <div className={`work-card__image ${project.title === 'Takasso' ? 'work-card__image--takasso' : ''}`}>
-                    {project.title === 'Takasso' ? <TakassoPortfolioVisual /> : <img src={project.imageUrl} alt={`${project.title} - ${project.category} by Lunavor`} width="800" height="600" loading="lazy" decoding="async" />}
+                    {project.title === 'Takasso' ? <TakassoPortfolioVisual /> : <img src={project.imageUrl} alt={`${project.title} için Lunavor tarafından geliştirilen ${project.category.toLocaleLowerCase('tr-TR')}`} width="1200" height="800" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 1200px" loading="lazy" decoding="async" />}
                   </div>
                   <div className="work-card__overlay"><span>{project.category}</span><h3>{project.title}</h3><span className="work-card__arrow"><ExternalLink size={17} /></span></div>
                 </a>

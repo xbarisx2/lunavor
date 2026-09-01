@@ -4,33 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#090c10" />
+    <meta name="color-scheme" content="dark light" />
     <meta name="format-detection" content="telephone=no" />
     <title>Lunavor | Web sitesi ve mobil uygulama geliştirme</title>
     <meta name="description" content="Lunavor; kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve Google Play ile App Store yayın çözümleri geliştirir." />
     <meta name="author" content="Lunavor" />
+    <meta name="application-name" content="Lunavor" />
+    <meta name="apple-mobile-web-app-title" content="Lunavor" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://www.lunavor.com.tr/" />
-    <link rel="icon" type="image/svg+xml" href="/lunavor-mark.svg?v=3" />
-    <link rel="apple-touch-icon" href="/lunavor-mark.svg?v=3" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="alternate" hreflang="tr-TR" href="https://www.lunavor.com.tr/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.lunavor.com.tr/" />
+    <link rel="icon" type="image/svg+xml" href="/lunavor-mark.svg?v=4" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/lunavor-icon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/lunavor-icon-180.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/dm-serif-display-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/media/takasso-app-icon-512.jpg" as="image" type="image/jpeg" fetchpriority="high" />
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Lunavor | Web sitesi ve mobil uygulama geliştirme" />
     <meta property="og:description" content="Kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve yayın çözümleri." />
     <meta property="og:url" content="https://www.lunavor.com.tr/" />
     <meta property="og:site_name" content="Lunavor" />
-    <meta property="og:image" content="https://www.lunavor.com.tr/lunavor-mark.svg?v=3" />
-    <meta property="og:image:alt" content="Lunavor marka sembolü" />
-    <meta property="og:image:type" content="image/svg+xml" />
-    <meta property="og:image:width" content="48" />
-    <meta property="og:image:height" content="48" />
+    <meta property="og:image" content="https://www.lunavor.com.tr/lunavor-social-1200x630.jpg" />
+    <meta property="og:image:secure_url" content="https://www.lunavor.com.tr/lunavor-social-1200x630.jpg" />
+    <meta property="og:image:alt" content="Lunavor web sitesi, mobil uygulama ve yayın çözümleri" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Lunavor | Web sitesi ve mobil uygulama geliştirme" />
     <meta name="twitter:description" content="Kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve yayın çözümleri." />
-    <meta name="twitter:image" content="https://www.lunavor.com.tr/lunavor-mark.svg?v=3" />
-    <meta name="twitter:image:alt" content="Lunavor marka sembolü" />
+    <meta name="twitter:image" content="https://www.lunavor.com.tr/lunavor-social-1200x630.jpg" />
+    <meta name="twitter:image:alt" content="Lunavor web sitesi, mobil uygulama ve yayın çözümleri" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -40,9 +49,36 @@
             "@id": "https://www.lunavor.com.tr/#organization",
             "name": "Lunavor",
             "url": "https://www.lunavor.com.tr/",
-            "logo": "https://www.lunavor.com.tr/lunavor-mark.svg?v=3",
+            "description": "Kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve yayın çözümleri geliştiren yazılım şirketi.",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.lunavor.com.tr/lunavor-icon-512.png",
+              "width": 512,
+              "height": 512
+            },
+            "image": "https://www.lunavor.com.tr/lunavor-social-1200x630.jpg",
             "email": "lunavor.app@gmail.com",
-            "sameAs": ["https://www.instagram.com/bariisyldrmm/?hl=tr"]
+            "sameAs": ["https://www.instagram.com/bariisyldrmm/?hl=tr"],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "email": "lunavor.app@gmail.com",
+              "availableLanguage": ["tr"]
+            },
+            "makesOffer": [
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Web sitesi geliştirme" }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Mobil uygulama geliştirme" }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Google Play ve App Store yayın desteği" }
+              }
+            ]
           },
           {
             "@type": "WebSite",
@@ -53,10 +89,27 @@
             "publisher": { "@id": "https://www.lunavor.com.tr/#organization" }
           },
           {
+            "@type": "WebPage",
+            "@id": "https://www.lunavor.com.tr/#webpage",
+            "url": "https://www.lunavor.com.tr/",
+            "name": "Lunavor | Web sitesi ve mobil uygulama geliştirme",
+            "description": "Kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve yayın çözümleri.",
+            "isPartOf": { "@id": "https://www.lunavor.com.tr/#website" },
+            "about": { "@id": "https://www.lunavor.com.tr/#organization" },
+            "inLanguage": "tr-TR",
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://www.lunavor.com.tr/lunavor-social-1200x630.jpg",
+              "width": 1200,
+              "height": 630
+            }
+          },
+          {
             "@type": "Service",
+            "@id": "https://www.lunavor.com.tr/#services",
             "name": "Web sitesi ve mobil uygulama geliştirme",
             "provider": { "@id": "https://www.lunavor.com.tr/#organization" },
-            "areaServed": "TR",
+            "areaServed": { "@type": "Country", "name": "Türkiye" },
             "serviceType": ["Web sitesi geliştirme", "Mobil uygulama geliştirme", "Google Play ve App Store yayın desteği"]
           }
         ]
