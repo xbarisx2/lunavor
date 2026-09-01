@@ -12,6 +12,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
+        webSitesi: './web-sitesi/index.html',
+        mobilUygulama: './mobil-uygulama/index.html',
+        yazilimGelistirme: './yazilim-gelistirme/index.html',
       },
     },
   },

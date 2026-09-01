@@ -311,6 +311,10 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
 .site-footer__links a { display: grid; width: 2.25rem; height: 2.25rem; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: #8a9597; }
 .site-footer__links a:hover { color: var(--cyan); border-color: var(--cyan); }
 .site-footer__bottom { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1.2rem; border-top: 1px solid var(--line); color: #5e686c; font-size: .58rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.site-footer__service-links { display: flex; gap: .6rem; }
+.site-footer__service-links a + a::before { margin-right: .6rem; color: #343b3e; content: '·'; }
+.site-footer__service-links a { transition: color .2s ease; }
+.site-footer__service-links a:hover { color: var(--cyan); }
 
 @media (max-width: 900px) {
   .desktop-nav, .site-header__actions > .icon-link, .header-cta { display: none; }

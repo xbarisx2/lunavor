@@ -33,6 +33,7 @@ const serviceCards = [
     title: 'Web sitesi',
     description: 'Markanızı doğru anlatan, hızlı ve mobil cihazlarda kusursuz çalışan web deneyimleri.',
     detail: 'Strateji · Tasarım · SEO',
+    href: '/web-sitesi/',
     icon: <Globe2 size={22} strokeWidth={1.5} />,
   },
   {
@@ -40,13 +41,15 @@ const serviceCards = [
     title: 'Mobil uygulama',
     description: 'Android ve iOS için gerçek ihtiyaca odaklanan, sade ve sürdürülebilir ürünler.',
     detail: 'Android · iOS · Ürün',
+    href: '/mobil-uygulama/',
     icon: <Smartphone size={22} strokeWidth={1.5} />,
   },
   {
     number: '03',
-    title: 'Yayın desteği',
-    description: 'Google Play ve App Store hazırlığını, testini ve yayın adımlarını birlikte yürütürüz.',
-    detail: 'Test · Mağaza · Destek',
+    title: 'Özel yazılım',
+    description: 'İş akışınıza ve hedefinize göre planlanan, sürdürülebilir dijital ürünler.',
+    detail: 'Plan · Geliştirme · Yayın',
+    href: '/yazilim-gelistirme/',
     icon: <Code2 size={22} strokeWidth={1.5} />,
   },
 ];
@@ -199,7 +202,7 @@ function App() {
           <div className="hero__content">
             <Eyebrow>KİŞİYE ÖZEL DİJİTAL ÜRÜNLER</Eyebrow>
             <h1>Fikrinizi <em>dijital</em><br />bir ürüne<br /><span>dönüştürelim.</span></h1>
-            <p className="hero__lead">Lunavor; kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve yayın çözümleri geliştirir. Fikirden yayına, sade bir planla.</p>
+            <p className="hero__lead">Lunavor; kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve yazılım çözümleri geliştirir. Fikirden yayına, sade bir planla.</p>
             <div className="hero__actions">
               <a className="button button--primary" href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">Proje konuşalım <ArrowUpRight size={17} /></a>
               <a className="button button--ghost" href="#takasso">Takasso'yu gör <ChevronRight size={17} /></a>
@@ -246,11 +249,11 @@ function App() {
           </div>
           <div className="service-grid">
             {serviceCards.map((service) => (
-              <article className="service-card" key={service.number}>
+              <a className="service-card" href={service.href} key={service.number} aria-label={`${service.title} geliştirme hizmetini incele`}>
                 <div className="service-card__top"><span>{service.number}</span><span className="service-card__icon">{service.icon}</span></div>
                 <div><h3>{service.title}</h3><p>{service.description}</p></div>
                 <div className="service-card__bottom"><span>{service.detail}</span><ArrowUpRight size={17} /></div>
-              </article>
+              </a>
             ))}
           </div>
         </section>
@@ -314,8 +317,8 @@ function App() {
       </main>
 
       <footer className="site-footer">
-        <div className="site-footer__top"><a href="#top" aria-label="Lunavor ana sayfa"><BrandMark /></a><p>Kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve yayın çözümleri.</p><div className="site-footer__links"><a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={18} /></a><a href={EMAIL_LINK} aria-label="E-posta"><Mail size={18} /></a></div></div>
-        <div className="site-footer__bottom"><span>© 2026 Lunavor. Tüm hakları saklıdır.</span><span>Web · Mobil · Ürün</span></div>
+        <div className="site-footer__top"><a href="#top" aria-label="Lunavor ana sayfa"><BrandMark /></a><p>Kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve yazılım çözümleri.</p><div className="site-footer__links"><a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={18} /></a><a href={EMAIL_LINK} aria-label="E-posta"><Mail size={18} /></a></div></div>
+        <div className="site-footer__bottom"><span>© 2026 Lunavor. Tüm hakları saklıdır.</span><nav className="site-footer__service-links" aria-label="Hizmet sayfaları"><a href="/web-sitesi/">Web</a><a href="/mobil-uygulama/">Mobil</a><a href="/yazilim-gelistirme/">Yazılım</a></nav></div>
       </footer>
     </div>
   );
