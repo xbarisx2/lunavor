@@ -21,7 +21,7 @@ type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 
 const navItems = [
   { label: 'Hizmetler', href: '#services' },
-  { label: 'Takasso', href: '#takasso' },
+  { label: 'Mobil ürünler', href: '#mobile-products' },
   { label: 'Çalışmalar', href: '#work' },
   { label: 'Süreç', href: '#process' },
   { label: 'İletişim', href: '#contact' },
@@ -68,13 +68,15 @@ function AtamaCepPortfolioVisual() {
   return (
     <div className="atamacep-card-art">
       <div className="atamacep-card-art__copy">
-        <span className="atamacep-card-art__eyebrow">Lunavor mobil ürünleri</span>
-        <strong>Kamu ilanları.<br /><em>Tek bir yerde.</em></strong>
+        <div className="atamacep-card-art__brand"><img src={atamacep.imageUrl} alt="AtamaCep resmî uygulama simgesi" width="72" height="72" loading="lazy" decoding="async" /><span>AtamaCep<small>KPSS ve kamu ilan takibi</small></span></div>
+        <span className="atamacep-card-art__eyebrow">Pusuk ile keşfet</span>
+        <strong>Bir sonraki<br /><em>fırsatına bak.</em></strong>
         <p>KPSS ve kamu ilanlarını takip etmek için geliştirdiğimiz mobil uygulama.</p>
         <span className="atamacep-card-art__stage">Google Play · Kapalı test</span>
       </div>
-      <div className="atamacep-card-art__icon">
-        <img src={atamacep.imageUrl} alt="AtamaCep resmî uygulama simgesi" width="512" height="512" loading="lazy" decoding="async" />
+      <div className="atamacep-card-art__mascot">
+        <img src="/media/atamacep-pusuk.png" alt="AtamaCep’in büyüteç tutan tilki maskotu Pusuk" width="635" height="824" loading="lazy" decoding="async" />
+        <span>Pusuk <small>AtamaCep’in takip arkadaşı</small></span>
       </div>
     </div>
   );
@@ -219,28 +221,27 @@ function App() {
           <div className="hero__content">
             <Eyebrow>KİŞİYE ÖZEL DİJİTAL ÜRÜNLER</Eyebrow>
             <h1>Fikrinizi <em>dijital</em><br />bir ürüne<br /><span>dönüştürelim.</span></h1>
-            <p className="hero__lead">Lunavor; kişiye ve işletmeye özel web siteleri, mobil uygulamalar ve yazılım çözümleri geliştirir. Fikirden yayına, sade bir planla.</p>
+            <p className="hero__lead">Takasso ve AtamaCep gibi kendi mobil ürünlerimizi geliştiriyor; bu deneyimi işletmenize özel web sitelerine ve yazılım çözümlerine taşıyoruz.</p>
             <div className="hero__actions">
               <a className="button button--primary" href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">Proje konuşalım <ArrowUpRight size={17} /></a>
-              <a className="button button--ghost" href="#takasso">Takasso'yu gör <ChevronRight size={17} /></a>
+              <a className="button button--ghost" href="#mobile-products">Mobil ürünlerimizi gör <ChevronRight size={17} /></a>
             </div>
             <div className="hero__meta"><span>01 / 05</span><span>Fikirden yayına</span></div>
           </div>
 
-          <div className="hero__visual" aria-label="Lunavor ürün geliştirme akışı">
+          <div className="hero__visual" aria-label="Lunavor’un mobil ürünleri Takasso ve AtamaCep">
             <div className="hero__visual-orbit hero__visual-orbit--one" aria-hidden="true" />
             <div className="hero__visual-orbit hero__visual-orbit--two" aria-hidden="true" />
             <div className="product-window">
               <div className="product-window__bar"><span /><span /><span /><small>lunavor / product-preview</small></div>
               <div className="product-window__body">
-                <div className="product-window__topline"><span>TAKASSO</span><span className="status-dot">YAYINDA</span></div>
-                <div className="product-window__hero-copy">Daha iyi<br /><em>keşfet.</em></div>
-                <div className="product-window__cards">
-                  <div className="mini-card mini-card--image"><img src={takasso.imageUrl} alt="Takasso uygulama simgesi" width="96" height="96" loading="eager" decoding="async" fetchPriority="high" /></div>
-                  <div className="mini-card"><span>web</span><strong>hazır</strong></div>
-                  <div className="mini-card"><span>mobil</span><strong>uyumlu</strong></div>
+                <div className="product-window__topline"><span>LUNAVOR MOBİL ÜRÜNLERİ</span><Smartphone size={15} /></div>
+                <div className="product-window__hero-copy">Kendi fikirlerimiz.<br /><em>Gerçek ürünler.</em></div>
+                <div className="hero-products">
+                  <a className="hero-product" href="#takasso"><img src={takasso.imageUrl} alt="Takasso logosu" width="72" height="72" loading="eager" decoding="async" fetchPriority="high" /><span><strong>Takasso</strong><small>İkinci el alışveriş</small></span><b className="status-dot">Yayında</b><ArrowUpRight size={16} /></a>
+                  <a className="hero-product hero-product--atamacep" href="#atamacep"><img src={atamacep.imageUrl} alt="AtamaCep logosu" width="72" height="72" loading="eager" decoding="async" /><span><strong>AtamaCep</strong><small>KPSS ve kamu ilan takibi</small></span><b>Kapalı test</b><ArrowUpRight size={16} /></a>
                 </div>
-                <div className="product-window__footer"><span>ürün deneyimi</span><span>↗</span></div>
+                <div className="product-window__footer"><span>Fikirden geliştirmeye, tek ekip.</span><span>↗</span></div>
               </div>
             </div>
             <div className="hero__floating-note"><Sparkles size={14} /><span>Fikirden ürüne</span></div>
@@ -275,13 +276,15 @@ function App() {
           </div>
         </section>
 
-        <section id="takasso" className="case-study section-frame">
+        <section id="mobile-products" className="case-study section-frame">
           <div className="case-study__copy">
-            <Eyebrow>03 / ANA ÜRÜNÜMÜZ</Eyebrow>
-            <h2>Bir fikri<br /><em>pazara</em> taşıdık.</h2>
+            <Eyebrow>03 / MOBİL ÜRÜNLERİMİZ</Eyebrow>
+            <h2>Kendi fikirlerimiz.<br /><em>Yaşayan</em> ürünler.</h2>
+            <div className="product-intro" id="takasso"><img src={takasso.imageUrl} alt="" width="48" height="48" loading="lazy" /><strong>Takasso</strong><span>Yayında</span></div>
             <p>Takasso; ikinci el ürünleri keşfetmeyi, ilan vermeyi ve kullanıcıların doğrudan iletişim kurmasını kolaylaştıran pazar yeri uygulamamızdır.</p>
             <div className="tag-row"><span>Mobil uygulama</span><span>Web platformu</span><span>Ürün deneyimi</span></div>
             <a className="text-link" href="https://takasso.com.tr/" target="_blank" rel="noopener noreferrer">Takasso'yu incele <ArrowUpRight size={17} /></a>
+            <a className="sister-product" href="#atamacep"><img src={atamacep.imageUrl} alt="AtamaCep logosu" width="64" height="64" loading="lazy" decoding="async" /><span><small>Diğer mobil ürünümüz · Kapalı test</small><strong>AtamaCep</strong><span>KPSS ve kamu ilanlarını Pusuk’la keşfet.</span></span><ArrowUpRight size={19} /></a>
           </div>
           <div className="case-study__visual">
             <div className="case-study__halo" aria-hidden="true" />
@@ -296,10 +299,10 @@ function App() {
         </section>
 
         <section id="work" className="work-section section-frame section-frame--light">
-          <div className="work-section__heading"><div><Eyebrow>04 / GERÇEK ÇALIŞMALAR</Eyebrow><h2>İz bırakan<br /><em>işler.</em></h2></div><p>Lunavor çatısı altında geliştirdiğimiz web siteleri, uygulamalar ve dijital ürünlerden seçmeler.</p></div>
+          <div className="work-section__heading"><div><Eyebrow>04 / ÜRÜNLER VE ÇALIŞMALAR</Eyebrow><h2>Önce fikir.<br /><em>Sonra etki.</em></h2></div><p>Önce kendi mobil ürünlerimiz: Takasso ve AtamaCep. Ardından işletmeler için geliştirdiğimiz web deneyimleri.</p></div>
           <div className="work-grid">
             {PROJECTS.map((project, index) => (
-              <article className={`work-card work-card--${index + 1}`} key={project.id}>
+              <article id={project.title === 'AtamaCep' ? 'atamacep' : undefined} className={`work-card work-card--${index + 1} ${project.title === 'Takasso' || project.title === 'AtamaCep' ? 'work-card--mobile' : 'work-card--web'}`} key={project.id}>
                 <a href={project.url} target={project.url.startsWith('https://') ? '_blank' : undefined} rel={project.url.startsWith('https://') ? 'noopener noreferrer' : undefined} aria-label={project.linkLabel ?? `${project.title} projesini görüntüle`}>
                   {project.status && <span className="work-card__status">{project.status}</span>}
                   <div className={`work-card__image ${project.title === 'Takasso' ? 'work-card__image--takasso' : ''}`}>
