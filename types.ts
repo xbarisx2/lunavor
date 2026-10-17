@@ -12,6 +12,8 @@ export interface Project {
   category: string;
   imageUrl: string;
   url: string;
+  status?: string;
+  linkLabel?: string;
 }
 
 export interface Client {

@@ -62,6 +62,23 @@ const processSteps = [
 ];
 
 const takasso = PROJECTS.find((project) => project.title === 'Takasso') ?? PROJECTS[0];
+const atamacep = PROJECTS.find((project) => project.title === 'AtamaCep')!;
+
+function AtamaCepPortfolioVisual() {
+  return (
+    <div className="atamacep-card-art">
+      <div className="atamacep-card-art__copy">
+        <span className="atamacep-card-art__eyebrow">Lunavor mobil ürünleri</span>
+        <strong>Kamu ilanları.<br /><em>Tek bir yerde.</em></strong>
+        <p>KPSS ve kamu ilanlarını takip etmek için geliştirdiğimiz mobil uygulama.</p>
+        <span className="atamacep-card-art__stage">Google Play · Kapalı test</span>
+      </div>
+      <div className="atamacep-card-art__icon">
+        <img src={atamacep.imageUrl} alt="AtamaCep resmî uygulama simgesi" width="512" height="512" loading="lazy" decoding="async" />
+      </div>
+    </div>
+  );
+}
 
 function BrandMark({ compact = false }: { compact?: boolean }) {
   return (
@@ -283,11 +300,12 @@ function App() {
           <div className="work-grid">
             {PROJECTS.map((project, index) => (
               <article className={`work-card work-card--${index + 1}`} key={project.id}>
-                <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} projesini görüntüle`}>
+                <a href={project.url} target={project.url.startsWith('https://') ? '_blank' : undefined} rel={project.url.startsWith('https://') ? 'noopener noreferrer' : undefined} aria-label={project.linkLabel ?? `${project.title} projesini görüntüle`}>
+                  {project.status && <span className="work-card__status">{project.status}</span>}
                   <div className={`work-card__image ${project.title === 'Takasso' ? 'work-card__image--takasso' : ''}`}>
-                    {project.title === 'Takasso' ? <TakassoPortfolioVisual /> : <img src={project.imageUrl} alt={`${project.title} için Lunavor tarafından geliştirilen ${project.category.toLocaleLowerCase('tr-TR')}`} width="1200" height="800" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 1200px" loading="lazy" decoding="async" />}
+                    {project.title === 'Takasso' ? <TakassoPortfolioVisual /> : project.title === 'AtamaCep' ? <AtamaCepPortfolioVisual /> : <img src={project.imageUrl} alt={`${project.title} için Lunavor tarafından geliştirilen ${project.category.toLocaleLowerCase('tr-TR')}`} width="1200" height="800" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 1200px" loading="lazy" decoding="async" />}
                   </div>
-                  <div className="work-card__overlay"><span>{project.category}</span><h3>{project.title}</h3><span className="work-card__arrow"><ExternalLink size={17} /></span></div>
+                  <div className="work-card__overlay"><span>{project.category}</span><h3>{project.title}</h3><span className="work-card__arrow">{project.url.startsWith('https://') ? <ExternalLink size={17} /> : <ArrowUpRight size={17} />}</span></div>
                 </a>
               </article>
             ))}
