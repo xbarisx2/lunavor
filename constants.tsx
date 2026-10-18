@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
   { id: 5, title: 'AtamaCep', category: 'Mobil uygulama · KPSS ilan bildirimi', imageUrl: '/media/atamacep-icon-512.png', url: '#contact', status: 'Kapalı test', linkLabel: 'AtamaCep hakkında bilgi alın' },
   { id: 2, title: 'Interakdeniz Alüminyum', category: 'Kurumsal web sitesi', imageUrl: '/media/interakdeniz-aluminyum-1200.jpg', url: 'https://www.interakdenizaluminyum.com/' },
   { id: 3, title: 'İkonyum Ahşap', category: 'Kurumsal web sitesi', imageUrl: '/media/ikonyum-ahsap-1200.jpg', url: 'https://www.ikonyumahsap.com.tr/' },
-  { id: 4, title: 'Fayansçı Serdar Dekorasyon', category: 'Hizmet ve portfolyo web sitesi', imageUrl: '/media/fayansci-serdar-preview.png', url: 'https://fayansci-serdar.vercel.app/' },
+  { id: 4, title: 'Fayansçı Serdar Dekorasyon', category: 'Hizmet ve portfolyo web sitesi', imageUrl: '/media/fayansci-serdar-dekorasyon-cover.webp', imageAlt: 'Fayansçı Serdar Dekorasyon web sitesi projesi için temsili modern seramik ve ahşap banyo tasarımı', url: 'https://fayansci-serdar.vercel.app/' },
 ];
 
 export const CLIENTS: Client[] = [

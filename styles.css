@@ -83,7 +83,7 @@ img { display: block; max-width: 100%; }
 .section-frame { position: relative; padding: clamp(5.5rem, 11vw, 10rem) clamp(1.25rem, 6vw, 6rem); }
 .section-frame--light { background: var(--paper); color: var(--ink); }
 .section-frame--accent { background: #c9f2f0; color: var(--ink); }
-.answer-section, .case-study, .work-section, .process-section, .contact-section { content-visibility: auto; contain-intrinsic-size: auto 900px; }
+.answer-section, .mobile-projects, .work-section, .process-section, .contact-section { content-visibility: auto; contain-intrinsic-size: auto 900px; }
 .site-footer { content-visibility: auto; contain-intrinsic-size: auto 260px; }
 
 .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 40; display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.15rem clamp(1.25rem, 5vw, 5rem); border-bottom: 1px solid transparent; transition: background .3s ease, border-color .3s ease, backdrop-filter .3s ease; }
@@ -181,47 +181,10 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
 .service-card:hover .service-card__bottom { border-color: var(--line); }
 .service-card:hover .service-card__icon { border-color: rgba(156,239,255,.4); color: var(--cyan); }
 
-.case-study { display: grid; max-width: 100rem; grid-template-columns: minmax(0, .8fr) minmax(22rem, 1.2fr); align-items: center; gap: clamp(3rem, 9vw, 10rem); margin: auto; }
-.case-study__copy { max-width: 31rem; }
-.case-study__copy .eyebrow { color: var(--blue); }
-.case-study h2 { margin: 0 0 2rem; font-size: clamp(3.5rem, 7vw, 7rem); letter-spacing: -.09em; line-height: .85; }
-.case-study h2 em { color: var(--cyan); }
-.case-study__copy > p { max-width: 28rem; color: var(--muted); font-size: 1rem; line-height: 1.75; }
 .tag-row { display: flex; flex-wrap: wrap; gap: .5rem; margin: 2rem 0; }
 .tag-row span { padding: .55rem .7rem; border: 1px solid var(--line); border-radius: 999px; color: #9ca7a7; font-size: .58rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .text-link { display: inline-flex; align-items: center; gap: .5rem; color: var(--cyan); font-size: .68rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .text-link:hover { color: var(--white); }
-.case-study__visual { position: relative; display: grid; min-height: 43rem; place-items: center; }
-.case-study__halo { position: absolute; width: 80%; height: 60%; border-radius: 50%; background: radial-gradient(ellipse, rgba(63, 120, 255, .24), transparent 68%); filter: blur(25px); }
-.case-study__device { position: relative; width: min(22rem, 75%); padding: .9rem; overflow: hidden; border: 1px solid rgba(156,239,255,.3); border-radius: 2.3rem; background: linear-gradient(145deg, #1e3140, #0c121a 60%); box-shadow: 2.5rem 2.5rem 6rem rgba(0,0,0,.35), 0 0 5rem rgba(72,150,255,.15); transform: rotate(-7deg); }
-.case-study__device::before { position: absolute; top: .5rem; left: 50%; width: 5rem; height: .3rem; border-radius: 1rem; background: #071016; content: ''; transform: translateX(-50%); }
-.case-study__device-top, .case-study__device-brand { display: flex; align-items: center; justify-content: space-between; padding: .55rem .65rem; color: #9cacb4; font-size: .6rem; }
-.case-study__device-brand { margin-top: .5rem; color: var(--white); }
-.takasso-mini-brand { display: inline-flex; align-items: center; gap: .35rem; color: #fff2df; font-size: .65rem; font-weight: 800; letter-spacing: -.04em; }
-.takasso-mini-brand > span { display: grid; width: 1.25rem; height: 1.25rem; place-items: center; border-radius: .4rem; background: linear-gradient(135deg, #ffd293, #ec6d29); color: #25150c; font-size: .58rem; font-weight: 900; }
-.takasso-mini-brand strong { font-weight: 800; }
-.case-study__device > img { width: 100%; aspect-ratio: 1; object-fit: contain; padding: 3rem; border-radius: 1.5rem; background: #0e1822; }
-.case-study__device-screen { padding: .7rem; border: 1px solid rgba(156,239,255,.14); border-radius: 1.45rem; background: linear-gradient(160deg, #102130, #0c151d 70%); }
-.case-study__search { display: flex; min-width: 0; align-items: center; justify-content: space-between; gap: .5rem; padding: .65rem .7rem; border: 1px solid rgba(255,255,255,.1); border-radius: .7rem; background: rgba(255,255,255,.06); color: #b6c4c7; font-size: .56rem; }
-.case-study__search span:first-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.case-study__search span:last-child { color: var(--cyan); font-size: .95rem; line-height: 1; }
-.case-study__screen-hero { display: flex; min-height: 8.4rem; align-items: center; justify-content: space-between; gap: .7rem; padding: 1.1rem .35rem .8rem; }
-.case-study__screen-hero span, .case-study__screen-hero strong { display: block; }
-.case-study__screen-hero span { color: #9eafb4; font-size: .62rem; }
-.case-study__screen-hero strong { margin-top: .25rem; color: var(--white); font-size: 1.45rem; letter-spacing: -.08em; line-height: .9; }
-.case-study__screen-hero img { width: 4.3rem; height: 4.3rem; flex: 0 0 auto; object-fit: cover; border: 1px solid rgba(255,194,115,.45); border-radius: 1.15rem; box-shadow: 0 .8rem 1.8rem rgba(0,0,0,.25); }
-.case-study__screen-tabs { display: flex; gap: .35rem; padding-bottom: .7rem; overflow: hidden; }
-.case-study__screen-tabs span { padding: .42rem .55rem; border: 1px solid rgba(255,255,255,.1); border-radius: 999px; color: #83949b; font-size: .5rem; font-weight: 800; white-space: nowrap; }
-.case-study__screen-tabs .is-active { border-color: rgba(156,239,255,.35); background: rgba(156,239,255,.1); color: var(--cyan); }
-.case-study__screen-card { display: grid; gap: .25rem; padding: .8rem; border-radius: .85rem; background: linear-gradient(135deg, rgba(255,190,110,.94), rgba(213,105,49,.88)); color: #1b1410; }
-.case-study__screen-card span, .case-study__screen-card strong, .case-study__screen-card small { display: block; }
-.case-study__screen-card span { font-size: .5rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-.case-study__screen-card strong { font-size: .82rem; letter-spacing: -.04em; }
-.case-study__screen-card small { color: rgba(27,20,16,.65); font-size: .52rem; }
-.case-study__device-caption { display: flex; justify-content: space-between; padding: 1rem .7rem .4rem; color: #9ba8ae; font-size: .65rem; }
-.case-study__device-caption strong { color: var(--cyan); }
-.case-study__label { position: absolute; right: 3%; bottom: 12%; display: flex; flex-direction: column; gap: .4rem; color: #6e7a7f; font-size: .58rem; font-weight: 800; letter-spacing: .16em; text-align: right; }
-.case-study__label strong { color: var(--cyan); font-family: var(--serif); font-size: 2.5rem; font-weight: 400; letter-spacing: -.05em; }
 
 .work-section { padding-top: clamp(5rem, 10vw, 9rem); padding-bottom: clamp(5rem, 10vw, 9rem); }
 .work-section__heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; max-width: 75rem; margin: 0 auto 4.5rem; }
@@ -230,13 +193,12 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
 .work-section__heading > p { max-width: 20rem; margin: 0 0 .4rem; color: #747d7e; font-size: .95rem; line-height: 1.7; }
 .work-grid { display: grid; max-width: 75rem; grid-template-columns: repeat(12, 1fr); gap: 1rem; margin: auto; }
 .work-card { position: relative; min-height: 23rem; grid-column: span 6; overflow: hidden; border-radius: 1rem; background: #d8dad6; }
-.work-card--mobile { grid-column: span 12; min-height: 30rem; }
-.work-card--web { grid-column: span 6; min-height: 25rem; }
-.work-card--5 { grid-column: span 12; }
+.work-card--web { grid-column: span 6; height: 25rem; min-height: 25rem; }
+.work-card--wide { grid-column: span 12; }
 .work-card__status { position: absolute; z-index: 2; top: 1.25rem; right: 1.25rem; padding: .55rem .8rem; border: 1px solid rgba(237, 203, 133, .45); border-radius: 999px; background: #172635; color: #f0d195; font-size: .65rem; font-weight: 700; }
 .atamacep-card-art { position: relative; display: grid; grid-template-columns: 1.15fr 1fr; gap: 2rem; align-items: center; min-height: inherit; padding: 2.5rem 3rem 6.5rem; color: #fff6df; background: radial-gradient(ellipse at 80% 30%, #394b4b, transparent 65%), #101e26; }
 .atamacep-card-art__brand { display: flex; align-items: center; gap: .85rem; margin-bottom: 2rem; }
-.work-card .atamacep-card-art__brand img { width: 3.5rem; height: 3.5rem; min-height: 0; border-radius: .8rem; object-fit: contain; filter: none; }
+.mobile-project .atamacep-card-art__brand img { width: 3.5rem; height: 3.5rem; min-height: 0; border-radius: .8rem; object-fit: contain; filter: none; }
 .atamacep-card-art__brand > span { font-size: 1.25rem; font-weight: 800; letter-spacing: -.04em; }
 .atamacep-card-art__brand small { display: block; margin-top: .25rem; color: #b8c3c2; font-size: .65rem; font-weight: 400; letter-spacing: 0; }
 .atamacep-card-art__eyebrow { display: block; margin-bottom: 1rem; color: #dbc28f; font-size: .6rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
@@ -245,10 +207,10 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
 .atamacep-card-art__copy p { max-width: 25rem; color: #b7c6ce; font-size: .9rem; line-height: 1.6; }
 .atamacep-card-art__stage { color: #e6ca8d; font-size: .7rem; }
 .atamacep-card-art__mascot { position: relative; width: 100%; max-width: 22rem; justify-self: end; overflow: hidden; border: 1px solid #e2cda0; border-radius: 10rem 10rem 1.5rem 1.5rem; background: #fcf7ee; box-shadow: 0 1.5rem 4rem #0004; }
-.work-card .atamacep-card-art__mascot img { display: block; width: 100%; height: 24rem; min-height: 0; object-fit: cover; object-position: center 35%; filter: none; }
+.mobile-project .atamacep-card-art__mascot img { display: block; width: 100%; height: 24rem; min-height: 0; object-fit: cover; object-position: center 35%; filter: none; }
 .atamacep-card-art__mascot > span { position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem 1rem 1rem; background: linear-gradient(transparent, #fcf7ee 55%); color: #403527; text-align: center; font-family: var(--serif); font-size: 1.7rem; }
 .atamacep-card-art__mascot small { display: block; margin-top: .2rem; font-family: var(--sans); font-size: .6rem; }
-.work-card:hover .atamacep-card-art img { transform: none; filter: none; }
+.mobile-project:hover .atamacep-card-art img { transform: none; filter: none; }
 .hero-products { display: grid; gap: .7rem; }
 .hero-product { display: flex; align-items: center; gap: .8rem; padding: .8rem; border: 1px solid #ffffff21; border-radius: .9rem; background: #ffffff05; }
 .hero-product:hover { border-color: #9cefff77; background: #ffffff0b; }
@@ -261,18 +223,6 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
 .hero-product > .status-dot { color: #83dfbd; }
 .hero-product > svg { color: #9bb1b9; flex-shrink: 0; }
 .product-window__hero-copy { margin: 2rem 0; font-size: clamp(2rem, 3.7vw, 3.2rem); }
-.product-intro { display: flex; align-items: center; gap: .7rem; margin: 1.7rem 0; scroll-margin-top: 7rem; }
-.product-intro img { border-radius: .7rem; }
-.product-intro strong { font-size: 1.4rem; letter-spacing: -.04em; }
-.product-intro > span { color: #83dfbd; font-size: .6rem; margin-left: auto; }
-.sister-product { display: flex; align-items: center; gap: 1rem; padding: 1.2rem; margin-top: 2rem; border: 1px solid #e6ca8d44; border-radius: 1rem; background: #e6ca8d06; }
-.sister-product:hover { border-color: #e6ca8daa; }
-.sister-product img { width: 3.5rem; height: 3.5rem; flex-shrink: 0; border-radius: .7rem; }
-.sister-product > span { flex: 1; }
-.sister-product small, .sister-product strong, .sister-product span > span { display: block; }
-.sister-product small { color: #dbc28f; font-size: .55rem; line-height: 1.5; }
-.sister-product strong { margin: .3rem 0; font-size: 1.1rem; }
-.sister-product span > span { color: #9eafb4; font-size: .7rem; line-height: 1.6; }
 #atamacep { scroll-margin-top: 6rem; }
 .work-card a, .work-card__image { display: block; width: 100%; height: 100%; }
 .work-card > a { min-height: inherit; }
@@ -284,7 +234,6 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
 .takasso-card-art__grid { position: absolute; inset: 0; z-index: -1; opacity: .2; background-image: linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px); background-size: 3rem 3rem; mask-image: radial-gradient(circle at center, black, transparent 78%); }
 .takasso-card-art__topline { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .takasso-card-art__wordmark { display: inline-flex; align-items: center; gap: .5rem; color: #fff2df; font-size: 1rem; font-weight: 800; letter-spacing: -.06em; }
-.takasso-card-art__wordmark-mark { display: grid; width: 1.7rem; height: 1.7rem; place-items: center; border-radius: .55rem; background: linear-gradient(135deg, #ffd293, #ec6d29); color: #25150c; font-size: .78rem; font-weight: 900; }
 .takasso-card-art__status { color: rgba(255,235,211,.62); font-size: .52rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .takasso-card-art__copy { position: relative; z-index: 2; display: flex; max-width: 52%; flex-direction: column; margin-top: clamp(3rem, 8vw, 5.6rem); font-size: clamp(2.2rem, 5.5vw, 5rem); font-weight: 800; letter-spacing: -.1em; line-height: .84; }
 .takasso-card-art__copy span { color: #fff5e8; }
@@ -370,9 +319,6 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
   .hero__scroll { display: none; }
   .service-grid { grid-template-columns: 1fr; }
   .service-card { min-height: 18rem; }
-  .case-study { grid-template-columns: 1fr; }
-  .case-study__copy { max-width: 40rem; }
-  .case-study__visual { min-height: 36rem; }
   .process-section { grid-template-columns: 1fr; gap: 3.5rem; }
   .principles { grid-column: auto; margin-top: 0; }
   .contact-section { grid-template-columns: 1fr; gap: 3rem; }
@@ -410,16 +356,13 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
   .work-card, .work-card--1, .work-card--2, .work-card--3, .work-card--4, .work-card--5 { min-height: 22rem; margin-bottom: 1rem; }
   .atamacep-card-art { grid-template-columns: 1fr; gap: 2rem; padding: 4.5rem 1.5rem 7rem; }
   .atamacep-card-art__mascot { width: 100%; max-width: 18rem; justify-self: center; }
-  .work-card .atamacep-card-art__mascot img { height: 20rem; }
+  .mobile-project .atamacep-card-art__mascot img { height: 20rem; }
   .atamacep-card-art__copy > strong { font-size: 2.7rem; }
   .atamacep-card-art__brand { margin-bottom: 1.5rem; }
   .hero-product { gap: .6rem; padding: .65rem; }
   .hero-product img { width: 2.8rem; height: 2.8rem; }
   .hero-product > svg { display: none; }
   .product-window__hero-copy { font-size: 2.35rem; }
-  .case-study__visual { min-height: 30rem; }
-  .case-study__device { width: 70%; }
-  .case-study__label { right: 0; }
   .takasso-card-art__panel { right: 1rem; bottom: 7.3rem; left: 1rem; }
   .takasso-card-art__panel div { padding: .4rem; }
   .takasso-card-art__panel strong { font-size: .6rem; }
@@ -439,5 +382,71 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
 }
 
 @media (prefers-reduced-data: reduce) {
-  .hero__glow, .hero__visual-orbit, .case-study__halo { display: none; }
+  .hero__glow, .hero__visual-orbit { display: none; }
+}
+
+/* Independent mobile products, followed by client web projects. */
+.mobile-projects { max-width: 100rem; margin: auto; }
+.site-header { background: rgba(9,12,16,.96); border-bottom-color: #ffffff12; }
+.mobile-projects__heading { display: flex; align-items: end; justify-content: space-between; gap: 3rem; max-width: 75rem; margin: 0 auto 3rem; }
+.mobile-projects__heading h2 { margin: 0; font-size: clamp(2.8rem, 5vw, 5.1rem); line-height: .98; letter-spacing: -.065em; }
+.mobile-projects__heading > p { max-width: 23rem; margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.8; }
+.mobile-projects__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; max-width: 75rem; margin: auto; }
+.mobile-project { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid #ffffff20; border-radius: 1.4rem; background: #0e161d; scroll-margin-top: 7rem; }
+.mobile-project__art { height: 25rem; flex-shrink: 0; overflow: hidden; }
+.mobile-project__body { display: flex; flex: 1; flex-direction: column; align-items: start; padding: 2rem; border-top: 1px solid #ffffff16; }
+.mobile-project__meta { display: flex; width: 100%; align-items: start; justify-content: space-between; gap: .7rem; color: #9baeb5; font-size: .6rem; line-height: 1.5; }
+.mobile-project__meta > span { text-transform: uppercase; letter-spacing: .08em; }
+.mobile-project__meta b { color: #86d8ba; font-weight: 500; white-space: nowrap; }
+.mobile-project--atamacep .mobile-project__meta b { color: #e6ca8d; }
+.mobile-project h3 { margin: 1rem 0 .8rem; font-size: 2.3rem; line-height: 1.1; letter-spacing: -.05em; }
+.mobile-project__body > p { margin: 0; color: #a7b6ba; font-size: .9rem; line-height: 1.8; }
+.mobile-project .tag-row { margin: 1.5rem 0 2rem; }
+.mobile-project .text-link { margin-top: auto; line-height: 1.5; }
+.mobile-project--atamacep .text-link { color: #e6ca8d; }
+.mobile-project .takasso-card-art { min-height: 0; height: 100%; padding: 2rem; }
+.takasso-card-art__wordmark img { width: 3rem; height: 3rem; object-fit: contain; border-radius: .7rem; }
+.mobile-project .takasso-card-art__copy { margin-top: 3rem; max-width: 70%; font-size: clamp(2.4rem, 4.2vw, 3.8rem); letter-spacing: -.07em; }
+.mobile-project .takasso-card-art__icon { top: 32%; right: 6%; width: 8.5rem; border-radius: 1.4rem; }
+.mobile-project .takasso-card-art__icon img { display: block; width: 100%; height: auto; border-radius: .9rem; }
+.mobile-project .takasso-card-art__panel { left: 2rem; right: 2rem; bottom: 1.8rem; }
+.mobile-project .atamacep-card-art { height: 100%; min-height: 0; grid-template-columns: 1fr .85fr; gap: 1rem; padding: 2rem; }
+.mobile-project .atamacep-card-art__brand { gap: .6rem; margin-bottom: 2rem; }
+.mobile-project .atamacep-card-art__brand { position: absolute; top: 2rem; left: 2rem; margin: 0; }
+.mobile-project .atamacep-card-art__copy { padding-top: 3rem; }
+.mobile-project .atamacep-card-art__brand img { width: 3rem; height: 3rem; }
+.mobile-project .atamacep-card-art__brand > span { font-size: 1rem; }
+.mobile-project .atamacep-card-art__eyebrow { font-size: .5rem; }
+.mobile-project .atamacep-card-art__copy > strong { font-size: clamp(2rem, 3vw, 2.7rem); }
+.mobile-project .atamacep-card-art__mascot { align-self: end; width: calc(100% + 1rem); max-width: none; border-radius: 7rem 7rem 1rem 1rem; }
+.mobile-project .atamacep-card-art__mascot img { height: 16.5rem; }
+.atamacep-card-art__mascot > span { font-size: 1.4rem; }
+.atamacep-card-art__mascot small { font-family: inherit; font-size: .5rem; }
+@media (max-width: 1000px) and (min-width: 761px) {
+  .mobile-projects__grid { gap: 1rem; }
+  .mobile-project__body { padding: 1.5rem; }
+  .mobile-project .atamacep-card-art { padding: 1.5rem; gap: .4rem; }
+  .mobile-project .atamacep-card-art__copy > strong { font-size: 1.9rem; }
+  .mobile-project .takasso-card-art__icon { width: 7rem; right: 5%; }
+}
+@media (max-width: 760px) {
+  .mobile-projects__heading { display: block; }
+  .mobile-projects__heading > p { margin-top: 1.5rem; max-width: 34rem; }
+  .mobile-projects__grid { grid-template-columns: 1fr; }
+  .mobile-project__art { height: 24rem; }
+  .mobile-project .takasso-card-art__copy { font-size: 3.3rem; }
+  .mobile-project .atamacep-card-art__copy > strong { font-size: 2.5rem; }
+}
+@media (max-width: 440px) {
+  .mobile-project__body { padding: 1.5rem; }
+  .mobile-project .takasso-card-art { padding: 1.5rem; }
+  .mobile-project .takasso-card-art__copy { font-size: 2.7rem; }
+  .mobile-project .takasso-card-art__icon { width: 6.8rem; top: 35%; }
+  .mobile-project .takasso-card-art__panel { left: 1.2rem; right: 1.2rem; }
+  .mobile-project .atamacep-card-art { padding: 1.5rem; gap: .4rem; }
+  .mobile-project .atamacep-card-art__copy > strong { font-size: 2rem; }
+  .mobile-project .atamacep-card-art__brand { gap: .5rem; }
+  .mobile-project .atamacep-card-art__brand { top: 1.5rem; left: 1.5rem; }
+  .mobile-project .atamacep-card-art__brand img { width: 2.5rem; height: 2.5rem; }
+  .mobile-project .atamacep-card-art__mascot img { height: 15rem; }
 }

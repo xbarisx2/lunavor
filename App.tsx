@@ -68,11 +68,9 @@ function AtamaCepPortfolioVisual() {
   return (
     <div className="atamacep-card-art">
       <div className="atamacep-card-art__copy">
-        <div className="atamacep-card-art__brand"><img src={atamacep.imageUrl} alt="AtamaCep resmî uygulama simgesi" width="72" height="72" loading="lazy" decoding="async" /><span>AtamaCep<small>KPSS ve kamu ilan takibi</small></span></div>
+        <div className="atamacep-card-art__brand"><img src={atamacep.imageUrl} alt="AtamaCep resmî uygulama simgesi" width="72" height="72" loading="lazy" decoding="async" /><span>AtamaCep</span></div>
         <span className="atamacep-card-art__eyebrow">Pusuk ile keşfet</span>
-        <strong>Bir sonraki<br /><em>fırsatına bak.</em></strong>
-        <p>KPSS ve kamu ilanlarını takip etmek için geliştirdiğimiz mobil uygulama.</p>
-        <span className="atamacep-card-art__stage">Google Play · Kapalı test</span>
+        <strong>Kamu ilanları.<br /><em>Yeni fırsatlar.</em></strong>
       </div>
       <div className="atamacep-card-art__mascot">
         <img src="/media/atamacep-pusuk.png" alt="AtamaCep’in büyüteç tutan tilki maskotu Pusuk" width="635" height="824" loading="lazy" decoding="async" />
@@ -93,16 +91,12 @@ function BrandMark({ compact = false }: { compact?: boolean }) {
   );
 }
 
-function TakassoMiniBrand() {
-  return <span className="takasso-mini-brand"><span>T</span><strong>takasso</strong></span>;
-}
-
 function TakassoPortfolioVisual() {
   return (
     <div className="takasso-card-art">
       <div className="takasso-card-art__grid" aria-hidden="true" />
       <div className="takasso-card-art__topline">
-        <span className="takasso-card-art__wordmark"><span className="takasso-card-art__wordmark-mark">T</span>takasso</span>
+        <span className="takasso-card-art__wordmark"><img src={takasso.imageUrl} alt="Takasso resmî logosu" width="56" height="56" loading="lazy" decoding="async" />Takasso</span>
         <span className="takasso-card-art__status">mobil · web</span>
       </div>
       <div className="takasso-card-art__copy"><span>yakınındaki</span><strong>fırsatlar.</strong></div>
@@ -115,20 +109,6 @@ function TakassoPortfolioVisual() {
         <div><span>iletişim</span><strong>Mesajlaş</strong></div>
         <div><span>hızlı</span><strong>Doğrudan</strong></div>
       </div>
-    </div>
-  );
-}
-
-function TakassoDeviceScreen() {
-  return (
-    <div className="case-study__device-screen">
-      <div className="case-study__search"><span>Yakınındaki fırsatları keşfet</span><span>⌕</span></div>
-      <div className="case-study__screen-hero">
-        <div><span>İkinci el,</span><strong>iyi fırsatlar.</strong></div>
-        <img src={takasso.imageUrl} alt="Takasso uygulama simgesi" width="78" height="78" loading="lazy" decoding="async" />
-      </div>
-      <div className="case-study__screen-tabs"><span className="is-active">Keşfet</span><span>İlan ver</span><span>Mesajlar</span></div>
-      <div className="case-study__screen-card"><span>Doğrudan iletişim</span><strong>İlanı incele ve mesajlaş.</strong><small>Takasso</small></div>
     </div>
   );
 }
@@ -276,37 +256,29 @@ function App() {
           </div>
         </section>
 
-        <section id="mobile-products" className="case-study section-frame">
-          <div className="case-study__copy">
-            <Eyebrow>03 / MOBİL ÜRÜNLERİMİZ</Eyebrow>
-            <h2>Kendi fikirlerimiz.<br /><em>Yaşayan</em> ürünler.</h2>
-            <div className="product-intro" id="takasso"><img src={takasso.imageUrl} alt="" width="48" height="48" loading="lazy" /><strong>Takasso</strong><span>Yayında</span></div>
-            <p>Takasso; ikinci el ürünleri keşfetmeyi, ilan vermeyi ve kullanıcıların doğrudan iletişim kurmasını kolaylaştıran pazar yeri uygulamamızdır.</p>
-            <div className="tag-row"><span>Mobil uygulama</span><span>Web platformu</span><span>Ürün deneyimi</span></div>
-            <a className="text-link" href="https://takasso.com.tr/" target="_blank" rel="noopener noreferrer">Takasso'yu incele <ArrowUpRight size={17} /></a>
-            <a className="sister-product" href="#atamacep"><img src={atamacep.imageUrl} alt="AtamaCep logosu" width="64" height="64" loading="lazy" decoding="async" /><span><small>Diğer mobil ürünümüz · Kapalı test</small><strong>AtamaCep</strong><span>KPSS ve kamu ilanlarını Pusuk’la keşfet.</span></span><ArrowUpRight size={19} /></a>
-          </div>
-          <div className="case-study__visual">
-            <div className="case-study__halo" aria-hidden="true" />
-            <div className="case-study__device">
-              <div className="case-study__device-top"><span>9:41</span><span>● ● ●</span></div>
-              <div className="case-study__device-brand"><TakassoMiniBrand /><span>⌁</span></div>
-              <TakassoDeviceScreen />
-              <div className="case-study__device-caption"><span>Yakınındaki fırsatlar</span><strong>Takasso</strong></div>
-            </div>
-            <div className="case-study__label"><span>ÜRÜN VİTRİNİ</span><strong>01</strong></div>
+        <section id="mobile-products" className="mobile-projects section-frame" aria-labelledby="mobile-projects-title">
+          <div className="mobile-projects__heading"><div><Eyebrow>03 / LUNAVOR MOBİL ÜRÜNLERİ</Eyebrow><h2 id="mobile-projects-title">Mobil uygulamalarımız.<br /><em>İki ayrı deneyim.</em></h2></div><p>İkinci el alışverişten kamu ilan takibine: Takasso ve AtamaCep, Lunavor tarafından geliştirilen iki bağımsız mobil ürün.</p></div>
+          <div className="mobile-projects__grid">
+            <article id="takasso" className="mobile-project mobile-project--takasso" aria-labelledby="takasso-title">
+              <div className="mobile-project__art"><TakassoPortfolioVisual /></div>
+              <div className="mobile-project__body"><div className="mobile-project__meta"><span>İkinci el alışveriş uygulaması</span><b>Yayında</b></div><h3 id="takasso-title">Takasso</h3><p>İkinci el ürünleri keşfetmek, ilan vermek ve satıcılarla doğrudan mesajlaşmak için geliştirdiğimiz pazar yeri uygulaması.</p><div className="tag-row"><span>Mobil uygulama</span><span>Web platformu</span></div><a className="text-link" href={takasso.url} target="_blank" rel="noopener noreferrer">Takasso’yu keşfet <ArrowUpRight size={17} /></a></div>
+            </article>
+            <article id="atamacep" className="mobile-project mobile-project--atamacep" aria-labelledby="atamacep-title">
+              <div className="mobile-project__art"><AtamaCepPortfolioVisual /></div>
+              <div className="mobile-project__body"><div className="mobile-project__meta"><span>KPSS ve kamu ilan takibi</span><b>Kapalı test</b></div><h3 id="atamacep-title">AtamaCep</h3><p>KPSS ve kamu ilanlarını tek yerde takip etmek için geliştirdiğimiz mobil uygulama. Takip arkadaşın Pusuk ile yeni fırsatları keşfet.</p><div className="tag-row"><span>Mobil uygulama</span><span>Google Play · Kapalı test</span></div><a className="text-link" href="#contact">AtamaCep hakkında bilgi al <ArrowUpRight size={17} /></a></div>
+            </article>
           </div>
         </section>
 
         <section id="work" className="work-section section-frame section-frame--light">
-          <div className="work-section__heading"><div><Eyebrow>04 / ÜRÜNLER VE ÇALIŞMALAR</Eyebrow><h2>Önce fikir.<br /><em>Sonra etki.</em></h2></div><p>Önce kendi mobil ürünlerimiz: Takasso ve AtamaCep. Ardından işletmeler için geliştirdiğimiz web deneyimleri.</p></div>
+          <div className="work-section__heading"><div><Eyebrow>04 / WEB SİTESİ PROJELERİ</Eyebrow><h2>İşletmelere özel<br /><em>web deneyimleri.</em></h2></div><p>Alüminyum, ahşap ve dekorasyon sektörleri için geliştirdiğimiz kurumsal web siteleri ve hizmet portfolyoları.</p></div>
           <div className="work-grid">
-            {PROJECTS.map((project, index) => (
-              <article id={project.title === 'AtamaCep' ? 'atamacep' : undefined} className={`work-card work-card--${index + 1} ${project.title === 'Takasso' || project.title === 'AtamaCep' ? 'work-card--mobile' : 'work-card--web'}`} key={project.id}>
+            {PROJECTS.filter((project) => project.id !== takasso.id && project.id !== atamacep.id).map((project, index) => (
+              <article className={`work-card work-card--web ${index === 2 ? 'work-card--wide' : ''}`} key={project.id}>
                 <a href={project.url} target={project.url.startsWith('https://') ? '_blank' : undefined} rel={project.url.startsWith('https://') ? 'noopener noreferrer' : undefined} aria-label={project.linkLabel ?? `${project.title} projesini görüntüle`}>
                   {project.status && <span className="work-card__status">{project.status}</span>}
-                  <div className={`work-card__image ${project.title === 'Takasso' ? 'work-card__image--takasso' : ''}`}>
-                    {project.title === 'Takasso' ? <TakassoPortfolioVisual /> : project.title === 'AtamaCep' ? <AtamaCepPortfolioVisual /> : <img src={project.imageUrl} alt={`${project.title} için Lunavor tarafından geliştirilen ${project.category.toLocaleLowerCase('tr-TR')}`} width="1200" height="800" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 1200px" loading="lazy" decoding="async" />}
+                  <div className="work-card__image">
+                    <img src={project.imageUrl} alt={project.imageAlt ?? `${project.title} web sitesi projesi için temsili sektör görseli`} width="1200" height="800" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 1200px" loading="lazy" decoding="async" />
                   </div>
                   <div className="work-card__overlay"><span>{project.category}</span><h3>{project.title}</h3><span className="work-card__arrow">{project.url.startsWith('https://') ? <ExternalLink size={17} /> : <ArrowUpRight size={17} />}</span></div>
                 </a>

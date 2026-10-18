@@ -11,6 +11,7 @@ export interface Project {
   title: string;
   category: string;
   imageUrl: string;
+  imageAlt?: string;
   url: string;
   status?: string;
   linkLabel?: string;
