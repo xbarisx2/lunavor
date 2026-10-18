@@ -164,22 +164,31 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
 .proof-item b { display: grid; width: 1.8rem; height: 1.8rem; place-items: center; border: 1px solid rgba(156,239,255,.3); border-radius: 50%; color: var(--cyan); font-size: .65rem; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
-.section-intro { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 2rem; max-width: 75rem; margin: 0 auto 5rem; }
+.answer-section { padding-top: clamp(3.5rem, 6vw, 5rem); padding-bottom: clamp(3.5rem, 6vw, 5rem); scroll-margin-top: 5rem; }
+.section-intro { display: grid; grid-template-columns: 1.15fr 1fr; align-items: end; gap: 2rem; max-width: 75rem; margin: 0 auto 2rem; }
 .section-intro .eyebrow { color: #5471b5; grid-column: 1 / -1; }
 .section-intro h2, .work-section h2, .process-section h2, .contact-section h2 { margin: 0; font-size: clamp(3rem, 6.5vw, 7rem); font-weight: 800; letter-spacing: -.09em; line-height: .87; }
 .section-intro h2 em, .work-section h2 em { color: #547cff; }
 .section-intro > p { max-width: 26rem; margin: 0 0 .35rem auto; color: #727c7d; font-size: 1rem; line-height: 1.7; }
-.service-grid { display: grid; max-width: 75rem; grid-template-columns: repeat(3, 1fr); gap: 1px; margin: 0 auto; border: 1px solid var(--line-dark); background: var(--line-dark); }
-.service-card { display: flex; min-height: 23rem; flex-direction: column; justify-content: space-between; padding: clamp(1.4rem, 3vw, 2.8rem); background: var(--paper); transition: background .25s ease, color .25s ease; }
-.service-card:hover { color: var(--white); background: var(--ink); }
+.section-intro h2 { font-size: clamp(2.2rem, 3.8vw, 3.6rem); letter-spacing: -.065em; line-height: 1.05; }
+.section-intro .eyebrow { margin-bottom: 1rem; }
+.section-intro > p { max-width: 27rem; margin: 0 0 .2rem auto; font-size: .92rem; line-height: 1.75; }
+.service-grid { display: grid; max-width: 75rem; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 0 auto; }
+.service-card { display: flex; min-width: 0; flex-direction: column; padding: clamp(1.35rem, 2.2vw, 2rem); border: 1px solid #d5dad6; border-radius: 1.15rem; background: #fafbf8; transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.service-card:hover { border-color: #7c99e8; box-shadow: 0 .7rem 1.8rem #1d32650b; transform: translateY(-3px); }
+.service-card:focus-visible { outline: 2px solid #547cff; outline-offset: 4px; }
 .service-card__top, .service-card__bottom { display: flex; align-items: center; justify-content: space-between; }
-.service-card__top > span:first-child { color: #7c8585; font-size: .66rem; font-weight: 800; letter-spacing: .15em; }
-.service-card__icon { display: grid; width: 2.8rem; height: 2.8rem; place-items: center; border: 1px solid var(--line-dark); border-radius: 50%; color: #5268a6; }
-.service-card h3 { margin: 2rem 0 .8rem; font-size: clamp(1.5rem, 2.5vw, 2.35rem); letter-spacing: -.07em; }
-.service-card p { max-width: 18rem; margin: 0; color: #747d7e; font-size: .9rem; line-height: 1.65; }
-.service-card__bottom { padding-top: 1.4rem; border-top: 1px solid var(--line-dark); color: #7d8584; font-size: .57rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
-.service-card:hover .service-card__bottom { border-color: var(--line); }
-.service-card:hover .service-card__icon { border-color: rgba(156,239,255,.4); color: var(--cyan); }
+.service-card__number { color: #8a9591; font-family: monospace; font-size: .7rem; }
+.service-card__icon { display: grid; width: 2.8rem; height: 2.8rem; place-items: center; border-radius: .8rem; background: #e8edff; color: #4665ba; }
+.service-card:nth-child(2) .service-card__icon { background: #e7f1ec; color: #38745f; }
+.service-card:nth-child(3) .service-card__icon { background: #f4ebdd; color: #9a6e35; }
+.service-card h3 { margin: 1.25rem 0 .6rem; font-size: clamp(1.35rem, 2vw, 1.75rem); letter-spacing: -.055em; }
+.service-card p { margin: 0; color: #64716d; font-size: .87rem; line-height: 1.7; }
+.service-card__copy { flex: 1; }
+.service-card__features { display: grid; gap: .5rem; margin: 1.25rem 0; padding: 0; list-style: none; color: #4c5b56; font-size: .72rem; line-height: 1.5; }
+.service-card__features li { display: flex; align-items: start; gap: .4rem; }
+.service-card__features svg { flex-shrink: 0; margin-top: .1rem; color: #617a6e; }
+.service-card__bottom { padding-top: 1rem; border-top: 1px solid #dde2de; color: #3454a3; font-size: .63rem; font-weight: 800; letter-spacing: .06em; }
 
 .tag-row { display: flex; flex-wrap: wrap; gap: .5rem; margin: 2rem 0; }
 .tag-row span { padding: .55rem .7rem; border: 1px solid var(--line); border-radius: 999px; color: #9ca7a7; font-size: .58rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
@@ -317,8 +326,6 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
   .hero__content { max-width: 42rem; }
   .hero__visual { min-height: 28rem; }
   .hero__scroll { display: none; }
-  .service-grid { grid-template-columns: 1fr; }
-  .service-card { min-height: 18rem; }
   .process-section { grid-template-columns: 1fr; gap: 3.5rem; }
   .principles { grid-column: auto; margin-top: 0; }
   .contact-section { grid-template-columns: 1fr; gap: 3rem; }
@@ -349,8 +356,9 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
   .proof-strip { display: block; padding: 1.2rem 0; }
   .proof-strip__label { display: block; padding: 0 1.25rem 1rem; }
   .proof-item { margin-right: 2rem; }
-  .section-intro, .work-section__heading { display: block; margin-bottom: 3rem; }
-  .section-intro h2, .work-section h2, .process-section h2, .contact-section h2 { font-size: clamp(3.1rem, 15vw, 5rem); }
+  .section-intro { display: block; margin-bottom: 2rem; }
+  .work-section__heading { display: block; margin-bottom: 3rem; }
+  .work-section h2, .process-section h2, .contact-section h2 { font-size: clamp(3.1rem, 15vw, 5rem); }
   .section-intro > p, .work-section__heading > p { margin: 1.8rem 0 0; }
   .work-grid { display: block; }
   .work-card, .work-card--1, .work-card--2, .work-card--3, .work-card--4, .work-card--5 { min-height: 22rem; margin-bottom: 1rem; }
@@ -430,6 +438,9 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
   .mobile-project .takasso-card-art__icon { width: 7rem; right: 5%; }
 }
 @media (max-width: 760px) {
+  .service-grid { grid-template-columns: 1fr; }
+  .section-intro { grid-template-columns: 1fr; gap: 1rem; }
+  .section-intro > p { max-width: none; margin: 1rem 0 0; }
   .mobile-projects__heading { display: block; }
   .mobile-projects__heading > p { margin-top: 1.5rem; max-width: 34rem; }
   .mobile-projects__grid { grid-template-columns: 1fr; }

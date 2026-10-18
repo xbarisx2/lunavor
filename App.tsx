@@ -31,24 +31,24 @@ const serviceCards = [
   {
     number: '01',
     title: 'Web sitesi',
-    description: 'Markanızı doğru anlatan, hızlı ve mobil cihazlarda kusursuz çalışan web deneyimleri.',
-    detail: 'Strateji · Tasarım · SEO',
+    description: 'İşletmenizi anlatan, hızlı ve her ekranda rahat kullanılan web siteleri.',
+    features: ['Kurumsal site ve portfolyo', 'Mobil uyum ve SEO temeli'],
     href: '/web-sitesi/',
     icon: <Globe2 size={22} strokeWidth={1.5} />,
   },
   {
     number: '02',
     title: 'Mobil uygulama',
-    description: 'Android ve iOS için gerçek ihtiyaca odaklanan, sade ve sürdürülebilir ürünler.',
-    detail: 'Android · iOS · Ürün',
+    description: 'Fikrinizi günlük hayatta kullanılan bir mobil ürüne dönüştürelim.',
+    features: ['Android ve iOS geliştirme', 'Tasarım, test ve yayın hazırlığı'],
     href: '/mobil-uygulama/',
     icon: <Smartphone size={22} strokeWidth={1.5} />,
   },
   {
     number: '03',
     title: 'Özel yazılım',
-    description: 'İş akışınıza ve hedefinize göre planlanan, sürdürülebilir dijital ürünler.',
-    detail: 'Plan · Geliştirme · Yayın',
+    description: 'İşinizi kolaylaştıran, ihtiyacınıza göre planlanmış yazılım çözümleri.',
+    features: ['Yönetim paneli ve entegrasyon', 'İş akışınıza özel geliştirme'],
     href: '/yazilim-gelistirme/',
     icon: <Code2 size={22} strokeWidth={1.5} />,
   },
@@ -239,18 +239,18 @@ function App() {
           </div>
         </section>
 
-        <section id="services" className="answer-section section-frame section-frame--light">
+        <section id="services" className="answer-section section-frame section-frame--light" aria-labelledby="services-title">
           <div className="section-intro">
-            <Eyebrow>02 / NE YAPIYORUZ?</Eyebrow>
-            <h2>Güzel görünen değil,<br /><em>işe yarayan</em> ürünler.</h2>
-            <p>İnsanların anlayabildiği, kullanabildiği ve hatırlayabildiği dijital deneyimler tasarlıyoruz.</p>
+            <div><Eyebrow>02 / HİZMETLERİMİZ</Eyebrow><h2 id="services-title">İhtiyacınıza uygun<br /><em>dijital çözümler.</em></h2></div>
+            <p>Web sitesi, mobil uygulama veya özel yazılım. Fikrinizi net bir planla tasarlıyor, geliştiriyor ve yayına hazırlıyoruz.</p>
           </div>
           <div className="service-grid">
             {serviceCards.map((service) => (
               <a className="service-card" href={service.href} key={service.number} aria-label={`${service.title} geliştirme hizmetini incele`}>
-                <div className="service-card__top"><span>{service.number}</span><span className="service-card__icon">{service.icon}</span></div>
-                <div><h3>{service.title}</h3><p>{service.description}</p></div>
-                <div className="service-card__bottom"><span>{service.detail}</span><ArrowUpRight size={17} /></div>
+                <div className="service-card__top"><span className="service-card__icon">{service.icon}</span><span className="service-card__number">{service.number}</span></div>
+                <div className="service-card__copy"><h3>{service.title}</h3><p>{service.description}</p></div>
+                <ul className="service-card__features">{service.features.map((feature) => <li key={feature}><Check size={14} aria-hidden="true" />{feature}</li>)}</ul>
+                <div className="service-card__bottom"><span>Hizmeti incele</span><ArrowUpRight size={17} /></div>
               </a>
             ))}
           </div>
