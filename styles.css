@@ -228,6 +228,7 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
 .hero-more-products span { font-size: .63rem; font-weight: 700; }
 .hero-more-products small { display: block; margin-top: .2rem; color: var(--muted); font-size: .5rem; font-weight: 400; }
 .hero-more-products svg { flex-shrink: 0; margin-left: auto; color: var(--cyan); }
+.hero-more-products__wide { grid-column: 1 / -1; }
 .hero-product { display: flex; align-items: center; gap: .8rem; padding: .8rem; border: 1px solid #ffffff21; border-radius: .9rem; background: #ffffff05; }
 .hero-product:hover { border-color: #9cefff77; background: #ffffff0b; }
 .hero-product img { width: 3.5rem; height: 3.5rem; flex-shrink: 0; border-radius: .7rem; object-fit: contain; }
@@ -421,6 +422,20 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
 .mobile-project--atamacep .text-link { color: #e6ca8d; }
 .mobile-project--geography .text-link { color: #f2c27b; }
 .mobile-project--delivery .text-link { color: #ffb96d; }
+.mobile-project--knoway { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.mobile-project--knoway .mobile-project__body { border-top: 0; border-left: 1px solid #ffffff16; justify-content: center; }
+.mobile-project--knoway .text-link { margin-top: 0; color: #9deac1; }
+.knoway-card-art { position: relative; isolation: isolate; height: 100%; overflow: hidden; padding: 2rem; color: #f3fff8; background: radial-gradient(ellipse at 80% 40%, #276456 0%, transparent 60%), #0b2726; }
+.knoway-card-art__grid { position: absolute; z-index: -1; inset: 0; opacity: .12; background-image: linear-gradient(#a4f4d0 1px, transparent 1px), linear-gradient(90deg, #a4f4d0 1px, transparent 1px); background-size: 2.5rem 2.5rem; mask-image: linear-gradient(90deg, transparent, black); }
+.knoway-card-art__copy { position: relative; z-index: 2; max-width: 60%; margin-top: 3.5rem; }
+.knoway-card-art__copy > span { display: block; margin-bottom: .9rem; color: #a5d6c4; font-size: .54rem; letter-spacing: .13em; text-transform: uppercase; }
+.knoway-card-art__copy strong { font-size: clamp(2.2rem, 3.5vw, 3.3rem); letter-spacing: -.055em; line-height: 1.02; }
+.knoway-card-art__copy em { font-family: var(--serif); color: #a4f4c5; font-weight: 400; }
+.knoway-card-art__portal { position: absolute; top: 28%; right: 7%; width: 32%; padding: .45rem; border: 1px solid #a4f4c570; border-radius: 1.8rem; background: #d8eee90d; box-shadow: 0 0 3rem #61ffad26; transform: rotate(6deg); }
+.knoway-card-art__portal img { display: block; width: 100%; height: auto; border-radius: 1.35rem; }
+.knoway-card-art__sequence { position: absolute; left: 2rem; right: 2rem; bottom: 2rem; display: grid; grid-template-columns: repeat(8, 1fr); gap: .45rem; }
+.knoway-card-art__sequence i { height: .5rem; border-radius: .15rem; background: #37665c; }
+.knoway-card-art__sequence i:nth-child(3n+1) { background: #a4f4c5; }
 .mobile-project h3 > span { display: block; margin-top: .35rem; color: #a7b6ba; font-size: .85rem; font-weight: 500; letter-spacing: 0; }
 .geography-card-art, .delivery-card-art { position: relative; display: flex; height: 100%; flex-direction: column; isolation: isolate; overflow: hidden; padding: 2rem; }
 .app-card-brand { position: relative; z-index: 2; display: flex; align-items: center; gap: .7rem; color: #fff4df; font-size: 1rem; font-weight: 800; letter-spacing: -.03em; }
@@ -474,6 +489,8 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
   .mobile-projects__heading { display: block; }
   .mobile-projects__heading > p { margin-top: 1.5rem; max-width: 34rem; }
   .mobile-projects__grid { grid-template-columns: 1fr; }
+  .mobile-project--knoway { display: flex; }
+  .mobile-project--knoway .mobile-project__body { border-left: 0; border-top: 1px solid #ffffff16; }
   .mobile-project__art { height: 24rem; }
   .mobile-project .takasso-card-art__copy { font-size: 3.3rem; }
   .mobile-project .atamacep-card-art__copy > strong { font-size: 2.5rem; }
@@ -487,6 +504,12 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
   .geography-card-art__copy { max-width: 76%; }
   .geography-card-art__copy strong, .delivery-card-art__copy strong { font-size: 2.25rem; }
   .geography-card-art__icon { width: 28%; right: 5%; top: 38%; }
+  .knoway-card-art { padding: 1.5rem; }
+  .knoway-card-art__copy { max-width: 70%; }
+  .knoway-card-art__copy strong { font-size: 2.4rem; }
+  .knoway-card-art__portal { top: 36%; right: 6%; width: 31%; border-radius: 1.2rem; }
+  .knoway-card-art__portal img { border-radius: .8rem; }
+  .knoway-card-art__sequence { left: 1.5rem; right: 1.5rem; }
   .mobile-project__body { padding: 1.5rem; }
   .mobile-project .takasso-card-art { padding: 1.5rem; }
   .mobile-project .takasso-card-art__copy { font-size: 2.7rem; }
