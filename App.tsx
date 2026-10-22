@@ -65,6 +65,19 @@ const takasso = PROJECTS.find((project) => project.title === 'Takasso') ?? PROJE
 const atamacep = PROJECTS.find((project) => project.title === 'AtamaCep')!;
 const geography = PROJECTS.find((project) => project.id === 6)!;
 const deliveryRush = PROJECTS.find((project) => project.id === 7)!;
+const knoway = PROJECTS.find((project) => project.id === 8)!;
+
+function KnoWayPortfolioVisual() {
+  return (
+    <div className="knoway-card-art">
+      <div className="knoway-card-art__grid" aria-hidden="true" />
+      <div className="app-card-brand"><img src={knoway.imageUrl} alt="KnoWay resmî uygulama simgesi" width="48" height="48" loading="lazy" decoding="async" /><span>KnoWay</span></div>
+      <div className="knoway-card-art__copy"><span>Hafıza · Dikkat · Keşif</span><strong>Hatırla.<br /><em>Yolunu bul.</em></strong></div>
+      <div className="knoway-card-art__portal"><img src={knoway.imageUrl} alt="Yeşil bir geçidin önündeki astronot: KnoWay oyun logosu" width="240" height="240" loading="lazy" decoding="async" /></div>
+      <div className="knoway-card-art__sequence" aria-hidden="true">{[0, 1, 2, 3, 4, 5, 6, 7].map((tile) => <i key={tile} />)}</div>
+    </div>
+  );
+}
 
 function GeographyPortfolioVisual() {
   return (
@@ -234,7 +247,7 @@ function App() {
             <div className="hero__meta"><span>01 / 05</span><span>Fikirden yayına</span></div>
           </div>
 
-          <div className="hero__visual" aria-label="Lunavor’un mobil ürünleri: Takasso, AtamaCep, KPSS Coğrafya ve Delivery Rush">
+          <div className="hero__visual" aria-label="Lunavor’un mobil ürünleri: Takasso, AtamaCep, KPSS Coğrafya, Delivery Rush ve KnoWay">
             <div className="hero__visual-orbit hero__visual-orbit--one" aria-hidden="true" />
             <div className="hero__visual-orbit hero__visual-orbit--two" aria-hidden="true" />
             <div className="product-window">
@@ -249,6 +262,7 @@ function App() {
                 <div className="hero-more-products" aria-label="Diğer mobil ürünlerimiz">
                   <a href="#kpss-cografya"><img src={geography.imageUrl} alt="" width="32" height="32" decoding="async" /><span>KPSS Coğrafya<small>Eğitim</small></span><ArrowUpRight size={13} /></a>
                   <a href="#delivery-rush"><img src={deliveryRush.imageUrl} alt="" width="32" height="32" decoding="async" /><span>Delivery Rush<small>Mobil oyun</small></span><ArrowUpRight size={13} /></a>
+                  <a className="hero-more-products__wide" href="#knoway"><img src={knoway.imageUrl} alt="" width="32" height="32" decoding="async" /><span>KnoWay<small>Hafıza ve bulmaca</small></span><ArrowUpRight size={13} /></a>
                 </div>
                 <div className="product-window__footer"><span>Fikirden geliştirmeye, tek ekip.</span><span>↗</span></div>
               </div>
@@ -286,7 +300,7 @@ function App() {
         </section>
 
         <section id="mobile-products" className="mobile-projects section-frame" aria-labelledby="mobile-projects-title">
-          <div className="mobile-projects__heading"><div><Eyebrow>03 / LUNAVOR MOBİL ÜRÜNLERİ</Eyebrow><h2 id="mobile-projects-title">Kendi ürünlerimiz.<br /><em>Farklı dünyalar.</em></h2></div><p>Takasso, AtamaCep, KPSS Coğrafya ve Delivery Rush. Alışveriş, kariyer, eğitim ve oyun için geliştirdiğimiz bağımsız mobil ürünler.</p></div>
+          <div className="mobile-projects__heading"><div><Eyebrow>03 / LUNAVOR MOBİL ÜRÜNLERİ</Eyebrow><h2 id="mobile-projects-title">Kendi ürünlerimiz.<br /><em>Farklı dünyalar.</em></h2></div><p>Takasso, AtamaCep, KPSS Coğrafya, Delivery Rush ve KnoWay. Alışveriş, kariyer, eğitim ve oyun için geliştirdiğimiz bağımsız mobil ürünler.</p></div>
           <div className="mobile-projects__grid">
             <article id="takasso" className="mobile-project mobile-project--takasso" aria-labelledby="takasso-title">
               <div className="mobile-project__art"><TakassoPortfolioVisual /></div>
@@ -303,6 +317,10 @@ function App() {
             <article id="delivery-rush" className="mobile-project mobile-project--delivery" aria-labelledby="delivery-title">
               <div className="mobile-project__art"><DeliveryRushPortfolioVisual /></div>
               <div className="mobile-project__body"><div className="mobile-project__meta"><span>Mobil oyun · Motosiklet ve kurye</span><b>Yayında</b></div><h3 id="delivery-title">Delivery Rush</h3><p>Motosikletinle şehir trafiğini aş, kurye görevlerini tamamla ve motorunu geliştir. Sürüş ile teslimat heyecanını birleştiren mobil oyunumuz.</p><div className="tag-row"><span>Yarış oyunu</span><span>Android</span></div><a className="text-link" href={deliveryRush.url} target="_blank" rel="noopener noreferrer" aria-label={deliveryRush.linkLabel}>Google Play’de incele <ArrowUpRight size={17} /></a></div>
+            </article>
+            <article id="knoway" className="mobile-project mobile-project--knoway" aria-labelledby="knoway-title">
+              <div className="mobile-project__art"><KnoWayPortfolioVisual /></div>
+              <div className="mobile-project__body"><div className="mobile-project__meta"><span>Mobil oyun · Hafıza ve bulmaca</span><b>Yayında</b></div><h3 id="knoway-title">KnoWay</h3><p>Hafızanı test et, dizileri hatırla ve astronotunla engelleri aş. Minimalist bir dünyada dikkat, hatırlama ve koşuyu bir araya getiren mobil bulmaca oyunumuz.</p><div className="tag-row"><span>Hafıza oyunu</span><span>Android</span></div><a className="text-link" href={knoway.url} target="_blank" rel="noopener noreferrer" aria-label={knoway.linkLabel}>Google Play’de incele <ArrowUpRight size={17} /></a></div>
             </article>
           </div>
         </section>
