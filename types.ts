@@ -8,6 +8,7 @@ export interface Service {
 
 export interface Project {
   id: number;
+  kind?: 'mobile' | 'web';
   title: string;
   category: string;
   imageUrl: string;

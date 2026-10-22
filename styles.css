@@ -221,6 +221,13 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
 .atamacep-card-art__mascot small { display: block; margin-top: .2rem; font-family: var(--sans); font-size: .6rem; }
 .mobile-project:hover .atamacep-card-art img { transform: none; filter: none; }
 .hero-products { display: grid; gap: .7rem; }
+.hero-more-products { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; margin-top: .7rem; }
+.hero-more-products a { display: flex; align-items: center; gap: .5rem; min-width: 0; padding: .6rem; border: 1px solid #ffffff20; border-radius: .7rem; background: #ffffff05; }
+.hero-more-products a:hover { border-color: #9cefff77; background: #ffffff0b; }
+.hero-more-products img { width: 2rem; height: 2rem; flex-shrink: 0; border-radius: .45rem; }
+.hero-more-products span { font-size: .63rem; font-weight: 700; }
+.hero-more-products small { display: block; margin-top: .2rem; color: var(--muted); font-size: .5rem; font-weight: 400; }
+.hero-more-products svg { flex-shrink: 0; margin-left: auto; color: var(--cyan); }
 .hero-product { display: flex; align-items: center; gap: .8rem; padding: .8rem; border: 1px solid #ffffff21; border-radius: .9rem; background: #ffffff05; }
 .hero-product:hover { border-color: #9cefff77; background: #ffffff0b; }
 .hero-product img { width: 3.5rem; height: 3.5rem; flex-shrink: 0; border-radius: .7rem; object-fit: contain; }
@@ -412,6 +419,29 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
 .mobile-project .tag-row { margin: 1.5rem 0 2rem; }
 .mobile-project .text-link { margin-top: auto; line-height: 1.5; }
 .mobile-project--atamacep .text-link { color: #e6ca8d; }
+.mobile-project--geography .text-link { color: #f2c27b; }
+.mobile-project--delivery .text-link { color: #ffb96d; }
+.mobile-project h3 > span { display: block; margin-top: .35rem; color: #a7b6ba; font-size: .85rem; font-weight: 500; letter-spacing: 0; }
+.geography-card-art, .delivery-card-art { position: relative; display: flex; height: 100%; flex-direction: column; isolation: isolate; overflow: hidden; padding: 2rem; }
+.app-card-brand { position: relative; z-index: 2; display: flex; align-items: center; gap: .7rem; color: #fff4df; font-size: 1rem; font-weight: 800; letter-spacing: -.03em; }
+.app-card-brand img { width: 3rem; height: 3rem; border-radius: .75rem; object-fit: contain; }
+.geography-card-art { background: radial-gradient(ellipse at 80% 35%, #2d6570 0%, transparent 60%), #102e37; color: #fff6e6; }
+.geography-card-art__contours { position: absolute; z-index: -1; inset: -50%; opacity: .15; background: repeating-radial-gradient(ellipse at 65% 55%, transparent 0 25px, #b6d8d3 26px 27px, transparent 28px 43px); transform: rotate(-25deg); }
+.geography-card-art__copy { position: relative; z-index: 2; max-width: 65%; margin: auto 0; padding: 1.2rem 0; }
+.geography-card-art__copy > span, .delivery-card-art__copy > span { display: block; margin-bottom: .8rem; font-size: .54rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.geography-card-art__copy strong { font-size: clamp(2rem, 3.2vw, 3rem); line-height: 1.04; letter-spacing: -.06em; }
+.geography-card-art__copy em { color: #f4c17a; font-family: var(--serif); font-weight: 400; }
+.geography-card-art__icon { position: absolute; right: 6%; top: 34%; width: 30%; height: auto; border-radius: 24%; box-shadow: 0 1rem 2rem #061c3355; transform: rotate(9deg); }
+.geography-card-art__topics { display: flex; flex-wrap: wrap; gap: .5rem; }
+.geography-card-art__topics span { padding: .55rem .8rem; border: 1px solid #d7e8d53d; border-radius: 999px; color: #d3e3dc; background: #09242b99; font-size: .6rem; }
+.delivery-card-art { justify-content: space-between; background: #0b1728; color: #fff5e6; }
+.delivery-card-art::after { position: absolute; z-index: -1; inset: 0; content: ''; background: linear-gradient(180deg, #061222c9 0%, #06122222 40%, #061222cc 74%, #061222 100%); }
+.delivery-card-art__cover { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.delivery-card-art .app-card-brand { align-self: start; padding: .45rem .8rem .45rem .45rem; border: 1px solid #ffffff30; border-radius: .9rem; background: #071522b3; }
+.delivery-card-art__copy { margin-top: auto; padding-top: 2rem; }
+.delivery-card-art__copy strong { font-size: clamp(2rem, 3.2vw, 3rem); line-height: 1.02; letter-spacing: -.05em; }
+.delivery-card-art__copy em { color: #ffbe7c; font-family: var(--serif); font-weight: 400; }
+.delivery-card-art__label { margin-top: 1rem; color: #b4c7d4; font-size: .58rem; letter-spacing: .04em; }
 .mobile-project .takasso-card-art { min-height: 0; height: 100%; padding: 2rem; }
 .takasso-card-art__wordmark img { width: 3rem; height: 3rem; object-fit: contain; border-radius: .7rem; }
 .mobile-project .takasso-card-art__copy { margin-top: 3rem; max-width: 70%; font-size: clamp(2.4rem, 4.2vw, 3.8rem); letter-spacing: -.07em; }
@@ -449,6 +479,14 @@ h1 em, h2 em { color: var(--cyan); font-family: var(--serif); font-weight: 400; 
   .mobile-project .atamacep-card-art__copy > strong { font-size: 2.5rem; }
 }
 @media (max-width: 440px) {
+  .hero-more-products { gap: .4rem; }
+  .hero-more-products a { gap: .4rem; padding: .5rem; }
+  .hero-more-products svg { display: none; }
+  .hero-more-products span { font-size: .58rem; }
+  .geography-card-art, .delivery-card-art { padding: 1.5rem; }
+  .geography-card-art__copy { max-width: 76%; }
+  .geography-card-art__copy strong, .delivery-card-art__copy strong { font-size: 2.25rem; }
+  .geography-card-art__icon { width: 28%; right: 5%; top: 38%; }
   .mobile-project__body { padding: 1.5rem; }
   .mobile-project .takasso-card-art { padding: 1.5rem; }
   .mobile-project .takasso-card-art__copy { font-size: 2.7rem; }
