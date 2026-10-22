@@ -12,7 +12,6 @@ import {
   Send,
   ShieldCheck,
   Smartphone,
-  Sparkles,
   X,
 } from 'lucide-react';
 import { CONTACT_EMAIL, EMAIL_LINK, INSTAGRAM_LINK, PROJECTS, WHATSAPP_LINK } from './constants.tsx';
@@ -66,6 +65,13 @@ const atamacep = PROJECTS.find((project) => project.title === 'AtamaCep')!;
 const geography = PROJECTS.find((project) => project.id === 6)!;
 const deliveryRush = PROJECTS.find((project) => project.id === 7)!;
 const knoway = PROJECTS.find((project) => project.id === 8)!;
+const featuredProducts = [
+  { project: takasso, href: '#takasso', theme: 'takasso', description: 'İkinci el alışveriş', status: 'Yayında' },
+  { project: atamacep, href: '#atamacep', theme: 'atamacep', description: 'KPSS ve kamu ilanları', status: 'Kapalı test' },
+  { project: geography, href: '#kpss-cografya', theme: 'geography', description: 'Haritalarla öğren', status: 'Yayında' },
+  { project: deliveryRush, href: '#delivery-rush', theme: 'delivery', description: 'Şehrin ritmini yakala', status: 'Yayında' },
+  { project: knoway, href: '#knoway', theme: 'knoway', description: 'Hatırla. Yolunu bul.', status: 'Yayında' },
+];
 
 function KnoWayPortfolioVisual() {
   return (
@@ -248,26 +254,20 @@ function App() {
           </div>
 
           <div className="hero__visual" aria-label="Lunavor’un mobil ürünleri: Takasso, AtamaCep, KPSS Coğrafya, Delivery Rush ve KnoWay">
-            <div className="hero__visual-orbit hero__visual-orbit--one" aria-hidden="true" />
-            <div className="hero__visual-orbit hero__visual-orbit--two" aria-hidden="true" />
-            <div className="product-window">
-              <div className="product-window__bar"><span /><span /><span /><small>lunavor / product-preview</small></div>
-              <div className="product-window__body">
-                <div className="product-window__topline"><span>LUNAVOR MOBİL ÜRÜNLERİ</span><Smartphone size={15} /></div>
-                <div className="product-window__hero-copy">Kendi fikirlerimiz.<br /><em>Gerçek ürünler.</em></div>
-                <div className="hero-products">
-                  <a className="hero-product" href="#takasso"><img src={takasso.imageUrl} alt="Takasso logosu" width="72" height="72" loading="eager" decoding="async" fetchPriority="high" /><span><strong>Takasso</strong><small>İkinci el alışveriş</small></span><b className="status-dot">Yayında</b><ArrowUpRight size={16} /></a>
-                  <a className="hero-product hero-product--atamacep" href="#atamacep"><img src={atamacep.imageUrl} alt="AtamaCep logosu" width="72" height="72" loading="eager" decoding="async" /><span><strong>AtamaCep</strong><small>KPSS ve kamu ilan takibi</small></span><b>Kapalı test</b><ArrowUpRight size={16} /></a>
-                </div>
-                <div className="hero-more-products" aria-label="Diğer mobil ürünlerimiz">
-                  <a href="#kpss-cografya"><img src={geography.imageUrl} alt="" width="32" height="32" decoding="async" /><span>KPSS Coğrafya<small>Eğitim</small></span><ArrowUpRight size={13} /></a>
-                  <a href="#delivery-rush"><img src={deliveryRush.imageUrl} alt="" width="32" height="32" decoding="async" /><span>Delivery Rush<small>Mobil oyun</small></span><ArrowUpRight size={13} /></a>
-                  <a className="hero-more-products__wide" href="#knoway"><img src={knoway.imageUrl} alt="" width="32" height="32" decoding="async" /><span>KnoWay<small>Hafıza ve bulmaca</small></span><ArrowUpRight size={13} /></a>
-                </div>
-                <div className="product-window__footer"><span>Fikirden geliştirmeye, tek ekip.</span><span>↗</span></div>
+            <div id="product-showcase" className="product-showcase">
+              <div className="product-showcase__heading"><div><span className="product-showcase__eyebrow">LUNAVOR MOBİL ÜRÜNLERİ</span><h2>Fikirden <em>hayata.</em></h2></div><span className="product-showcase__count">05<span>ürün</span></span></div>
+              <div className="product-showcase__grid">
+                {featuredProducts.map(({ project, href, theme, description, status }) => (
+                  <a className={`product-tile product-tile--${theme}`} href={href} key={project.id} aria-label={`${project.title} · ${description} · ${status}`}>
+                    <img className="product-tile__icon" src={project.imageUrl} alt={`${project.title} logosu`} width="56" height="56" decoding="async" />
+                    <ArrowUpRight className="product-tile__arrow" size={18} aria-hidden="true" />
+                    <span className="product-tile__copy"><strong>{project.title}</strong><small>{description}</small></span>
+                    <span className={`product-tile__status ${status === 'Kapalı test' ? 'product-tile__status--test' : ''}`}>{status}</span>
+                  </a>
+                ))}
               </div>
+              <a className="product-showcase__footer" href="#mobile-products"><span>Her birinin ayrı bir hikâyesi var.</span><span>Tüm ürünler <ArrowUpRight size={15} /></span></a>
             </div>
-            <div className="hero__floating-note"><Sparkles size={14} /><span>Fikirden ürüne</span></div>
           </div>
 
           <a className="hero__scroll" href="#services"><span>Keşfet</span><span className="hero__scroll-line" /></a>
