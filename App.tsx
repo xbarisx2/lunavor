@@ -255,7 +255,8 @@ function App() {
 
           <div className="hero__visual" aria-label="Lunavor’un mobil ürünleri: Takasso, AtamaCep, KPSS Coğrafya, Delivery Rush ve KnoWay">
             <div id="product-showcase" className="product-showcase">
-              <div className="product-showcase__heading"><div><span className="product-showcase__eyebrow">LUNAVOR MOBİL ÜRÜNLERİ</span><h2>Fikirden <em>hayata.</em></h2></div><span className="product-showcase__count">05<span>ürün</span></span></div>
+              <div className="product-showcase__chrome" aria-hidden="true"><span /><span /><span /><small>Lunavor · Ürün koleksiyonu</small></div>
+              <div className="product-showcase__heading"><div><span className="product-showcase__eyebrow">LUNAVOR MOBİL ÜRÜNLERİ</span><h2>Kendi fikirlerimiz.<br /><em>Gerçek ürünler.</em></h2></div></div>
               <div className="product-showcase__grid">
                 {featuredProducts.map(({ project, href, theme, description, status }) => (
                   <a className={`product-tile product-tile--${theme}`} href={href} key={project.id} aria-label={`${project.title} · ${description} · ${status}`}>
@@ -273,13 +274,13 @@ function App() {
           <a className="hero__scroll" href="#services"><span>Keşfet</span><span className="hero__scroll-line" /></a>
         </section>
 
-        <section className="proof-strip" aria-label="Lunavor çalışmalarından seçmeler">
+        <section id="projects-strip" className="proof-strip" aria-label="Lunavor çalışmalarından seçmeler">
           <div className="proof-strip__label">GELİŞTİRDİĞİMİZ İŞLER</div>
-          <div className="proof-strip__track">
+          <div className="proof-strip__viewport"><div className="proof-strip__track">
             {[...PROJECTS, ...PROJECTS].map((project, index) => (
-              <span className="proof-item" key={`${project.id}-${index}`}><b>{project.title.charAt(0)}</b>{project.title}</span>
+              <span className="proof-item" key={`${project.id}-${index}`} aria-hidden={index >= PROJECTS.length ? true : undefined}><span className={`proof-item__logo ${project.id === 2 ? 'proof-item__logo--light' : ''}`}><img src={project.logoUrl ?? project.imageUrl} alt="" width="48" height="48" decoding="async" /></span>{project.title}</span>
             ))}
-          </div>
+          </div></div>
         </section>
 
         <section id="services" className="answer-section section-frame section-frame--light" aria-labelledby="services-title">

@@ -33,9 +33,9 @@ export const PROJECTS: Project[] = [
   { id: 6, kind: 'mobile', title: 'KPSS Coğrafya', category: 'Eğitim · İnteraktif haritalar', imageUrl: '/media/kpss-cografya-icon.webp', url: 'https://play.google.com/store/apps/details?id=com.kpsscografya.egitim', status: 'Yayında', linkLabel: 'KPSS Coğrafya - Haritalarla uygulamasını Google Play’de incele' },
   { id: 7, kind: 'mobile', title: 'Delivery Rush', category: 'Mobil oyun · Motosiklet ve kurye', imageUrl: '/media/delivery-rush-icon.webp', url: 'https://play.google.com/store/apps/details?id=com.deliveryrush.game', status: 'Yayında', linkLabel: 'Delivery Rush motosiklet oyununu Google Play’de incele' },
   { id: 8, kind: 'mobile', title: 'KnoWay', category: 'Mobil oyun · Hafıza ve bulmaca', imageUrl: '/media/knoway-icon.webp', url: 'https://play.google.com/store/apps/details?id=com.chillstudio.knoway', status: 'Yayında', linkLabel: 'KnoWay hafıza ve bulmaca oyununu Google Play’de incele' },
-  { id: 2, title: 'Interakdeniz Alüminyum', category: 'Kurumsal web sitesi', imageUrl: '/media/interakdeniz-aluminyum-1200.jpg', url: 'https://www.interakdenizaluminyum.com/' },
-  { id: 3, title: 'İkonyum Ahşap', category: 'Kurumsal web sitesi', imageUrl: '/media/ikonyum-ahsap-1200.jpg', url: 'https://www.ikonyumahsap.com.tr/' },
-  { id: 4, title: 'Fayansçı Serdar Dekorasyon', category: 'Hizmet ve portfolyo web sitesi', imageUrl: '/media/fayansci-serdar-dekorasyon-cover.webp', imageAlt: 'Fayansçı Serdar Dekorasyon web sitesi projesi için temsili modern seramik ve ahşap banyo tasarımı', url: 'https://fayansci-serdar.vercel.app/' },
+  { id: 2, title: 'Interakdeniz Alüminyum', category: 'Kurumsal web sitesi', imageUrl: '/media/interakdeniz-aluminyum-1200.jpg', logoUrl: '/media/interakdeniz-logo.png', url: 'https://www.interakdenizaluminyum.com/' },
+  { id: 3, title: 'İkonyum Ahşap', category: 'Kurumsal web sitesi', imageUrl: '/media/ikonyum-ahsap-1200.jpg', logoUrl: '/media/ikonyum-logo.png', url: 'https://www.ikonyumahsap.com.tr/' },
+  { id: 4, title: 'Fayansçı Serdar Dekorasyon', category: 'Hizmet ve portfolyo web sitesi', imageUrl: '/media/fayansci-serdar-dekorasyon-cover.webp', logoUrl: '/media/fayansci-serdar-logo.svg', imageAlt: 'Fayansçı Serdar Dekorasyon web sitesi projesi için temsili modern seramik ve ahşap banyo tasarımı', url: 'https://fayansci-serdar.vercel.app/' },
 ];
 
 export const CLIENTS: Client[] = [
