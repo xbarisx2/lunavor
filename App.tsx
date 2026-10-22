@@ -63,6 +63,31 @@ const processSteps = [
 
 const takasso = PROJECTS.find((project) => project.title === 'Takasso') ?? PROJECTS[0];
 const atamacep = PROJECTS.find((project) => project.title === 'AtamaCep')!;
+const geography = PROJECTS.find((project) => project.id === 6)!;
+const deliveryRush = PROJECTS.find((project) => project.id === 7)!;
+
+function GeographyPortfolioVisual() {
+  return (
+    <div className="geography-card-art">
+      <div className="geography-card-art__contours" aria-hidden="true" />
+      <div className="app-card-brand"><img src={geography.imageUrl} alt="KPSS Coğrafya resmî uygulama simgesi" width="48" height="48" loading="lazy" decoding="async" /><span>KPSS Coğrafya</span></div>
+      <div className="geography-card-art__copy"><span>Türkiye’yi keşfet</span><strong>Haritada öğren.<br /><em>Akılda kalsın.</em></strong></div>
+      <img className="geography-card-art__icon" src={geography.imageUrl} alt="Dağlar ve konum işaretli KPSS Coğrafya logosu" width="240" height="240" loading="lazy" decoding="async" />
+      <div className="geography-card-art__topics"><span>Haritalar</span><span>Konular</span><span>Tekrar</span></div>
+    </div>
+  );
+}
+
+function DeliveryRushPortfolioVisual() {
+  return (
+    <div className="delivery-card-art">
+      <img className="delivery-card-art__cover" src="/media/delivery-rush-cover.webp" alt="Delivery Rush mağaza görseli: şehir trafiğinde motosikletli kurye" width="526" height="296" loading="lazy" decoding="async" />
+      <div className="app-card-brand"><img src={deliveryRush.imageUrl} alt="Delivery Rush resmî uygulama simgesi" width="48" height="48" loading="lazy" decoding="async" /><span>Delivery Rush</span></div>
+      <div className="delivery-card-art__copy"><span>Şehir seni bekliyor</span><strong>Yola çık.<br /><em>Teslimatı tamamla.</em></strong></div>
+      <span className="delivery-card-art__label">Motosiklet · Trafik · Kurye</span>
+    </div>
+  );
+}
 
 function AtamaCepPortfolioVisual() {
   return (
@@ -201,7 +226,7 @@ function App() {
           <div className="hero__content">
             <Eyebrow>KİŞİYE ÖZEL DİJİTAL ÜRÜNLER</Eyebrow>
             <h1>Fikrinizi <em>dijital</em><br />bir ürüne<br /><span>dönüştürelim.</span></h1>
-            <p className="hero__lead">Takasso ve AtamaCep gibi kendi mobil ürünlerimizi geliştiriyor; bu deneyimi işletmenize özel web sitelerine ve yazılım çözümlerine taşıyoruz.</p>
+            <p className="hero__lead">Alışverişten eğitime, kariyerden oyuna kendi mobil ürünlerimizi geliştiriyor; bu deneyimi işletmenize özel web sitelerine ve yazılım çözümlerine taşıyoruz.</p>
             <div className="hero__actions">
               <a className="button button--primary" href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">Proje konuşalım <ArrowUpRight size={17} /></a>
               <a className="button button--ghost" href="#mobile-products">Mobil ürünlerimizi gör <ChevronRight size={17} /></a>
@@ -209,7 +234,7 @@ function App() {
             <div className="hero__meta"><span>01 / 05</span><span>Fikirden yayına</span></div>
           </div>
 
-          <div className="hero__visual" aria-label="Lunavor’un mobil ürünleri Takasso ve AtamaCep">
+          <div className="hero__visual" aria-label="Lunavor’un mobil ürünleri: Takasso, AtamaCep, KPSS Coğrafya ve Delivery Rush">
             <div className="hero__visual-orbit hero__visual-orbit--one" aria-hidden="true" />
             <div className="hero__visual-orbit hero__visual-orbit--two" aria-hidden="true" />
             <div className="product-window">
@@ -220,6 +245,10 @@ function App() {
                 <div className="hero-products">
                   <a className="hero-product" href="#takasso"><img src={takasso.imageUrl} alt="Takasso logosu" width="72" height="72" loading="eager" decoding="async" fetchPriority="high" /><span><strong>Takasso</strong><small>İkinci el alışveriş</small></span><b className="status-dot">Yayında</b><ArrowUpRight size={16} /></a>
                   <a className="hero-product hero-product--atamacep" href="#atamacep"><img src={atamacep.imageUrl} alt="AtamaCep logosu" width="72" height="72" loading="eager" decoding="async" /><span><strong>AtamaCep</strong><small>KPSS ve kamu ilan takibi</small></span><b>Kapalı test</b><ArrowUpRight size={16} /></a>
+                </div>
+                <div className="hero-more-products" aria-label="Diğer mobil ürünlerimiz">
+                  <a href="#kpss-cografya"><img src={geography.imageUrl} alt="" width="32" height="32" decoding="async" /><span>KPSS Coğrafya<small>Eğitim</small></span><ArrowUpRight size={13} /></a>
+                  <a href="#delivery-rush"><img src={deliveryRush.imageUrl} alt="" width="32" height="32" decoding="async" /><span>Delivery Rush<small>Mobil oyun</small></span><ArrowUpRight size={13} /></a>
                 </div>
                 <div className="product-window__footer"><span>Fikirden geliştirmeye, tek ekip.</span><span>↗</span></div>
               </div>
@@ -257,7 +286,7 @@ function App() {
         </section>
 
         <section id="mobile-products" className="mobile-projects section-frame" aria-labelledby="mobile-projects-title">
-          <div className="mobile-projects__heading"><div><Eyebrow>03 / LUNAVOR MOBİL ÜRÜNLERİ</Eyebrow><h2 id="mobile-projects-title">Mobil uygulamalarımız.<br /><em>İki ayrı deneyim.</em></h2></div><p>İkinci el alışverişten kamu ilan takibine: Takasso ve AtamaCep, Lunavor tarafından geliştirilen iki bağımsız mobil ürün.</p></div>
+          <div className="mobile-projects__heading"><div><Eyebrow>03 / LUNAVOR MOBİL ÜRÜNLERİ</Eyebrow><h2 id="mobile-projects-title">Kendi ürünlerimiz.<br /><em>Farklı dünyalar.</em></h2></div><p>Takasso, AtamaCep, KPSS Coğrafya ve Delivery Rush. Alışveriş, kariyer, eğitim ve oyun için geliştirdiğimiz bağımsız mobil ürünler.</p></div>
           <div className="mobile-projects__grid">
             <article id="takasso" className="mobile-project mobile-project--takasso" aria-labelledby="takasso-title">
               <div className="mobile-project__art"><TakassoPortfolioVisual /></div>
@@ -267,13 +296,21 @@ function App() {
               <div className="mobile-project__art"><AtamaCepPortfolioVisual /></div>
               <div className="mobile-project__body"><div className="mobile-project__meta"><span>KPSS ve kamu ilan takibi</span><b>Kapalı test</b></div><h3 id="atamacep-title">AtamaCep</h3><p>KPSS ve kamu ilanlarını tek yerde takip etmek için geliştirdiğimiz mobil uygulama. Takip arkadaşın Pusuk ile yeni fırsatları keşfet.</p><div className="tag-row"><span>Mobil uygulama</span><span>Google Play · Kapalı test</span></div><a className="text-link" href="#contact">AtamaCep hakkında bilgi al <ArrowUpRight size={17} /></a></div>
             </article>
+            <article id="kpss-cografya" className="mobile-project mobile-project--geography" aria-labelledby="geography-title">
+              <div className="mobile-project__art"><GeographyPortfolioVisual /></div>
+              <div className="mobile-project__body"><div className="mobile-project__meta"><span>Eğitim · İnteraktif haritalar</span><b>Yayında</b></div><h3 id="geography-title">KPSS Coğrafya <span>Haritalarla</span></h3><p>Türkiye coğrafyasını interaktif haritalarla öğrenmek, konumları bulmak ve bilgileri tekrar etmek için geliştirdiğimiz KPSS hazırlık uygulaması.</p><div className="tag-row"><span>Eğitim uygulaması</span><span>Android</span></div><a className="text-link" href={geography.url} target="_blank" rel="noopener noreferrer" aria-label={geography.linkLabel}>Google Play’de incele <ArrowUpRight size={17} /></a></div>
+            </article>
+            <article id="delivery-rush" className="mobile-project mobile-project--delivery" aria-labelledby="delivery-title">
+              <div className="mobile-project__art"><DeliveryRushPortfolioVisual /></div>
+              <div className="mobile-project__body"><div className="mobile-project__meta"><span>Mobil oyun · Motosiklet ve kurye</span><b>Yayında</b></div><h3 id="delivery-title">Delivery Rush</h3><p>Motosikletinle şehir trafiğini aş, kurye görevlerini tamamla ve motorunu geliştir. Sürüş ile teslimat heyecanını birleştiren mobil oyunumuz.</p><div className="tag-row"><span>Yarış oyunu</span><span>Android</span></div><a className="text-link" href={deliveryRush.url} target="_blank" rel="noopener noreferrer" aria-label={deliveryRush.linkLabel}>Google Play’de incele <ArrowUpRight size={17} /></a></div>
+            </article>
           </div>
         </section>
 
         <section id="work" className="work-section section-frame section-frame--light">
           <div className="work-section__heading"><div><Eyebrow>04 / WEB SİTESİ PROJELERİ</Eyebrow><h2>İşletmelere özel<br /><em>web deneyimleri.</em></h2></div><p>Alüminyum, ahşap ve dekorasyon sektörleri için geliştirdiğimiz kurumsal web siteleri ve hizmet portfolyoları.</p></div>
           <div className="work-grid">
-            {PROJECTS.filter((project) => project.id !== takasso.id && project.id !== atamacep.id).map((project, index) => (
+            {PROJECTS.filter((project) => project.kind !== 'mobile').map((project, index) => (
               <article className={`work-card work-card--web ${index === 2 ? 'work-card--wide' : ''}`} key={project.id}>
                 <a href={project.url} target={project.url.startsWith('https://') ? '_blank' : undefined} rel={project.url.startsWith('https://') ? 'noopener noreferrer' : undefined} aria-label={project.linkLabel ?? `${project.title} projesini görüntüle`}>
                   {project.status && <span className="work-card__status">{project.status}</span>}
