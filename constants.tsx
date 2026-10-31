@@ -30,15 +30,13 @@ export const PACKAGES: PricingPackage[] = [
 export const PROJECTS: Project[] = [
   { id: 1, title: 'Takasso', category: 'Mobil uygulama ve web platformu', imageUrl: 'https://takasso.com.tr/brand/takasso-app-icon.png', url: 'https://takasso.com.tr/' },
   { id: 2, title: 'Interakdeniz Alüminyum', category: 'Kurumsal web sitesi', imageUrl: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1200', url: 'https://www.interakdenizaluminyum.com/' },
-  { id: 3, title: 'Hell Gym Center', category: 'Hizmet ve rezervasyon', imageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1200', url: 'https://www.hellgymcenter.com/' },
-  { id: 4, title: 'İkonyum Ahşap', category: 'Kurumsal web sitesi', imageUrl: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=1200', url: 'https://www.ikonyumahsap.com.tr/' },
+  { id: 3, title: 'İkonyum Ahşap', category: 'Kurumsal web sitesi', imageUrl: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=1200', url: 'https://www.ikonyumahsap.com.tr/' },
 ];
 
 export const CLIENTS: Client[] = [
   { id: 1, name: 'Takasso', logoUrl: 'https://takasso.com.tr/brand/takasso-app-icon.png' },
   { id: 2, name: 'Interakdeniz Alüminyum', logoUrl: 'https://github.com/xbarisx2/logo/blob/main/logoointer-removebg-preview.png?raw=true' },
-  { id: 3, name: 'Hell Gym Center', logoUrl: 'https://www.hellgymcenter.com/images/hellogo.png' },
-  { id: 4, name: 'İkonyum Ahşap', logoUrl: 'https://www.ikonyumahsap.com.tr/img/ikonyum-ahsap.png' },
+  { id: 3, name: 'İkonyum Ahşap', logoUrl: 'https://www.ikonyumahsap.com.tr/img/ikonyum-ahsap.png' },
 ];
 
 export const SOCIAL_LINKS = [
