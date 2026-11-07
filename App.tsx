@@ -67,7 +67,7 @@ const deliveryRush = PROJECTS.find((project) => project.id === 7)!;
 const knoway = PROJECTS.find((project) => project.id === 8)!;
 const featuredProducts = [
   { project: takasso, href: '#takasso', theme: 'takasso', description: 'İkinci el alışveriş', status: 'Yayında' },
-  { project: atamacep, href: '#atamacep', theme: 'atamacep', description: 'KPSS ve kamu ilanları', status: 'Kapalı test' },
+  { project: atamacep, href: '/atamacep/', theme: 'atamacep', description: 'KPSS ve kamu ilanları', status: 'Yayında' },
   { project: geography, href: '#kpss-cografya', theme: 'geography', description: 'Haritalarla öğren', status: 'Yayında' },
   { project: deliveryRush, href: '#delivery-rush', theme: 'delivery', description: 'Şehrin ritmini yakala', status: 'Yayında' },
   { project: knoway, href: '#knoway', theme: 'knoway', description: 'Hatırla. Yolunu bul.', status: 'Yayında' },
@@ -309,7 +309,7 @@ function App() {
             </article>
             <article id="atamacep" className="mobile-project mobile-project--atamacep" aria-labelledby="atamacep-title">
               <div className="mobile-project__art"><AtamaCepPortfolioVisual /></div>
-              <div className="mobile-project__body"><div className="mobile-project__meta"><span>KPSS ve kamu ilan takibi</span><b>Kapalı test</b></div><h3 id="atamacep-title">AtamaCep</h3><p>KPSS ve kamu ilanlarını tek yerde takip etmek için geliştirdiğimiz mobil uygulama. Takip arkadaşın Pusuk ile yeni fırsatları keşfet.</p><div className="tag-row"><span>Mobil uygulama</span><span>Google Play · Kapalı test</span></div><a className="text-link" href="#contact">AtamaCep hakkında bilgi al <ArrowUpRight size={17} /></a></div>
+              <div className="mobile-project__body"><div className="mobile-project__meta"><span>KPSS ve kamu ilan takibi</span><b>Yayında</b></div><h3 id="atamacep-title">AtamaCep</h3><p>KPSS ve kamu ilanlarını tek yerde takip etmek için geliştirdiğimiz mobil uygulama. Takip arkadaşın Pusuk ile yeni fırsatları keşfet.</p><div className="tag-row"><span>Mobil uygulama</span><span>Google Play</span></div><a className="text-link" href="/atamacep/">AtamaCep’i keşfet <ArrowUpRight size={17} /></a></div>
             </article>
             <article id="kpss-cografya" className="mobile-project mobile-project--geography" aria-labelledby="geography-title">
               <div className="mobile-project__art"><GeographyPortfolioVisual /></div>
