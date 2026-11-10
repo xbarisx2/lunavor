@@ -1,0 +1,14 @@
+# AtamaCep
+
+> Lunavor’un bağımsız Android uygulaması. KPSS ve kamu ilanlarını takip etmeye yardımcı olur. Resmî başvurular kurumun belirlediği kanallardan yapılır.
+
+## Ürün ve rehberler
+- [AtamaCep](https://www.lunavor.com.tr/atamacep/)
+- [Google Play](https://play.google.com/store/apps/details?id=com.lunavor.atamacep)
+- [KPSS ve kamu ilanları](https://www.lunavor.com.tr/atamacep/kpss-kamu-ilanlari.html)
+- [KPSS’siz kamu personel alımı](https://www.lunavor.com.tr/atamacep/kpsssiz-kamu-personel-alimi.html)
+- [Atama bildirimleri](https://www.lunavor.com.tr/atamacep/atama-bildirimleri.html)
+
+## Destek
+- [Destek ve hesap işlemleri](https://www.lunavor.com.tr/atamacep/#destek)
+- [Premium koşulları](https://lunavorapp-arch.github.io/atamacep-support/subscription.html)
