@@ -309,7 +309,7 @@ function App() {
             </article>
             <article id="atamacep" className="mobile-project mobile-project--atamacep" aria-labelledby="atamacep-title">
               <div className="mobile-project__art"><AtamaCepPortfolioVisual /></div>
-              <div className="mobile-project__body"><div className="mobile-project__meta"><span>KPSS ve kamu ilan takibi</span><b>Yayında</b></div><h3 id="atamacep-title">AtamaCep</h3><p>KPSS ve kamu ilanlarını tek yerde takip etmek için geliştirdiğimiz mobil uygulama. Takip arkadaşın Pusuk ile yeni fırsatları keşfet.</p><div className="tag-row"><span>Mobil uygulama</span><span>Google Play</span></div><a className="text-link" href="/atamacep/">AtamaCep’i keşfet <ArrowUpRight size={17} /></a></div>
+              <div className="mobile-project__body"><div className="mobile-project__meta"><span>KPSS ve kamu ilan takibi</span><b>Yayında</b></div><h3 id="atamacep-title">AtamaCep</h3><p>AtamaCep, Lunavor’un Android için geliştirdiği bağımsız KPSS ve kamu ilanı takip uygulamasıdır. İlanları filtrele, başvuru koşullarını incele ve son tarihleri takip et.</p><div className="tag-row"><span>Mobil uygulama</span><span>Google Play</span></div><a className="text-link" href="/atamacep/">AtamaCep’i keşfet <ArrowUpRight size={17} /></a> <a className="text-link" href="https://play.google.com/store/apps/details?id=com.lunavor.atamacep">Google Play’de AtamaCep <ArrowUpRight size={17} /></a></div>
             </article>
             <article id="kpss-cografya" className="mobile-project mobile-project--geography" aria-labelledby="geography-title">
               <div className="mobile-project__art"><GeographyPortfolioVisual /></div>
