@@ -31,7 +31,7 @@ h2 { font-size: clamp(2rem, 4.25vw, 3.55rem); max-width: 16ch; }
 .nav nav a { color: #e0eae7; font-size: .9rem; }
 .nav a:hover, footer a:hover { text-decoration: underline; text-underline-offset: .28em; }
 .nav-download { border: 1px solid #ffffff45; border-radius: 100px; padding: 8px 16px; white-space: nowrap; }
-.hero { color: #f4f7ef; background: radial-gradient(ellipse at 79% 43%, #233c45 0%, #152934 33%, #101e2a 68%); }
+.hero { overflow: clip; color: #f4f7ef; background: radial-gradient(ellipse at 79% 43%, #233c45 0%, #152934 33%, #101e2a 68%); }
 .hero-grid { min-height: 646px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 0; }
 .hero-copy { position: relative; z-index: 2; padding: 35px 0 65px; }
 .eyebrow { display: flex; align-items: center; gap: 9px; color: var(--mint); font-weight: 700; font-size: .86rem; letter-spacing: .035em; margin-bottom: 22px; }
