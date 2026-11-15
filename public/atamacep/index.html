@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AtamaCep · Lunavor | KPSS ve Kamu İlan Takibi</title>
-  <meta name="description" content="AtamaCep ile KPSS ilanlarını ve kamu personel alımlarını takip et. KPSS’siz ilanları filtrele, başvuru tarihlerini ve ilan bildirimlerini yönet.">
+  <title>AtamaCep | KPSS İlanları ve Kamu Personel Alımı</title>
+  <meta name="description" content="KPSS ve KPSS’siz kamu personel alımlarını takip et. Kadro, bölüm ve başvuru tarihlerini incele. AtamaCep’i Google Play’den indir.">
   <link rel="canonical" href="https://www.lunavor.com.tr/atamacep/">
+  <link rel="icon" href="/media/atamacep-icon-512.png" type="image/png">
+  <meta name="theme-color" content="#101e2a">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="tr_TR">
-  <meta property="og:site_name" content="AtamaCep">
-  <meta property="og:title" content="AtamaCep · Lunavor | KPSS ve Kamu İlan Takibi">
-  <meta property="og:description" content="AtamaCep ile KPSS ilanlarını ve kamu personel alımlarını takip et. KPSS’siz ilanları filtrele, başvuru tarihlerini ve ilan bildirimlerini yönet.">
+  <meta property="og:title" content="AtamaCep | KPSS İlanları ve Kamu Personel Alımı">
+  <meta property="og:description" content="KPSS ve KPSS’siz kamu personel alımlarını takip et. Kadro, bölüm ve başvuru tarihlerini incele. AtamaCep’i Google Play’den indir.">
   <meta property="og:url" content="https://www.lunavor.com.tr/atamacep/">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'">
-  <link rel="stylesheet" href="styles.css">
+  <meta property="og:image" content="https://www.lunavor.com.tr/media/atamacep-icon-512.png">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <link rel="stylesheet" href="landing.css">
+  <script src="landing.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,7 +34,7 @@
       "mainEntity": {
         "@id": "https://www.lunavor.com.tr/#atamacep"
       },
-      "dateModified": "2026-11-14",
+      "dateModified": "2026-11-15",
       "publisher": {
         "@id": "https://www.lunavor.com.tr/#organization"
       }
@@ -71,67 +75,104 @@
   ]
 }
   </script>
-  <meta property="og:image" content="https://www.lunavor.com.tr/media/atamacep-icon-512.png">
-  <meta name="twitter:card" content="summary">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">İçeriğe geç</a>
-  <header>
-    <a href="./" class="brand">Atama<span>Cep</span></a>
-    <nav aria-label="Destek ve belgeler" style="flex-wrap:wrap">
-      <a href="#destek">Destek</a>
-      <a href="https://lunavorapp-arch.github.io/atamacep-support/privacy.html">Gizlilik</a>
-      <a href="https://lunavorapp-arch.github.io/atamacep-support/account-deletion.html">Hesap silme</a>
-    </nav>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header class="top" id="ust">
+    <div class="frame nav">
+      <a class="brand" href="./"><img src="/media/atamacep-icon-512.png" width="40" height="40" alt="">Atama<span>Cep</span></a>
+      <nav aria-label="Ana menü">
+        <a href="#ekranlar">Uygulamayı keşfet</a>
+        <a href="#rehberler">Rehberler</a>
+        <a href="#destek">Destek</a>
+      </nav>
+      <a class="nav-download" href="https://play.google.com/store/apps/details?id=com.lunavor.atamacep">Google Play <span aria-hidden="true">↗</span></a>
+    </div>
   </header>
-  <main id="main-content" tabindex="-1">
-    <p class="eyebrow">LUNAVOR ANDROID UYGULAMASI</p>
-    <h1>AtamaCep · KPSS ve kamu ilanı takibi</h1>
-    <p>AtamaCep, Lunavor’un Android için geliştirdiği bağımsız KPSS ve kamu ilanı takip uygulamasıdır. Kurum, şehir ve meslek alanına göre ilan ara, kaynakta bulunan kadro ve kontenjan bilgilerini incele ve başvuru tarihlerini takip et.</p>
-    <p><a class="button" href="https://play.google.com/store/apps/details?id=com.lunavor.atamacep">Google Play’de AtamaCep’i aç</a></p>
-
-    <section aria-labelledby="isleyis">
-      <h2 id="isleyis">İlanı bul, şartları incele, tarihi takip et</h2>
-      <ul>
-        <li><strong>İlanı bul.</strong> Kamu kurumlarının ilanlarını kurum, şehir ve meslek alanına göre incele. Açık ve yakında başlayacak başvuruları ayırt et. KPSS’siz filtresiyle KPSS şartı aranmadığı açıkça belirtilen ilanları gör.</li>
-        <li><strong>Şartları incele.</strong> İlan detayında kadro, başvuru koşulları ve ilgili resmî bağlantıyı gör. Başvurunu kurumun belirlediği kanaldan tamamla.</li>
-        <li><strong>Tarihi takip et.</strong> Takip etmek istediğin ilanları kaydet. Uygulamadaki bildirim ayarlarından yeni ilan ve son başvuru hatırlatmalarını yönet.</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="rehberler">
-      <h2 id="rehberler">Kamu ilanı takip rehberleri</h2>
-      <div class="cards">
-        <a href="kpss-kamu-ilanlari.html">KPSS ve kamu ilanları<span>İlan, tercih ve atama sonuçları için doğru resmî kaynağı bul.</span></a>
-        <a href="kpsssiz-kamu-personel-alimi.html">KPSS’siz kamu personel alımı<span>KPSS şartı aranmadığı açıkça yazan ilanları bul.</span></a>
-        <a href="atama-bildirimleri.html">Atama bildirimleri<span>Yeni ilan bildirimlerini ve başvuru hatırlatmalarını yönet.</span></a>
+  <main id="icerik">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="frame hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> KPSS ve kamu personel alımı</p>
+          <h1 id="hero-title">Kamu ilanlarını<br> <em>cebinden takip et.</em></h1>
+          <p class="lede">Kadro, bölüm ve KPSS şartlarını incele. İlgilendiğin ilanı kaydet, son başvuru tarihini ve resmî kaynağı tek ekrandan aç.</p>
+          <div class="actions">
+            <a class="button" href="https://play.google.com/store/apps/details?id=com.lunavor.atamacep"><span class="play" aria-hidden="true">▶</span> Google Play’den indir <span aria-hidden="true">↗</span></a>
+            <a class="text-action" href="#ekranlar">Uygulamayı keşfet <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="micro">Lunavor’un bağımsız Android uygulaması</p>
+        </div>
+        <div class="hero-art">
+          <div class="halo" aria-hidden="true"></div>
+          <div class="phone hero-back" aria-hidden="true"><img src="/media/atamacep-web-kadro.webp" width="500" height="1039" alt=""></div>
+          <div class="phone hero-front"><img src="/media/atamacep-web-ilanlar.webp" width="500" height="1039" fetchpriority="high" alt="AtamaCep ilan listesi, arama alanı ve KPSS filtreleri"></div>
+          <div class="hero-label" aria-hidden="true"><span class="hero-label-icon">✓</span><div><b>Şartları incele</b><small>Kadro · KPSS · Bölüm</small></div></div>
+        </div>
       </div>
     </section>
-
-    <section aria-labelledby="sorular">
-      <h2 id="sorular">AtamaCep hakkında sık sorulanlar</h2>
-      <h3>KPSS puanı veya öğrenim düzeyi nerede yazar?</h3>
-      <p>Yayımlanan ilanda yer alan şartları ilan detayından inceleyebilirsin. Başvuru kararı vermeden önce kadroya özel puan, mezuniyet ve belge koşullarını resmî ilandan kontrol et.</p>
-      <h3>Atama ve son başvuru bildirimleri nasıl çalışır?</h3>
-      <p>Bildirim tercihlerini uygulamadan yönetebilirsin. İlan bildirimleri ve hatırlatmalar hesabındaki erişim hakkına, bildirim tercihlerine ve telefon iznine bağlıdır.</p>
-      <h3>Lunavor’un AtamaCep uygulaması nereden indirilir?</h3>
-      <p><a href="https://play.google.com/store/apps/details?id=com.lunavor.atamacep">AtamaCep: KPSS ve Atama İlanı</a> sayfasını aç. Geliştirici adı <strong>Lunavor</strong>, Android paket kimliği <code>com.lunavor.atamacep</code> olarak geçer.</p>
-      <h3>AtamaCep bir kamu kurumu mu?</h3>
-      <p>AtamaCep, Lunavor tarafından sunulan bağımsız bir ilan takip uygulamasıdır. Resmî başvurular ilgili kurumun kanallarında yapılır.</p>
-      <h3>AtamaCep Premium nasıl çalışır?</h3>
-      <p>Premium aylık veya yıllık Google Play aboneliğiyle kullanılabilir. Güncel fiyat ve yenileme koşulları satın alma ekranında gösterilir. Mevcut aboneliğin için Satın alımları geri yükle seçeneğini kullanabilirsin. Hesaba tanımlanan hediye erişimi süresi bitince kendi başına ödeme başlatmaz.</p>
+    <div class="source-strip"><div class="frame">
+      <p>Resmî duyuru kaynakları</p>
+      <a href="https://kariyerkapisi.gov.tr/isealim">Kariyer Kapısı <span aria-hidden="true">↗</span></a>
+      <a href="https://kamuilan.sbb.gov.tr/">SBB Kamu İlan Portalı <span aria-hidden="true">↗</span></a>
+      <a href="https://www.osym.gov.tr/SinavGrubu/Index/3">ÖSYM KPSS <span aria-hidden="true">↗</span></a>
+    </div></div>
+    <section class="section frame showcase" id="ekranlar" aria-labelledby="ekran-baslik">
+      <div>
+        <h2 id="ekran-baslik">İlanı bulduktan sonra sıra şartlarda.</h2>
+        <p>AtamaCep’te başvuruyu hazırlarken kullanacağın üç ekranı keşfet.</p>
+        <div class="feature-list">
+          <button type="button" class="feature" aria-pressed="true" aria-controls="app-screen" data-screen="ilanlar" data-alt="AtamaCep ilan listesi, arama alanı ve KPSS filtreleri" data-caption="İlan arama ve filtreleme">
+            <span class="feature-icon" aria-hidden="true">⌕</span><span><strong>İlanları filtrele</strong><small>Kurum, şehir ve mesleğe göre ara. KPSS şartı aranmadığı belirtilen ilanları ayır.</small></span><span aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="feature" aria-pressed="false" aria-controls="app-screen" data-screen="kadro" data-alt="Kadro, kontenjan, öğrenim ve resmî belge bilgileri görünen AtamaCep ilan detayı" data-caption="Bir ilan kaydından gerçek kadro ayrıntıları">
+            <span class="feature-icon" aria-hidden="true">▤</span><span><strong>Kadro ve şartlara bak</strong><small>Kaynakta bulunan kontenjanı, aranan bölümleri ve KPSS şartını aynı ilanda incele.</small></span><span aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="feature" aria-pressed="false" aria-controls="app-screen" data-screen="bildirimler" data-alt="AtamaCep Bildirimler ekranındaki ilan özeti ve bildirim filtreleri" data-caption="İlan özetleri ve hatırlatmalar">
+            <span class="feature-icon" aria-hidden="true">◷</span><span><strong>Bildirimlerini yönet</strong><small>Yeni ilan ve başvuru hatırlatma tercihlerini uygulama içinden yönet.</small></span><span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+      <figure class="screen-stage" id="app-screen">
+        <div class="phone stage-phone"><img id="stage-image" src="/media/atamacep-web-ilanlar.webp" width="500" height="1039" loading="lazy" alt="AtamaCep ilan listesi, arama alanı ve KPSS filtreleri"></div>
+        <figcaption id="screen-caption" aria-live="polite">İlan arama ve filtreleme</figcaption>
+        <noscript><p><a href="/media/atamacep-web-kadro.webp">Kadro ekranı</a> · <a href="/media/atamacep-web-bildirimler.webp">Bildirim ekranı</a></p></noscript>
+      </figure>
     </section>
-
-    <section id="destek" aria-labelledby="destek-baslik">
-      <h2 id="destek-baslik">AtamaCep destek ve hesap işlemleri</h2>
-      <p>Destek için <a href="mailto:lunavor.app@gmail.com">lunavor.app@gmail.com</a> adresine ulaşabilirsin.</p>
-      <ul>
-        <li><a href="https://lunavorapp-arch.github.io/atamacep-support/privacy.html">Gizlilik Politikası</a> ve <a href="https://lunavorapp-arch.github.io/atamacep-support/kvkk.html">KVKK Aydınlatma Metni</a></li>
-        <li><a href="https://lunavorapp-arch.github.io/atamacep-support/terms.html">Kullanım Koşulları</a> ve <a href="https://lunavorapp-arch.github.io/atamacep-support/subscription.html">Premium abonelik koşulları</a></li>
-        <li><a href="https://lunavorapp-arch.github.io/atamacep-support/account-deletion.html">Hesap ve veri silme</a></li>
-      </ul>
+    <section class="guides section" id="rehberler" aria-labelledby="rehber-baslik">
+      <div class="frame">
+        <h2 id="rehber-baslik">Kamu ilanı takip rehberleri</h2>
+        <div class="guide-grid">
+          <a href="kpss-kamu-ilanlari.html"><strong>KPSS ve kamu ilanları</strong><span>İlan, tercih ve atama sonuçları için doğru resmî kaynağı bul.</span><span aria-hidden="true">↗</span></a>
+          <a href="kpsssiz-kamu-personel-alimi.html"><strong>KPSS’siz kamu personel alımı</strong><span>KPSS şartı aranmadığı belirtilen ilanlarda diğer koşulları kontrol et.</span><span aria-hidden="true">↗</span></a>
+          <a href="atama-bildirimleri.html"><strong>Atama bildirimi nasıl alınır?</strong><span>Yeni ilan bildirimlerini aç, başvuru hatırlatmalarını yönet.</span><span aria-hidden="true">↗</span></a>
+          <a href="kpss-puan-turu-yil-taban-puan.html"><strong>KPSS türü, yılı ve taban puan</strong><span>İlandaki KPSS şartını sınav sonucunla üç adımda karşılaştır.</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="section frame faq" aria-labelledby="faq-title">
+      <div><h2 id="faq-title">Sık sorulanlar</h2><p>AtamaCep ve resmî başvuru hakkında.</p></div>
+      <div>
+        <details><summary>AtamaCep’ten kamu ilanına başvurabilir miyim?</summary><p>AtamaCep, Lunavor’un bağımsız ilan takip uygulamasıdır. Başvurunu ilanın gösterdiği resmî kanaldan yap. İlan detayındaki kaynak bağlantısından koşulları ve son başvuru tarihini doğrula.</p></details>
+        <details><summary>KPSS şartını nerede görürüm?</summary><p>İlanın Şartlar bölümünde kaynaktan doğrulanan puan türü, sınav yılı ve taban puan bilgilerini incele. Aranan bölüm ve diğer koşullar için kadro satırına ve resmî metne bak.</p></details>
+        <details><summary>Bildirimler ve Premium nasıl çalışır?</summary><p>Bildirimler, hesabındaki erişim hakkına, uygulama tercihine ve Android iznine bağlıdır. Premium aylık veya yıllık Google Play aboneliğidir. Güncel fiyat ve yenileme koşulları satın alma ekranında görünür. Hediye erişiminin sona ermesi ödeme başlatmaz.</p></details>
+      </div>
+    </section>
+    <section class="section end" aria-labelledby="indir-baslik">
+      <div class="frame end-row"><div><h2 id="indir-baslik">Bir sonraki ilanı telefondan takip et.</h2><p>AtamaCep’i Android cihazında keşfet.</p></div>
+      <a class="button" href="https://play.google.com/store/apps/details?id=com.lunavor.atamacep"><span class="play" aria-hidden="true">▶</span> Google Play’den indir <span aria-hidden="true">↗</span></a></div>
     </section>
   </main>
-  <footer>AtamaCep · Lunavor · Son içerik kontrolü <time datetime="2026-11-14">14 Kasım 2026</time></footer>
+  <footer id="destek">
+    <div class="frame footer">
+      <div><a class="brand" href="./">Atama<span>Cep</span></a><p>Lunavor · Android</p><a href="mailto:lunavor.app@gmail.com">lunavor.app@gmail.com</a></div>
+      <nav aria-label="Destek ve belgeler">
+        <a href="https://lunavorapp-arch.github.io/atamacep-support/privacy.html">Gizlilik</a>
+        <a href="https://lunavorapp-arch.github.io/atamacep-support/kvkk.html">KVKK</a>
+        <a href="https://lunavorapp-arch.github.io/atamacep-support/terms.html">Kullanım koşulları</a>
+        <a href="https://lunavorapp-arch.github.io/atamacep-support/subscription.html">Abonelik</a>
+        <a href="https://lunavorapp-arch.github.io/atamacep-support/account-deletion.html">Hesap silme</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
